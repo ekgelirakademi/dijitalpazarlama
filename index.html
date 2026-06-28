@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ek Gelir Akademi · Pasif Gelir Yaratma Premium Sunum</title>
-<meta name="description" content="Ek Gelir Akademi — pasif gelir yaratma sanatına dair 12 bölümlük premium interaktif sunum." />
+<title>Ek Gelir Akademi · Dijital Pazarlama Premium Sunum</title>
+<meta name="description" content="Ek Gelir Akademi — dijital pazarlamanın temellerinden veri analitiğine kadar 8 bölümlük premium interaktif sunum." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -416,7 +416,7 @@ button { font-family: inherit; cursor: pointer; }
       <div class="ega-brand">
         <div class="ega-brand-eyebrow">Premium Sunum</div>
         <h1 class="ega-brand-title">Ek Gelir <em>Akademi</em></h1>
-        <p class="ega-brand-sub">Pasif gelir yaratma sanatına dair 12 bölümlük interaktif çalışma.</p>
+        <p class="ega-brand-sub">Dijital pazarlama sanatına dair 8 bölümlük interaktif çalışma.</p>
       </div>
       <nav class="ega-nav" id="nav" aria-label="Bölümler">
         <div class="ega-nav-label">Bölümler</div>
@@ -438,9 +438,9 @@ button { font-family: inherit; cursor: pointer; }
           <p>
             <span class="ega-foot-mark">Ek Gelir Akademi</span>
             <span class="ega-foot-sep">·</span>
-            Pasif Gelir Yaratma Premium Sunum Serisi
+            Dijital Pazarlama Premium Sunum Serisi
           </p>
-          <p class="ega-foot-sub">Bu sunum bilgilendirme amaçlıdır; finansal tavsiye niteliği taşımaz.</p>
+          <p class="ega-foot-sub">Bu sunum eğitim ve bilgilendirme amaçlıdır.</p>
         </footer>
       </div>
     </main>
@@ -453,453 +453,601 @@ const SECTIONS = [
   {
     id: "intro", shortTitle: "Açılış", hero: true,
     toc: [
-      "Pasif Gelir Zihniyeti ve Temel İlkeler",
-      "Pasif Gelir Modellerine Genel Bakış",
-      "Dijital Ürünlerle Pasif Gelir",
-      "Bağlı Kuruluş Pazarlaması",
-      "Yatırım Araçları ile Pasif Gelir",
-      "Gayrimenkulden Düzenli Nakit Akışı",
-      "Lisanslama ve Telif Hakları",
-      "Yapay Zekâ Destekli Pasif Gelir (2026)",
-      "Otomasyon ve Sistem Kurulumu",
-      "Pasif Gelir Akışlarını Ölçeklendirme",
-      "Risk Yönetimi ve Sürdürülebilirlik",
-      "Uzun Vadeli Pasif Gelir Stratejisi"
+      "Dijital Pazarlama Temelleri",
+      "SEO ve Arama Motorları",
+      "Sosyal Medya Pazarlaması",
+      "İçerik Pazarlama ve Blog Yönetimi",
+      "E-posta Pazarlama",
+      "Dijital Reklamcılık",
+      "Web Optimizasyonu ve CRO",
+      "Analitik ve Veri Yönetimi"
     ]
   },
-  { id: "zihniyet", shortTitle: "Zihniyet ve Temel İlkeler",
-    title: 'Pasif Gelir <em>Zihniyeti</em> ve Temel İlkeler',
-    lead: "Pasif gelir, sihirli bir değnek değildir; disiplin, sabır ve doğru ilkelerle inşa edilen bir finansal özgürlük mimarisidir. Önce zihniyeti kurun; modeller doğal olarak yerine oturacaktır.",
-    blocks: [
-      { type:"h", text:"Pasif Gelir Nedir? Aktif Gelirden Farkı" },
-      { type:"p", text:"Pasif gelir, maddi katılımın sınırlı ya da hiç olmadığı faaliyetlerden doğan kazançtır. Aktif gelirde ise zamanı doğrudan parayla takas edersiniz. Aradaki ayrım sadece felsefi değil tekniktir: ABD Vergi Dairesi (IRS), bir faaliyete yılda 500 saatten fazla katılımı maddi katılım sayar ve bu eşiğin altındaki kazançları pasif olarak sınıflandırır." },
-      { type:"callout", title:"Çekirdek İlke", text:"Pasif gelir, çalışmasanız da akan bir nakit akışı yaratarak zamanınızı satmaktan kurtarır. Hedef birikim yapmak değil, sürekli nakit akışı üreten varlıklar inşa etmektir." },
-      { type:"h", text:"Zihniyet Dönüşümü: Paranız Sizin İçin Çalışsın" },
-      { type:"p", text:"Robert Kiyosaki'nin Nakit Akışı Çeyreği modeli bu dönüşümü resmeder: Çalışan (E) ve serbest meslek (S) tarafından, işletme sahibi (B) ve yatırımcı (I) tarafına geçmek. Tony Robbins ise becerikliliğin (resourcefulness) kaynaklardan daha kıymetli olduğunu söyler. Kendinizi sistem kuran biri olarak konumlandırın." },
-      { type:"h", text:"Pasif Gelir Spektrumu" },
+
+  /* 1 */
+  { id:"temeller", shortTitle:"Pazarlama Temelleri",
+    title:'Dijital Pazarlama <em>Temelleri</em>',
+    lead:"Dijital pazarlama bütçeleri 2022'de ilk kez geleneksel pazarlamanın önüne geçti. 6 milyardan fazla internet kullanıcısı, lead başına %61 daha düşük maliyet ve küresel erişim — markanızın sesini duyurmanın yol haritası burada başlıyor.",
+    blocks:[
+      { type:"h", text:"Dijital Pazarlama Nedir?" },
+      { type:"p", text:"Dijital pazarlama, elektronik bir cihaz veya internet kullanan tüm pazarlama çabalarını kapsar. Ürün ve hizmetleri tanıtmak için masaüstü bilgisayarlar, cep telefonları ve diğer dijital platformlar gibi internet tabanlı teknolojileri kullanır." },
+      { type:"callout", title:"Çekirdek İlke", text:"Dijital kanalları kullanarak <strong>doğru mesajı, doğru kişiye, doğru zamanda</strong> iletmek. Geleneksel pazarlamanın 'herkese' reklam yapmasının aksine, dijital pazarlama hedef kitleye odaklanır." },
+      { type:"h", text:"Geleneksel ve Dijital Pazarlama Karşılaştırması" },
       { type:"table",
-        headers:["Özellik","Tam Pasif","Yarı Pasif / Ölçeklenebilir"],
+        headers:["Özellik","Geleneksel","Dijital"],
         rows:[
-          ["Tanım","İlk kurulum sonrası neredeyse hiç müdahale gerektirmez","Belirli düzeyde sürekli bakım veya pazarlama ister"],
-          ["Örnek","Kitap telifleri, tahvil faizleri, temettü hisseleri (DRIP)","Kiralık mülk yönetimi, bağlı kuruluş, çevrimiçi kurs"],
-          ["Çaba","Minimum sürekli çaba","Müşteri desteği, içerik tazeleme"],
-          ["Zihin İpucu","Gerçek anlamda \"uyurken kazanç\"","Pasif değil, ölçeklenebilir gelir olarak düşünün"]
+          ["Mecra","Gazete, TV, radyo, broşür","Web, sosyal medya, e-posta, SEO/SEM"],
+          ["İletişim","Tek yönlü; geri bildirim sınırlı","İki yönlü; etkileşim ve diyalog"],
+          ["Hedefleme","Kitlesel, geniş","Demografik, davranışsal, hassas"],
+          ["Ölçüm","Zor, gecikmeli","Gerçek zamanlı veri ve analitik"],
+          ["Maliyet","Yüksek; lead başına pahalı","Lead başına %61 daha düşük"],
+          ["Erişim","Coğrafi sınırlı","Küresel ve anlık"]
         ]
       },
-      { type:"h", text:"Pasif Gelir Zihniyetini Hayata Geçirmek" },
+      { type:"h", text:"Dijital Pazarlamanın 7 Ana Kanalı" },
+      { type:"cards", items:[
+        { title:"SEO", body:"Organik arama sıralaması; web sitesi içeriği optimizasyonu ile uzun vadeli, ücretsiz trafik." },
+        { title:"SEM", body:"Ücretli arama reklamları; Google Ads kampanyalarıyla anında görünürlük." },
+        { title:"İçerik Pazarlaması", body:"Değer temelli blog yazıları, videolar; potansiyel müşteriyle güven kuran format." },
+        { title:"E-posta Pazarlaması", body:"Bülten ve promosyon mesajlarıyla doğrudan iletişim; en yüksek ROI'lu kanal." },
+        { title:"PPC", body:"Tıklama başına ödeme yapılan display reklamlar; hassas hedefleme ile geniş erişim." },
+        { title:"Sosyal Medya", body:"Instagram, LinkedIn, TikTok paylaşımlarıyla topluluk etkileşimi ve marka inşası." },
+        { title:"Influencer & Affiliate", body:"Etkileyici iş birlikleri ve komisyon bazlı satış modelleriyle güven transferi." }
+      ]},
+      { type:"h", text:"Dijital Pazarlama Süreci (Döngüsel)" },
       { type:"steps", items:[
-        { title:"Finansal durumunuzu değerlendirin", body:"Varlık, borç ve nakit akışınızı gözden geçirerek hangi pasif gelir stratejisinin size uygun olduğunu belirleyin." },
-        { title:"Gerçekçi hedefler koyun", body:"Ek gelir mi, emeklilik birikimi mi, tam bağımsızlık mı? Kısa ve uzun vadeli kilometre taşlarına bölün." },
-        { title:"Başlangıç kaynaklarınızı belirleyin", body:"Zaman, para ve enerji ayırmanız gerekecek. Sessiz ortaklık gibi modeller daha az yönetim gerektirebilir." },
-        { title:"Araştırın ve kendinizi eğitin", body:"Başarılı örnekleri inceleyin, rehberler okuyun, uzmanlarla konuşun ve başarısızlık hikâyelerini ihmal etmeyin." },
-        { title:"Stratejinizi seçin ve çeşitlendirin", body:"Tek bir kaynağa bağlanmayın; yatırım, gayrimenkul, dijital ürün gibi farklı modelleri karşılaştırın." },
-        { title:"Sistemler ve otomasyon kurun", body:"E-posta otomasyonu, mülk yönetim yazılımı, otomatik yeniden yatırım planları (DRIP) gibi araçları devreye alın." },
-        { title:"Uzun vadeli düşünün", body:"Pasif gelir bir gecede oluşmaz; sabır ve sürekli öğrenme en güçlü iki yapı taşıdır." }
+        { title:"Hedef Kitle Analizi", body:"Demografik, psikografik ve davranışsal verilerle hedef kitlenizi tanıyın." },
+        { title:"Hedef Belirleme", body:"Marka bilinirliği, lead, satış — SMART hedeflerle başlayın." },
+        { title:"Bütçe Planlaması", body:"Kanal ağırlıkları, kampanya bütçesi ve test fonu ayırın." },
+        { title:"Kanal Seçimi", body:"Kitlenize ve hedeflerinize en uygun 7 ana kanaldan birini ya da kombinasyonunu seçin." },
+        { title:"İçerik Oluşturma", body:"Platforma özgü formatla değerli ve markanıza uygun içerik hazırlayın." },
+        { title:"Kampanya Yayını", body:"İçerikleri zamanlı, platform optimize biçimde yayına alın." },
+        { title:"Performans Takibi", body:"Trafik, dönüşüm, etkileşim, ROI metriklerini sürekli izleyin." },
+        { title:"Veri Analizi", body:"Sonuçları değerlendirip stratejiyi optimize edin; döngü baştan başlar." }
       ]},
-      { type:"h", text:"Rakamlarla Pasif Gelir" },
+      { type:"h", text:"Strateji Oluştururken Atılacak 7 Adım" },
+      { type:"steps", items:[
+        { title:"Hedef Kitle Analizi", body:"İhtiyaca yanıt veren içerik ve mesajlar için demografik, psikografik, davranışsal veriyi birleştirin." },
+        { title:"Marka Tanıtımı", body:"Tutarlı ses tonu, görsel kimlik ve insan merkezli hikâye anlatımıyla tüm kanallarda aynı markayı sunun." },
+        { title:"İçerik Pazarlaması", body:"Kalite miktardan önemlidir; SEO dostu ama kullanıcı odaklı içerik üretin." },
+        { title:"Sosyal Medya Stratejisi", body:"Her platformun dinamiklerine ve doğru zamanlamaya göre formatlar belirleyin." },
+        { title:"E-posta Pazarlaması", body:"Geçmiş alışverişe göre öneri, abonelere özel indirim, mevsimsel kampanya zamanlaması." },
+        { title:"Arama Motoru Pazarlaması (SEM)", body:"Anahtar kelime araştırması, küçük bütçeyle test, performans verisi analizi." },
+        { title:"Veri Analitiği", body:"Google Analytics ve Facebook Insights ile en çok ilgi gören içerik, terk noktaları ve dönüşüm kaynakları haritalanır." }
+      ]},
+      { type:"h", text:"Kanal–Odak Eşleştirmesi" },
+      { type:"table",
+        headers:["Kanal","Odak","Örnek"],
+        rows:[
+          ["SEO","Organik arama sıralaması","Web sitesi içeriği optimizasyonu"],
+          ["SEM","Ücretli arama reklamları","Google Ads kampanyaları"],
+          ["İçerik Pazarlaması","Değer temelli içerik","Blog yazıları, videolar"],
+          ["E-posta Pazarlaması","Doğrudan iletişim","Bültenler, promosyon mailleri"],
+          ["PPC","Tıklama başına ödeme","Display reklamlar"],
+          ["Sosyal Medya","Topluluk etkileşimi","Instagram, LinkedIn paylaşımları"],
+          ["Influencer","Etkileyici iş birlikleri","Ürün incelemeleri"],
+          ["Satış Ortaklığı","Komisyon bazlı satış","Affiliate linkleri"]
+        ]
+      },
+      { type:"h", text:"Rakamlarla Dijital Pazarlama" },
       { type:"stats", items:[
-        { value:"%20", label:"Gelişmiş pazarlarda pasif gelir elde eden hanelerin oranı" },
-        { value:"4.200 $", label:"ABD'de medyan yıllık pasif gelir" },
-        { value:"%36", label:"Y kuşağında pasif gelire sahip olanların tahmini oranı" }
+        { value:"6 Mlr+", label:"Küresel internet kullanıcısı sayısı" },
+        { value:"%61", label:"Geleneksele göre lead başına maliyet avantajı" },
+        { value:"2022", label:"Dijital bütçenin geleneksel bütçeyi ilk kez geçtiği yıl" }
       ]},
-      { type:"h", text:"Vergisel Farkındalık" },
-      { type:"p", text:"Kiyosaki'nin çerçevesinde üç gelir türü vardır: normal kazanılmış gelir (en yüksek vergi), portföy geliri (sermaye kazançları ve temettüler) ve pasif gelir (kira, telif, limited ortaklık kârı). Pasif gelir genellikle bordro vergilerine tabi değildir; bu, servet inşasında ciddi bir avantaj sağlar." },
+      { type:"h", text:"Tarihsel Kilometre Taşları" },
+      { type:"cards", items:[
+        { title:"1971 · İlk E-posta", body:"Ray Tomlinson, DARPA'da ARPANET üzerinden ilk ağ e-postasını gönderdi." },
+        { title:"1978 · İlk Spam", body:"Gary Thuerk 400 işletmeye gönderdiği mesajla 13 milyon dolar üzeri satış yarattı." },
+        { title:"1991 · World Wide Web", body:"Tim Berners-Lee tarafından oluşturuldu; Ağustos 1991'de piyasaya sürüldü." },
+        { title:"1993 · Tıklanabilir Banner", body:"İlk tıklanabilir banner Mosaic tarayıcısıyla birlikte yayına girdi." },
+        { title:"1994 · Yahoo + İlk Banner Reklam", body:"AT&T, Volvo, Zima, IBM banner reklamları Wired Magazine'de yayınlandı." },
+        { title:"1998 · Google Doğdu", body:"MSN ve Yahoo arama motorları aynı yıl piyasaya çıktı." },
+        { title:"2000 · Google AdWords", body:"Bugünkü Google Ads'in temeli olan platform yayınlandı." },
+        { title:"2006 · YouTube Marka Kanalı", body:"Warner Bros. Records, YouTube'daki ilk büyük marka kanalını açtı." },
+        { title:"2017 · Online > TV", body:"Çevrim içi reklam gelirleri (209 milyar $) TV harcamalarını geçti." },
+        { title:"2022 · Bütçe Devrimi", body:"Dijital pazarlama bütçesi ilk kez geleneksel pazarlamanın önüne geçti." }
+      ]},
       { type:"takeaways", items:[
-        "Pasif gelir, zamanı doğrudan parayla takas etmez; ölçeklenebilir varlıklar bu bağı koparır.",
-        "Zihniyet dönüşümü, çalışan/serbest meslek sahibi konumundan işletme sahibi ve yatırımcı konumuna geçişi gerektirir.",
-        "Pasif gelir bir spektrumdur; tam pasif ve yarı pasif akışları birlikte planlayın.",
-        "Başlangıçta yoğun emek kaçınılmazdır; 'kolay para' yanılgısı en büyük tuzaktır.",
-        "Çeşitlendirme ve sürekli öğrenme, sürdürülebilir pasif gelirin olmazsa olmazıdır."
+        "Dijital pazarlama; internet ve elektronik cihazları kullanan tüm pazarlama çabalarını kapsar; hedef doğru mesajı doğru kişiye doğru zamanda iletmektir.",
+        "7 ana kanal: SEO/SEM, içerik, e-posta, PPC, sosyal medya, influencer ve satış ortaklığı.",
+        "Dijital pazarlama, lead başına %61 daha düşük maliyet ve küresel erişim sunar.",
+        "İki yönlü iletişim ve ölçülebilirlik, müşteri memnuniyetini geleneksel pazarlamadan çok daha kolay sağlar.",
+        "Strateji 7 adımdan oluşur: hedef kitle, marka, içerik, sosyal medya, e-posta, SEM, veri analitiği."
       ]}
     ]
   },
-  { id:"modeller", shortTitle:"Modellere Genel Bakış",
-    title:'Pasif Gelir <em>Modellerine</em> Genel Bakış',
-    lead:"Dijital ürünlerden gayrimenkule, bağlı kuruluştan lisanslamaya altı temel model. Hedef bir katalog sunmak değil; size uyan modeli seçmek için bir çerçeve kazandırmak.",
+
+  /* 2 */
+  { id:"seo", shortTitle:"SEO ve Arama Motorları",
+    title:'SEO ve <em>Arama Motorları</em>',
+    lead:"İnternette 1,7 milyar web sitesi var; kullanıcıların %92'si arama sonuçlarında ilk sayfayı hiç geçmiyor. SEO, görünmezlik sorununu çözen ve markanızı potansiyel müşterilerin gerçekten gördüğü ilk sonuçlara taşıyan teknik bir disiplindir.",
     blocks:[
-      { type:"h", text:"Modellerin Ortak DNA'sı" },
-      { type:"p", text:"Tüm modeller önce yoğun bir kurulum aşaması, ardından azalan müdahale ile gelen gelir akışı sunar. Hiçbiri 'sıfır emek' vaat etmez. Asıl soru şudur: kurulumdan sonra ne kadar sürekli bakım yapabilirim?" },
-      { type:"cards", items:[
-        { title:"Dijital Ürünler", body:"E-kitap, kurs, şablon, yazılım. Yüksek kâr marjı ve sınırsız ölçek; kurulum zaman ister, rekabet yoğundur." },
-        { title:"Bağlı Kuruluş Pazarlaması", body:"Başkasının ürününü tanıtıp komisyon kazanırsınız. Düşük başlangıç, ancak trafiğe ve güvene bağımlı." },
-        { title:"Yatırım Araçları", body:"Temettü hissesi, ETF, tahvil, kripto stake. En pasif modeldir; sermaye ve risk toleransı ister." },
-        { title:"Gayrimenkul", body:"Konut/ofis/depo kirası veya kitle fonlaması. Somut varlık, enflasyon koruması; yüksek sermaye." },
-        { title:"Lisanslama ve Telif", body:"Müzik, fotoğraf, patent, marka. Bir kez üret, yıllarca telif al; rekabet ve fikri mülkiyet koruması zor." },
-        { title:"Yapay Zekâ Destekli Akışlar", body:"Otomatik içerik, AI ajanları, dijital abonelikleri. 2026'nın en hızlı büyüyen modeli; doğru niş ve sistem şart." }
-      ]},
-      { type:"h", text:"Size Uygun Modeli Seçmek" },
+      { type:"h", text:"SEO Nedir, Neden Önemlidir?" },
+      { type:"p", text:"SEO (Search Engine Optimization), web sitelerinin ve sayfaların arama motoru sonuç sayfalarındaki (SERP) görünürlüğünü ve performansını iyileştirme uygulamasıdır. Ücretli reklamcılıktan farklı olarak, organik trafiğin miktarını ve kalitesini artırmaya odaklanır." },
+      { type:"callout", title:"Stratejik Önem", text:"Doğru uygulandığında SEO; organik trafik, marka bilinirliği ve dijital rekabette güçlü konum kazandırır. Arama motorlarında görünür olmayan bir web sitesi, dijitalde neredeyse <strong>yok hükmündedir</strong>." },
+      { type:"h", text:"Arama Motorları Nasıl Çalışır?" },
       { type:"steps", items:[
-        { title:"İlgi alanınızı ve sürdürülebilir bir sektör seçin", body:"Uzun vadede ilginizi koruyacak ve trendlerden hızla etkilenmeyecek bir alanda derinleşin." },
-        { title:"Dijital mi, fiziksel mi?", body:"Dijital ürünler düşük sermaye, fiziksel ortam daha somut getiri sunar. Kendi mizacınızı tanıyın." },
-        { title:"Sektörden kişilerle görüşün", body:"Başarı kadar başarısızlık hikâyelerini de dinleyin; gerçekçi beklentiler oluşturun." },
-        { title:"Haftalık, aylık ve yıllık taslak plan yapın", body:"Kurulum aşamasının zaman çizelgesini çıkarın. İlk 3 ay, 6 ay ve 12 ay hedeflerinizi netleştirin." },
-        { title:"Risk toleransınızı ve bakım kapasitenizi ölçün", body:"Ne kadar sermaye kaybedebilirsiniz? Kurulumdan sonra haftada kaç saat ayırabilirsiniz?" }
+        { title:"Tarama (Crawling)", body:"Google botları (crawler/spider) web sayfalarını keşfeder ve indirir." },
+        { title:"Dizinleme (Indexing)", body:"Metin, görsel ve video analiz edilir; sayfa Google dizinine kaydedilir. Tüm sayfaların dizine ekleneceği garanti edilmez." },
+        { title:"Sıralama (Ranking)", body:"Sorgu anlamı, içerik alakası, içerik kalitesi ve kullanılabilirlik kriterleriyle sayfa sıralanır." }
       ]},
+      { type:"h", text:"SEO'nun Üç Temel Bileşeni" },
+      { type:"cards", items:[
+        { title:"Teknik SEO", body:"Altyapı: site hızı, mobil uyumluluk, sitemap, robots.txt, URL yapısı, Core Web Vitals. Teknik altyapı olmadan diğer çalışmaların etkisi sınırlı kalır." },
+        { title:"Site İçi SEO (On-Page)", body:"Sayfa içeriği: başlık hiyerarşisi, içerik kalitesi, anahtar kelime kullanımı, görsel optimizasyonu. Faydalı ve ilgi çekici içerik, sıralamayı en çok etkileyen faktördür." },
+        { title:"Site Dışı SEO (Off-Page)", body:"Backlink stratejisi, marka otoritesi ve sosyal sinyaller. PageRank bağlantıları kullanır; ancak Google'da bağlantılardan çok daha fazla faktör vardır." }
+      ]},
+      { type:"h", text:"Başarılı SEO'nun 7 Adımı (Moz)" },
+      { type:"steps", items:[
+        { title:"Tarama Erişilebilirliği", body:"Robots.txt'yi doğru yapılandırın; önemli sayfaların engellenmediğinden emin olun." },
+        { title:"İlgi Çekici İçerik", body:"Arayıcının sorgusunu yanıtlayan, benzersiz ve güncel içerik üretin." },
+        { title:"Anahtar Kelime Optimizasyonu", body:"Anahtar kelimeleri doğal yerleştirin; keyword stuffing spam politikalarına aykırıdır." },
+        { title:"Kullanıcı Deneyimi", body:"Hızlı yükleme ve Core Web Vitals metriklerini optimize edin." },
+        { title:"Paylaşılabilir İçerik", body:"Doğal backlink ve atıf kazanan, paylaşılabilir içerik üretin." },
+        { title:"Başlık ve Snippet", body:"Sayfaya özgü, net ve kısa başlık + açıklama; CTR'yi doğrudan artırır." },
+        { title:"Schema İşaretlemesi", body:"Snippet/schema markup ile SERP'lerde zengin sonuçlar elde edin." }
+      ]},
+      { type:"h", text:"White Hat vs Black Hat" },
+      { type:"table",
+        headers:["Özellik","White Hat","Black Hat"],
+        rows:[
+          ["Tanım","Yönergelere uyan etik teknikler","Algoritmayı manipüle eden riskli teknikler"],
+          ["Odak","Kullanıcı için kaliteli içerik","Arama motorunu kandırma"],
+          ["Sonuç","Sürdürülebilir, kalıcı sıralama","Geçici kazanç, uzun vadede ceza riski"],
+          ["Örnekler","Doğal backlink, teknik optimizasyon","Gizli metin, cloaking, link spam, keyword stuffing"],
+          ["Risk","Düşük; Google onaylı","Yüksek; siteler kaldırılabilir"]
+        ]
+      },
+      { type:"h", text:"Önemli Algoritma Güncellemeleri" },
+      { type:"cards", items:[
+        { title:"2011 · Panda", body:"Düşük kaliteli içerikleri hedefleyen ilk büyük kalite filtresi." },
+        { title:"2012 · Penguin", body:"Yapay backlink ve link spam'i hedefleyen güncelleme." },
+        { title:"2013 · Hummingbird", body:"Doğal dil işleme; sorguları daha bütüncül anlama." },
+        { title:"2015 · Mobil & RankBrain", body:"Mobil aramalar masaüstünü geçti; makine öğrenimi devreye girdi." },
+        { title:"2019 · BERT", body:"Sorgu bağlamını derinden anlama; uzun kuyruk sorgular için kritik." },
+        { title:"2021 · Mobile-First Indexing", body:"Mart 2021'de tam geçiş tamamlandı; siteler önce mobilden değerlendirilir." }
+      ]},
+      { type:"h", text:"Pratik Uygulamalar" },
+      { type:"p", text:"Sitenizin Google'da olup olmadığını kontrol etmek için <em>site:alanadiniz.com</em> sorgusunu kullanın. URL'ler açıklayıcı kelimeler içermeli (örn. <em>/pets/cats.html</em>); rastgele tanımlayıcılardan kaçının. Görsellere açıklayıcı alt text ekleyin. Yinelenen içerik için 301 yönlendirmesi veya <em>rel=\"canonical\"</em> kullanın." },
+      { type:"stats", items:[
+        { value:"1,7 Mlr", label:"İnternette aktif web sitesi sayısı" },
+        { value:"%92", label:"Kullanıcının ilk sayfayı geçmeme oranı" },
+        { value:"3", label:"Arama motoru aşaması: tarama, dizinleme, sıralama" }
+      ]},
+      { type:"takeaways", items:[
+        "SEO; organik görünürlüğü artıran sistematik bir disiplindir, ücretli reklamcılıktan farklıdır.",
+        "Arama motorları üç aşamada çalışır: tarama, dizinleme, sıralama.",
+        "Üç ana bileşen: Teknik SEO, On-Page SEO, Off-Page SEO — üçü dengeli uygulanmalı.",
+        "İçerik kalitesi en önemli sıralama faktörüdür; benzersiz, güncel, kullanıcı odaklı olmalı.",
+        "White hat sürdürülebilir, black hat ceza riski taşır; uzun vade için tek doğru yol white hat'tir."
+      ]}
+    ]
+  },
+
+  /* 3 */
+  { id:"sosyal", shortTitle:"Sosyal Medya",
+    title:'Sosyal Medya <em>Pazarlaması</em>',
+    lead:"4,89 milyar kullanıcı, günde 151 dakika ortalama kullanım, tüketicilerin %81'i sonraki satın alımı için sosyal medyaya bakıyor. Asıl mesele takipçi sayısı değil; doğru strateji, doğru platform ve doğru içerik dengesidir.",
+    blocks:[
+      { type:"h", text:"Sosyal Medya Pazarlaması Nedir?" },
+      { type:"p", text:"Sosyal medya pazarlaması (SMM); markaların sosyal medya platformları üzerinden hedef kitleyle etkileşime geçerek ürün ve hizmetlerini tanıttığı, satışlarını artırdığı aktivitelerin bütünüdür. Facebook, Instagram, X, TikTok, LinkedIn, YouTube, Pinterest, Snapchat, Threads ve WhatsApp/Telegram bu kanalların başlıcalarıdır." },
+      { type:"h", text:"8 Adımlı Sosyal Medya Stratejisi" },
+      { type:"steps", items:[
+        { title:"SMART Hedefler", body:"Spesifik, ölçülebilir, ulaşılabilir, ilgili, zaman bağlı hedefler. Örn: '6 ayda Instagram takipçilerini %20 artırmak.'" },
+        { title:"Hedef Kitleyi Tanı", body:"Demografi, ilgi alanı ve davranış kalıplarıyla persona oluşturun." },
+        { title:"Rakipleri Araştır", body:"Hangi platformda, hangi formatta, hangi sıklıkta paylaşım yapıyorlar?" },
+        { title:"Sosyal Medya Denetimi", body:"Mevcut hesapların performansını ve marka tutarlılığını gözden geçirin." },
+        { title:"Profilleri Optimize Et", body:"Bio, görsel kimlik, link, CTA — her detay marka deneyimini şekillendirir." },
+        { title:"İlham Bul", body:"Sektör trendleri, viral içerikler, başarılı kampanyaları izleyin ama kopyalamayın." },
+        { title:"İçerik Takvimi", body:"3-5 içerik direği etrafında platforma özel takvim hazırlayın." },
+        { title:"Test Et, Değerlendir, Ayarla", body:"KPI'lara göre stratejiyi iyileştirin; süreç döngüseldir." }
+      ]},
+      { type:"h", text:"Hangi Platform, Kimin İçin?" },
+      { type:"table",
+        headers:["Platform","En İyi Kullanım","Hedef Kitle"],
+        rows:[
+          ["Facebook","Reklamla yeni müşteri kazanımı","Genel kitle, Baby Boomers; %70 Amerikalı yetişkin"],
+          ["Instagram","Marka yakınlığı, görsel satış","18-34 yaş; görsel alışveriş yapanlar"],
+          ["LinkedIn","B2B, yetenek çekme","Profesyoneller; 200 ülkede iş dünyası"],
+          ["TikTok","Z kuşağı, viral içerik","Gen Z; kısa video sevenler"],
+          ["YouTube","Eğitim, demo, uzun form","Tüm yaşlar; 2,5 milyar kullanıcı"],
+          ["Pinterest","Görsel ürün keşfi","Kadın kullanıcılar (%76,7); alışveriş odaklı"]
+        ]
+      },
+      { type:"h", text:"80-20 Kuralı: İçerik Dengesi" },
+      { type:"callout", title:"Altın Oran", text:"Gönderilerinizin <strong>%80'i kitlenize değer sunmalı</strong> (eğitim, eğlence, ilham); sadece <strong>%20'si doğrudan tanıtım</strong> içermeli. Bu denge marka güvenini korur ve satışı tetikler." },
+      { type:"h", text:"İçerik Takvimi Oluşturma" },
+      { type:"steps", items:[
+        { title:"3-5 İçerik Direği Belirleyin", body:"Eğitici, eğlenceli/duygusal, kullanıcı kaynaklı (UGC), tanıtım ve düşünce liderliği kategorileri." },
+        { title:"Platforma Göre Uyarlayın", body:"Instagram görsel, LinkedIn profesyonel, TikTok eğlenceli kısa video formatı." },
+        { title:"Sıklığı Planlayın", body:"Instagram 3-5/hafta + Stories/Reels; LinkedIn 2-3/hafta; TikTok 2-4/hafta; X 1-3 tweet/gün; Pinterest 5+ pin/hafta; YouTube 1 video/hafta." },
+        { title:"Zamanlamayı Optimize Edin", body:"Hedef kitlenizin en aktif olduğu saatleri platform analitiklerinden çıkarın." },
+        { title:"Esneklik Bırakın", body:"Takvimde %20 boşluk: trendlere ve spontane fırsatlara yer verin." }
+      ]},
+      { type:"h", text:"Influencer Pazarlaması" },
+      { type:"cards", items:[
+        { title:"Mega (1M+)", body:"Kitlesel erişim; yüksek maliyet, düşük etkileşim oranı. Marka bilinirliği kampanyalarında ideal." },
+        { title:"Macro (100K-1M)", body:"Geniş erişim + niş otoritesi dengesi. Lansman kampanyalarında etkili." },
+        { title:"Micro (10K-100K)", body:"Yüksek etkileşim oranı; spesifik kitleye derin nüfuz. ROI odaklı kampanyalar için." },
+        { title:"Nano (1K-10K)", body:"En yüksek otantisite ve dönüşüm. Yerel/spesifik kampanyalarda altın değerindedir." }
+      ]},
+      { type:"p", text:"2024 Influencer Marketing Report'a göre tüketicilerin <em>%86'sı yılda en az bir kez influencer'dan ilham alarak satın alma yapıyor</em>. Influencer seçiminde takipçi sayısından çok <strong>etkileşim oranı ve kitle uyumu</strong> belirleyicidir." },
       { type:"vaka",
-        title:"Ahmet'in Yol Ayrımı",
-        baglam:"30 yaşında, tam zamanlı çalışan. Aylık 5.000 TL birikimi, yazma ve basit video düzenleme becerisi var. Haftada 10 saatini pasif gelir kurulumuna ayırabiliyor.",
-        analiz:"Sınırlı sermaye, yatırım araçları ve gayrimenkulü eler. Yazma becerisi e-kitabı, video becerisi ise mini kursu mümkün kılar. Bağlı kuruluş daha yavaş başlar ve trafiğe bağımlıdır.",
-        sonuc:"Ahmet, sağlıklı yaşam üzerine bir e-kitap yazıp e-posta otomasyonu kurar. 3 ayda ürün, 6. aydan itibaren düzenli pasif satış akışı."
+        title:"Perakende Markasının 8 Adımlı Başarısı",
+        baglam:"Bir perakende markası, sosyal medya varlığını güçlendirmek için 8 adımlı stratejiyi uyguladı. İlk olarak, 6 ayda Instagram takipçilerini %20 artırma SMART hedefi belirlediler.",
+        analiz:"18-34 yaş aralığındaki görsel alışveriş yapanlara odaklandılar. Rakip analizi ile içerik boşlukları belirlediler. 80-20 kuralıyla haftada 3-5 Instagram gönderisi, günlük Stories ve haftada 2-3 Reels paylaştılar. İçeriklerin %80'i stil ipuçları, kombin önerileri ve müşteri hikayeleriydi.",
+        sonuc:"3 ay sonunda takipçi büyüme oranı %25'i aştı, etkileşim oranı %40 arttı ve sosyal medya kaynaklı satışlar %35 yükseldi."
       },
-      { type:"takeaways", items:[
-        "Her model aktif bir kurulumla başlar; pasiflik derecesi sonradan farklılaşır.",
-        "Dijital ürünler yüksek kâr marjı, yatırım araçları en yüksek pasiflik sunar.",
-        "Bağlı kuruluş düşük maliyetli ama trafiğe bağımlı; gayrimenkul somut ama sermaye gerektirir.",
-        "Doğru model; zamanınız, sermayeniz, ilgi alanınız ve risk toleransınızla örtüşen modeldir."
-      ]}
-    ]
-  },
-  { id:"dijital", shortTitle:"Dijital Ürünler",
-    title:'Dijital Ürünlerle <em>Pasif Gelir</em>',
-    lead:"Bir kez üret, sonsuz sat. E-öğrenme pazarının 2030'a kadar 840 milyar dolara, dijital ticaretin 2034'te 26 trilyon doları aşacağı bir çağdayız.",
-    blocks:[
-      { type:"h", text:"Dijital Ürünü Pasif Gelire Dönüştüren Mekanik" },
-      { type:"p", text:"Cevap basit: bir kez oluştur, tekrar tekrar sat. Ürünü ürettikten sonra 10 ya da 10.000 kopya satın, ek üretim maliyetiniz sıfırdır. Envanter yok, kargo yok, depo yok. Sipariş gözetimsiz şekilde anında teslim edilir." },
-      { type:"callout", title:"Kritik Ayrım", text:"Aktif gelirde çalışma süreniz azaldıkça geliriniz düşer. Dijital ürünlerde kurulum sonrası gelir, sizin aktif çalışma sürenizden bağımsızlaşır." },
-      { type:"table",
-        headers:["Özellik","Dijital Ürün","Fiziksel Ürün"],
-        rows:[
-          ["Envanter","Yok; sınırsız kopya","Depolama ve stok takibi zorunlu"],
-          ["Kargo","Anında dijital teslim","Lojistik ve sevkiyat"],
-          ["Kâr Marjı","Yüksek","Düşük-orta"],
-          ["Ölçek","Sınırsız","Her ek ürün için maliyet"],
-          ["Küresel Erişim","Anında","Gümrük ve bölgesel sınırlamalar"],
-          ["Başlangıç Sermayesi","Düşük; çoğunlukla zaman","Yüksek"]
-        ]
-      },
-      { type:"h", text:"Dijital Ürün Oluşturmanın 5 Adımı" },
-      { type:"steps", items:[
-        { title:"Hedef kitleyi tanımla", body:"Somut bir problemi çözün; talep ve gereklilik buradan doğar." },
-        { title:"Fikir beyin fırtınası", body:"Ücretsiz alternatiflere karşı değerinizi açıkça ortaya koyun." },
-        { title:"Ürünü planla", body:"Ürün Merdiveni: ücretsiz, ana ürün, upsell, downsell." },
-        { title:"Ürünü oluştur", body:"Yazılı, video, ses; interaktif quizlerle değeri artırın." },
-        { title:"Satış ve pazarlama", body:"Eşsiz satış önerinizi (USP) net biçimde ifade edin." }
-      ]},
-      { type:"h", text:"Nerede Satmalı?" },
+      { type:"h", text:"Temel Metrikler" },
       { type:"cards", items:[
-        { title:"Kendi Mağazanız", body:"Shopify, ThriveCart, Gumroad. Tam kontrol ve yüksek marj; trafiği siz üretirsiniz." },
-        { title:"Niş Pazaryerleri", body:"Teachers Pay Teachers gibi. Hazır kitle avantajı; %50'ye varan komisyon." },
-        { title:"Sosyal Medya Mağazaları", body:"Instagram, TikTok Shop. Hızlı erişim; algoritma bağımlılığı yüksek." }
-      ]},
-      { type:"proscons",
-        pros:["Düşük genel maliyetler: stok, kargo ve depolama yok","Yüksek kâr marjları ve tekrar eden satış","Otomasyonla 7/24 satış ve teslim","Sınırsız ölçeklenebilirlik","Anında küresel erişim"],
-        cons:["Korsanlık riski ve dijital güvenlik ihtiyacı","Kalabalık pazar ve fiyat baskısı","Video/ses üretim ekipman maliyeti","İçerik güncel kalmazsa satışlar düşer"]
-      },
-      { type:"takeaways", items:[
-        "Dijital ürün 'bir kez oluştur, sürekli sat' ilkesiyle zaman-para bağını koparır.",
-        "Pasif gelir kolay değildir; asıl pasiflik, kurulum sonrası gelirin çalışma süresinden bağımsızlaşmasıdır.",
-        "Platform stratejik bir karardır: kendi mağaza yüksek marj, pazaryeri hazır kitle sunar.",
-        "Otomasyon dijital ürünü gerçek anlamda pasif yapan katmandır."
-      ]}
-    ]
-  },
-  { id:"affiliate", shortTitle:"Bağlı Kuruluş Pazarlaması",
-    title:'Bağlı <em>Kuruluş</em> Pazarlaması',
-    lead:"Dijital ağızdan ağıza tavsiyenin ücretlendirilmiş hâli. Kendi ürününüz, stoğunuz, müşteri desteğiniz yok; sadece güvendiğiniz ürünleri özel takip linkleriyle paylaşırsınız.",
-    blocks:[
-      { type:"h", text:"Sistem Nasıl Çalışır?" },
-      { type:"p", text:"Sistem dört aktör etrafında döner: satış ortağı, satıcı, bağlı kuruluş ağı (Awin, CJ, ShareASale) ve müşteri. Tıklama sonrası tarayıcıya çerez yerleşir; çerez süresi içinde (24 saat–90 gün) yapılan satın alımlarda komisyon size aittir." },
-      { type:"h", text:"Niş Seçimi: Gelirinizin Temel Taşı" },
-      { type:"p", text:"Spesifiklik, otorite ve güven doğurur. 'Spor ayakkabıları' değil, 'yeni başlayanlar için yürüyüş ayakkabısı testleri'. Tekrarlayan komisyon potansiyeli (yazılım abonelikleri, kurs platformları), yüksek dönüşüm ve güvenilir takip-ödeme sistemi olan partnerler seçin." },
-      { type:"table",
-        headers:["Özellik","Web Sitesi / Blog","Sosyal Medya"],
-        rows:[
-          ["İçerik Sahipliği","Tamamen size ait","Platforma ait"],
-          ["Algoritma Bağımlılığı","Düşük","Yüksek"],
-          ["Pasiflik","Evergreen içerik yıllarca çalışır","Sürekli üretim gerekir"],
-          ["Kitle Hızı","Yavaş ama kalıcı","Hızlı ama geçici"]
-        ]
-      },
-      { type:"h", text:"Güven Seviyeleri (Pat Flynn)" },
-      { type:"cards", items:[
-        { title:"İlişiksiz", body:"Ürünle bağı yok; en düşük dönüşüm. Yalnızca link yerleştirme." },
-        { title:"İlişkili", body:"Aynı nişte ama ürünü bizzat kullanmamış. Orta dönüşüm." },
-        { title:"Dahil Olan", body:"Test edip kullandığı ürünü önerir. En yüksek dönüşüm ve itibar." }
-      ]},
-      { type:"h", text:"Başlama Adımları" },
-      { type:"steps", items:[
-        { title:"Niş belirleme", body:"Spesifik ve tutkunuza yakın bir alt alan seçin." },
-        { title:"Platform seçimi", body:"Blog uzun ömür, sosyal medya hız sunar; ideal olarak hibrit kullanın." },
-        { title:"Partner programı seçimi", body:"2-3 uyumlu programla başlayın; komisyon, çerez süresi ve uyumu test edin." },
-        { title:"Sorun çözen içerik", body:"Karşılaştırmalar, rehberler, kişisel deneyimler; salt reklam değil." },
-        { title:"Link yerleştirme ve takip", body:"Dönüşüm verilerine göre stratejiyi optimize edin." },
-        { title:"Sabır", body:"İlk 3-6 ay 'gözyaşı vadisi'dir; ardından hokey sopası etkisi devreye girer." }
+        { title:"Reach (Erişim)", body:"Gönderiyi gören benzersiz kullanıcı sayısı." },
+        { title:"Impressions", body:"Gönderinin görüntülenme sayısı; aynı kullanıcı birden fazla kez sayılır." },
+        { title:"Engagement Rate", body:"Beğeni, yorum, paylaşımın toplam erişime oranı." },
+        { title:"CTR", body:"Gönderiyi görenlerin link tıklama yüzdesi." },
+        { title:"ROAS", body:"Reklam Harcaması Getirisi: 1 TL reklam başına gelir." },
+        { title:"UGC", body:"User Generated Content: kullanıcı tarafından oluşturulan içerik." }
       ]},
       { type:"stats", items:[
-        { value:"12-13 Mlr $", label:"Bağlı kuruluş pazarının küresel büyüklüğü" },
-        { value:"%50'ye kadar", label:"Dijital ürünlerde komisyon oranı" },
-        { value:"24-90 gün", label:"Tipik çerez (atfetme) süresi" }
+        { value:"4,89 Mlr", label:"Küresel sosyal medya kullanıcısı (2023)" },
+        { value:"151 dk", label:"Günlük ortalama kullanım süresi" },
+        { value:"%81", label:"Tüketicinin satın alma öncesi sosyal medyayı kullanma oranı" }
       ]},
       { type:"takeaways", items:[
-        "Spesifik niş, güveni ve dönüşümü maksimize eder.",
-        "Blog uzun vadeli pasiflik, sosyal medya hızlı kitle sunar; ikisini sinerjiyle kullanın.",
-        "Güven katmanı arttıkça komisyon geliri katlanır.",
-        "Sabır şarttır: ilk aylar emek, sonraki yıllar bileşik kazançtır."
+        "Başarılı strateji 8 adımdan oluşur ve döngüseldir: sürekli ölçüm ve iyileştirme şart.",
+        "Her platformun kendine özgü demografisi vardır; doğru platform seçimi kritiktir.",
+        "80-20 kuralı: içeriğin %80'i değer, %20'si tanıtım.",
+        "Video, çoğu platformda en yüksek etkileşimi alan içerik formatıdır.",
+        "Influencer marketing tüketicilerin %86'sının satın alma kararını etkiliyor; etkileşim ve uyum öne çıkar."
       ]}
     ]
   },
-  { id:"yatirim", shortTitle:"Yatırım Araçları",
-    title:'Yatırım Araçları ile <em>Pasif Gelir</em>',
-    lead:"Paranızın sizin için çalıştığı, en yüksek pasiflik düzeyine sahip model. Sermaye, sabır ve bileşik getiri üçgeniyle uzun vadede servet inşa eder.",
+
+  /* 4 */
+  { id:"icerik", shortTitle:"İçerik & Blog",
+    title:'İçerik Pazarlama ve <em>Blog Yönetimi</em>',
+    lead:"Anahtar kelime 'değer'dir — içerik pazarlamasını diğer tüm pazarlama yöntemlerinden ayıran tek kelime. 2013'te şirketlerin %93'ü içerik pazarlamasını genel stratejilerine entegre etmişti; günümüzde bir 'opsiyon' değil, zorunluluk.",
     blocks:[
-      { type:"h", text:"Başlıca Araçlar" },
-      { type:"cards", items:[
-        { title:"Temettü Hisseleri", body:"Düzenli kâr payı dağıtan şirketlerden hisse alarak nakit akışı kurun." },
-        { title:"ETF'ler", body:"Çeşitlendirilmiş portföye düşük maliyetle erişim; özellikle endeks ve temettü ETF'leri." },
-        { title:"Tahvil ve Bono", body:"Sabit gelir araçları; portföyün istikrar çıpası." },
-        { title:"REIT'ler", body:"Gayrimenkul yatırım ortaklıkları; mülk yönetmeden kira ve değer artışı geliri." },
-        { title:"P2P Borçlanma", body:"Eşler arası kredi platformları; yüksek getiri, yüksek temerrüt riski." },
-        { title:"Kripto Stake/Validatör", body:"Blokzincir ödülleri; volatilite ve regülasyon riskini hesaplayın." }
-      ]},
-      { type:"h", text:"Bileşik Getirinin Sessiz Gücü" },
-      { type:"p", text:"Erken başlamak, daha çok yatırım yapmaktan değerlidir. 30 yıl boyunca ayda 250 $ yatıran biri, 20 yıl boyunca ayda 400 $ yatırandan daha az ana para koysa bile bileşik etki sayesinde daha yüksek bir bakiyeye ulaşır." },
-      { type:"callout", title:"72 Kuralı", text:"Yıllık enflasyon veya getiri oranını 72'ye bölün; sonuç yaşam maliyetinizin ya da paranızın kaç yılda ikiye katlanacağıdır." },
-      { type:"stats", items:[
-        { value:"%7", label:"Uzun vadeli ortalama hisse senedi getirisi (USD bazlı)" },
-        { value:"%2-4", label:"Tipik temettü verimi aralığı" },
-        { value:"DRIP", label:"Otomatik yeniden yatırım planları bileşik etkiyi en yüksek seviyeye taşır" }
-      ]},
-      { type:"proscons",
-        pros:["En yüksek pasiflik düzeyi","Bileşik etkiyle ölçeklenen büyüme","Çeşitlendirme kolaylığı","Diğer modellerden gelen kâr buraya yeniden yatırılabilir"],
-        cons:["Yüksek başlangıç sermayesi gerekebilir","Piyasa volatilitesi ve sermaye kaybı riski","Vergi planlaması ihmal edilirse net getiri düşer","Duygusal kararlar uzun vadeli getiriyi sabote eder"]
+      { type:"h", text:"İçerik Pazarlaması Neden Farklı?" },
+      { type:"p", text:"İçerik pazarlaması; belirli bir değer ve alaka düzeyine sahip tutarlı içeriklerin hedef kitleye sunulması ve onların harekete geçirilmesi sürecidir. Geleneksel reklamcılık doğrudan satış yaparken, içerik pazarlaması <strong>önce değer sunar</strong>. Okuyucuya bir şey satmaya çalışmadan onun sorununu çözmeye yardımcı olursunuz." },
+      { type:"callout", title:"Reklam mı İçerik mi?", text:"Placement için ödeme yaparsanız <strong>reklam</strong> olur; ödeme yapmazsanız ve içerik değerli ve ilgiliyse <strong>içerik pazarlaması</strong> olur. Forrester'a göre B2B müşterilerin %60'ı satış temsilcilerini öncelikli bilgi kaynağı olarak görmek istemiyor." },
+      { type:"h", text:"İçerik Pazarlama Hunisi (ToFu / MoFu / BoFu)" },
+      { type:"table",
+        headers:["Aşama","Alıcı Durumu","İçerik Örnekleri"],
+        rows:[
+          ["Farkındalık (ToFu)","Sorunu fark eder ama tanımlamak için dile sahip olmayabilir","Blog yazıları, öz değerlendirme listeleri, kısa videolar"],
+          ["Değerlendirme (MoFu)","Sorununu adlandırmış ve aktif çözüm araştırır","Karşılaştırma rehberleri, uzman açıklamaları, vaka analizleri"],
+          ["Karar (BoFu)","Çözüm kategorisi seçilmiş, satıcılar arasında karar veriyor","Müşteri referansları, ROI hesaplayıcıları, demolar, ücretsiz deneme"]
+        ]
       },
+      { type:"h", text:"7 Adımlı İçerik Üretim İş Akışı" },
+      { type:"steps", items:[
+        { title:"Fikir Bulma ve Araştırma", body:"Kitle ihtiyaçlarını, anahtar kelimeleri ve içerik boşluklarını tara." },
+        { title:"Planlama ve Brief", body:"Hedef, kitle, anahtar kelime, format ve metrik içeren brief hazırla." },
+        { title:"Yazma ve Taslak", body:"İçeriği plan dahilinde yaz; akıcı, faydalı ve özgün ol." },
+        { title:"Düzenleme", body:"Dilbilgisi, tutarlılık, SEO ve okunabilirlik kontrolü yap." },
+        { title:"Onay", body:"İlgili paydaşlardan onay al; yasal ve marka kontrolünden geçir." },
+        { title:"Yayınlama", body:"CMS'e ekle; meta etiketler, görsel ve dahili linkleri tamamla." },
+        { title:"Dağıtım ve Tanıtım", body:"Sosyal medya, e-posta ve bağlı kanallarda etkin dağıtım yap." }
+      ]},
+      { type:"h", text:"SEO Uyumlu Blog Yazma Teknikleri" },
+      { type:"steps", items:[
+        { title:"Birincil Anahtar Kelime", body:"Her içerik tek bir birincil anahtar kelime için optimize edilmeli; alaka, arama hacmi ve zorluk dengesi gözetilir." },
+        { title:"İçerik Boşluklarını Belirle", body:"Rakiplerin kapsadığı ama sizin kapsamadığınız konular fırsat alanlarıdır." },
+        { title:"İkincil Anahtar Kelimeler", body:"Eş anlamlılar, ilgili alt konular ve uzun kuyruk varyasyonlarıyla görünürlüğü artır." },
+        { title:"Arama Niyetini Karşıla", body:"Bilgilendirici, navigasyonel, ticari, işlemsel — hangi niyeti hedefliyorsan içeriği ona göre kur." },
+        { title:"Kaliteli İçerik Üret", body:"Doğru, yararlı, özgün ve ilgi çekici içerik arama görünürlüğünü maksimize eder." },
+        { title:"Anahtar Kelimeleri Doğal Kullan", body:"Keyword stuffing'ten kaçın; içerik akışını bozmadan yerleştir." },
+        { title:"Alt Başlıklarla Yapılandır", body:"H1, H2, H3 hiyerarşisi; okuyucu, arama motoru ve AI sistemleri için anlaşılırlık sağlar." },
+        { title:"Okunabilirliği Artır", body:"Kısa cümle ve paragraflar, net dil, destekleyici görseller ve tablolar." }
+      ]},
+      { type:"h", text:"Blog Yönetimi ve İçerik Takvimi" },
+      { type:"p", text:"Editöryal takvim, ekibin tüm içeriği yönetmesini ve planlamaları uyum içinde tamamlamasını sağlar. <em>Tutarlılık</em>, kitlenizin geri gelmesini sağlayan tek anahtardır. Belirli yayın tarihleri belirleyin, bağlı kalın. CMS, içerik üretimi-arşivleme-yayınlama-dağıtım sürecini BT müdahalesi olmadan yönetmenizi sağlar." },
+      { type:"h", text:"Performans Metrikleri" },
+      { type:"cards", items:[
+        { title:"Engaged Session", body:"10 saniyeden uzun, bir anahtar olay içeren veya 2+ sayfa görüntüleyen oturum." },
+        { title:"Engagement Rate", body:"Etkileşimli oturumların toplam oturumlara yüzdesi." },
+        { title:"Bounce Rate", body:"Etkileşimsiz oturum oranı; düşük tutmak hedef." },
+        { title:"Evergreen", body:"Zamanla değerini kaybetmeyen, her zaman geçerli içerik." }
+      ]},
+      { type:"h", text:"Tarihsel Bakış" },
+      { type:"cards", items:[
+        { title:"1732 · Poor Richard's Almanack", body:"Benjamin Franklin basım işini tanıtmak için yayınladı." },
+        { title:"1895 · The Furrow", body:"John Deere'nin çiftçi dergisi; hâlâ 40 ülkede 1,5 milyon okuyucu." },
+        { title:"1900 · Michelin Guide", body:"Sürücülere bakım ve seyahat rehberi; ilk baskıda 35.000 kopya ücretsiz." },
+        { title:"1996 · Terimin Doğuşu", body:"'Content marketing' terimi John F. Oppedahl tarafından kullanıldı." },
+        { title:"2013 · Yaygın Kabul", body:"Şirketlerin %93'ü içerik pazarlamasını genel stratejilerinin parçası yaptı." }
+      ]},
       { type:"takeaways", items:[
-        "Yatırım araçları en pasif modeldir; sermaye koyduktan sonra müdahale minimumdur.",
-        "Bileşik getiri uzun vadenin sessiz mucizesidir; erken başlamak en kıymetli üstünlüktür.",
-        "Çeşitlendirme tek bir aracın çöküşünü tüm portföye yayılmaktan korur.",
-        "Duygusal disiplin, teknik beceriden daha çok kazandırır."
+        "İçerik pazarlaması değer odaklıdır; satıştan önce çözüm ve bilgi sunar.",
+        "Huni üç aşamadan oluşur: ToFu farkındalık, MoFu değerlendirme, BoFu karar.",
+        "Her huni aşaması farklı içerik türü ister: blog → vaka analizi → demo.",
+        "7 adımlı iş akışı: fikir, plan, yazma, düzenleme, onay, yayın, dağıtım.",
+        "SEO uyumu için anahtar kelime, arama niyeti ve okunabilirlik üçlüsü olmazsa olmazdır.",
+        "İçerik takvimi tutarlılık demektir; tutarlılık ise güvenin tek yoludur."
       ]}
     ]
   },
-  { id:"gayrimenkul", shortTitle:"Gayrimenkul",
-    title:'Gayrimenkulden <em>Düzenli Nakit Akışı</em>',
-    lead:"Somut varlığa dayanan klasik pasif gelir modeli. Doğrudan mülk sahipliği veya kitle fonlamasıyla farklı kapı aralıkları sunar.",
+
+  /* 5 */
+  { id:"eposta", shortTitle:"E-posta Pazarlama",
+    title:'E-posta <em>Pazarlama</em>',
+    lead:"Harcanan her 1 dolara karşılık 36-44 dolar ROI. 2025 ortalama açılma oranı %42,35. Sosyal medya gönderilerinizin çoğunun görülmediği bir çağda, e-posta hâlâ en doğrudan ve en yüksek getirili kanaldır.",
     blocks:[
-      { type:"h", text:"Üç Farklı Yaklaşım" },
+      { type:"h", text:"E-posta Pazarlama Nedir?" },
+      { type:"p", text:"E-posta pazarlama; bir satıcının mevcut/eski müşterilerle ilişkisini güçlendirmek, sadakat sağlamak, yeni müşteri kazanmak veya hemen satışı tetiklemek amacıyla e-posta mesajları göndermesidir. Salesforce'a göre doğrudan pazarlamanın bir formudur; e-posta ile ürün/hizmet tanıtımı, düşünce liderliği paylaşımı veya kitleyle etkileşim sağlar." },
+      { type:"callout", title:"Liste Felsefesi", text:"Modern e-posta pazarlama, <strong>büyük bir liste oluşturmak</strong> değil, <strong>sağlıklı bir liste geliştirmek</strong> üzerine kuruludur. Listeyi segmentlere ayırıp doğru mesajı doğru zamanda göndermek başarının anahtarıdır." },
+      { type:"h", text:"E-posta Pazarlama Döngüsü" },
+      { type:"steps", items:[
+        { title:"Abone Listesi Oluşturma", body:"Açık rıza (opt-in) ile sağlıklı bir taban kurun." },
+        { title:"Listeyi Segmentlere Ayırma", body:"Demografi, davranış ve müşteri yolculuğu aşamasına göre gruplandırın." },
+        { title:"Doğru Mesajı Tasarlama", body:"Segmente uygun, kişiselleştirilmiş içerik hazırlayın." },
+        { title:"Doğru Zamanda Gönderme", body:"Açılma oranını maksimize edecek saat dilimi ve gün seçilir." },
+        { title:"Metrikleri İzleme", body:"Açılma oranı, CTR, dönüşüm oranı sürekli izlenir." },
+        { title:"Optimizasyon", body:"Verilerden öğrenip mesaj, segment ve zamanı iyileştirin." }
+      ]},
+      { type:"h", text:"7 E-posta Türü" },
       { type:"cards", items:[
-        { title:"Uzun Süreli Kira", body:"Konut, ofis, depo. İstikrarlı aylık nakit akışı; mülk yönetimi ve yasal yükler." },
-        { title:"Kısa Süreli Kira", body:"Airbnb modeli. Yüksek getiri potansiyeli, talep dalgalanması ve operasyon yükü." },
-        { title:"Kitle Fonlaması & REIT", body:"Düşük tutarlarla mülk yönetmeden kira ve değer artışı geliri." }
+        { title:"Bülten (Newsletter)", body:"Düzenli marka ve sektör güncellemeleri; ortalama %36,6 açılma oranı." },
+        { title:"Tanıtım", body:"Yeni ürün, kampanya ve indirim duyuruları için promosyon e-postaları." },
+        { title:"İlişkisel", body:"Müşteriyle duygusal bağ kuran hoşgeldin, doğum günü, yıldönümü mesajları." },
+        { title:"İşlemsel", body:"Sipariş onayı, ödeme makbuzu, kargo bildirim; %51,3 açılma oranıyla en yüksek." },
+        { title:"Lead Besleme", body:"Hunideki potansiyel müşteriyi karar aşamasına taşıyan sekans serisi." },
+        { title:"Onay", body:"Çift opt-in onayı, hesap doğrulama, yasal gereklilikler için kritik." },
+        { title:"Etkileşimli", body:"Anket, geri bildirim, e-posta içi etkileşim modülleri." }
+      ]},
+      { type:"h", text:"Başarılı Kampanya 5 Adımı" },
+      { type:"steps", items:[
+        { title:"İş Hedeflerinizi Belirleyin", body:"Satış mı, marka bilinirliği mi, ilişki güçlendirme mi?" },
+        { title:"E-posta Türünü Seçin", body:"Bülten, tanıtım, işlemsel — hedefe en uygun türü belirleyin." },
+        { title:"Müşteri Verisiyle Entegrasyon", body:"CRM/müşteri veri sistemine bağlı bir araç dinamik içerik ve damla kampanyayı kolaylaştırır." },
+        { title:"İş Araçlarına Entegrasyon", body:"Analitik, raporlama ve diğer pazarlama araçlarıyla çift yönlü entegrasyon sağlanır." },
+        { title:"Kullanım Kolaylığı", body:"Karmaşık arayüzlü en güçlü araç bile, ekip kullanamıyorsa değer üretmez." }
+      ]},
+      { type:"h", text:"Temel Metrikler" },
+      { type:"table",
+        headers:["Metrik","Ne ölçer?","Ortalama"],
+        rows:[
+          ["Açılma Oranı","E-postayı açan alıcı yüzdesi","%42,35 (2025)"],
+          ["Tıklama Oranı (CTR)","Bağlantıya tıklayan alıcı yüzdesi","%2,5"],
+          ["Dönüşüm Oranı","İstenen eylemi tamamlayanların yüzdesi","Sektöre göre değişir"],
+          ["Teslim Edilebilirlik","Gelen kutusuna ulaşan e-posta oranı","%84-85"],
+          ["Hemen Çıkma Oranı","Teslim edilemeyen e-posta","%2,48"],
+          ["Şikayet Oranı","Spam olarak işaretlenenler","< %0,1"]
+        ]
+      },
+      { type:"h", text:"Segmentasyon, Kişiselleştirme ve Konu Satırı" },
+      { type:"p", text:"Segmentasyon; aboneleri demografi, davranış veya tercihlere göre kategorize eder. Kişiselleştirme ise ad, geçmiş satın alma veya konum gibi verileri kullanarak alaka düzeyini katlanır artırır. <strong>Konu satırı kuralları:</strong> 9 kelime ve 60 karakteri geçmeyin; satır başına en fazla 3 noktalama işareti; bir seferde en fazla 1 emoji. Yapay zekâ destekli segmentasyon, büyük veri setlerinden bireysel alaka düzeyi yüksek mesajlar üretir." },
+      { type:"h", text:"Yasal Çerçeve" },
+      { type:"cards", items:[
+        { title:"CAN-SPAM Act (ABD, 2003)", body:"Her ihlal başına 16.000 dolar ceza yetkisi; opt-out, gönderici bilgisi ve net konu zorunludur." },
+        { title:"GDPR (AB, 2018)", body:"Açık rıza, veri minimizasyonu ve şeffaflık. AB kullanıcıları için sıkı uyum gereklilikleri." },
+        { title:"CASL (Kanada, 2014)", body:"İzinli pazarlama (opt-in) zorunluluğu; opt-out mekanizması her e-postada bulunmalı." },
+        { title:"Türkiye İYS", body:"T.C. Ticaret Bakanlığı Ticari Elektronik İleti Şikayet Sistemi; ticari e-posta öncesi izin şart." }
       ]},
       { type:"h", text:"Avantajlar ve Riskler" },
       { type:"proscons",
-        pros:["Somut varlık, enflasyona doğal koruma","Düzenli nakit akışı + değer artışı","Kredi kaldıracı ile sermaye verimliliği","Birçok milyonerin servet kaynağı"],
-        cons:["Yüksek başlangıç sermayesi ve işlem maliyetleri","Bakım, tadilat ve kiracı yönetim yükü","Boşluk dönemleri ve ödememe riski","Düşük likidite; aniden nakde çevirmek zor"]
+        pros:["En yüksek ROI'lu dijital kanal (36-44$/$)","Detaylı analitik ve ölçülebilirlik","Otomasyon ile zamanlı/davranışsal kampanyalar","Düşük maliyet, doğa dostu","Doğrudan ve kişiselleştirilmiş iletişim"],
+        cons:["Hedeflenmemiş e-posta = düşük CTR, spam riski","Teslim edilebilirlik %73-90 arasında dalgalanır","Aboneliğin spam'e dönüşme tehlikesi","Yasal düzenlemeler gri alana yer bırakmaz; ihlal cezalı"]
       },
-      { type:"h", text:"Otomasyon ve Profesyonel Yönetim" },
-      { type:"p", text:"Mülk yönetim yazılımları, dijital sözleşme platformları ve profesyonel mülk yöneticileri pasiflik düzeyini yukarı çeker. Ölçeklenme hedefi olan yatırımcılar için profesyonel yönetim, gece yarısı tesisat çağrılarından kurtarıp portföyü 20+ mülke kadar büyütmeye olanak verir." },
-      { type:"callout", title:"Pasiflik Notu", text:"Doğrudan mülk sahipliği orta seviye pasiftir; gerçek pasiflik için profesyonel yönetim veya REIT/kitle fonlaması tercih edilmelidir." },
-      { type:"takeaways", items:[
-        "Gayrimenkul somut varlık avantajı ve enflasyon koruması sunar.",
-        "Doğrudan sahiplik yüksek getiri; ancak bakım ve yasal yük gerektirir.",
-        "REIT ve kitle fonlaması, düşük sermayeyle gerçek pasifliği mümkün kılar.",
-        "Profesyonel yönetim, portföy ölçeklendirmenin anahtarıdır."
-      ]}
-    ]
-  },
-  { id:"lisans", shortTitle:"Lisanslama ve Telif",
-    title:'Lisanslama ve <em>Telif Hakları</em>',
-    lead:"Yaratıcılığınızı sınırsız sayıda satılabilen bir varlığa dönüştürün. Müzik, fotoğraf, yazılım, patent, marka — bir kez üretilen değer yıllarca telif üretebilir.",
-    blocks:[
-      { type:"h", text:"Telif Kazandıran Varlık Türleri" },
-      { type:"cards", items:[
-        { title:"Müzik & Ses", body:"Spotify telifleri, sync lisansları, stock müzik platformları (Epidemic Sound, Artlist)." },
-        { title:"Fotoğraf & Video", body:"Shutterstock, Adobe Stock, Pond5; teaching portföyleri için Skillshare telifleri." },
-        { title:"Yazılım & Eklenti", body:"WordPress eklentileri, Shopify uygulamaları, API üzerinden lisanslama." },
-        { title:"Patent & Marka", body:"Lisans anlaşmalarıyla üreticilere kullanım hakkı; pasif royalty geliri." },
-        { title:"Yazılı İçerik & Kurs", body:"Kitap telifleri, kurs lisansları, MOOC platformlarına içerik üretimi." },
-        { title:"Karakter & IP", body:"Karakter lisansları, oyun/animasyon stüdyolarıyla işbirliği." }
-      ]},
-      { type:"h", text:"Telif Sisteminin İşleyişi" },
-      { type:"p", text:"Bir esere lisans verirken kullanım hakkı, coğrafi alan, süre ve münhasırlık koşulları belirlersiniz. Her kullanım veya satış başına telif (royalty) yüzdesi kazanırsınız. Marka tescili, patent ve eser tescili olmadan bu modeli sürdürmek hukuken kırılgandır." },
-      { type:"proscons",
-        pros:["Bir kez üretilen içerik yıllarca gelir getirir","Yüksek ölçeklenebilirlik","Çoklu platforma aynı eserle erişim","Marka/IP değeri zaman içinde artabilir"],
-        cons:["Stok platformlarında yoğun rekabet","Fikri mülkiyet ihlali ve korsanlık riski","Yasal süreçler ve tescil maliyeti","Kalite çıtası sürekli yükselir"]
-      },
-      { type:"takeaways", items:[
-        "Yaratıcı bir varlık, doğru lisans yapısıyla ömür boyu telif üretebilir.",
-        "Hukuki koruma (tescil, sözleşme) modelin sürdürülebilirliğinin temelidir.",
-        "Tek esere değil; bir IP portföyüne odaklanmak ölçeği büyütür."
-      ]}
-    ]
-  },
-  { id:"ai", shortTitle:"Yapay Zekâ Destekli Akışlar",
-    title:'Yapay Zekâ Destekli <em>Pasif Gelir</em>',
-    lead:"2026'nın en hızlı büyüyen alanı. Doğru kullanıldığında yapay zekâ, içerik üretiminden satış hunisine kadar tüm pasif gelir akışlarınızı turbo'lar.",
-    blocks:[
-      { type:"h", text:"Yapay Zekâ ile Açılan Yeni Kapılar" },
-      { type:"cards", items:[
-        { title:"AI Destekli İçerik Markaları", body:"Tematik niş siteler, YouTube otomasyonu, e-posta bültenleri; LLM + insan editör hibridi." },
-        { title:"Prompt/Şablon Pazarı", body:"Hazır prompt setleri, GPTs ve AI ajan şablonlarının lisanslı satışı." },
-        { title:"AI Aboneliği (Micro SaaS)", body:"Tek bir niş problemi çözen GPT-tabanlı dar kapsamlı abonelik ürünleri." },
-        { title:"Otomatik Pazarlama Ajanı", body:"Sosyal medya, reklam ve e-posta optimizasyonu yapan AI ajan akışları." },
-        { title:"Veri Ürünleri & Dashboard", body:"AI ile zenginleştirilmiş özet raporlar; abonelik tabanlı satış." },
-        { title:"Stok Görsel & Ses (Generatif)", body:"Telif uyumlu üretken görsel ve ses kütüphaneleri; lisanslı satış." }
-      ]},
-      { type:"h", text:"Sürdürülebilir AI Pasif Geliri İçin İlkeler" },
-      { type:"steps", items:[
-        { title:"Dar bir niş seçin", body:"AI ile genel içerik üretmek değer üretmez; spesifik bir kitlenin çözülmemiş problemini hedefleyin." },
-        { title:"İnsan dokunuşunu koruyun", body:"Salt AI çıktısı algoritmalar ve okuyucular tarafından hızla cezalandırılır; orijinal bakış açısı ekleyin." },
-        { title:"Otomasyon zinciri kurun", body:"n8n, Zapier, Make ile içerik üretimi → düzenleme → yayın → e-posta hunisi zincirini birbirine bağlayın." },
-        { title:"Veri ve geri bildirimle iyileştirin", body:"Hangi prompt, hangi format, hangi kanal kazandırıyor — sürekli A/B test edin." },
-        { title:"Telif ve etik sınırları gözetin", body:"Kullandığınız eğitim verilerini ve görsel kaynaklarını lisanslı tutun; markanızın itibarını koruyun." }
-      ]},
-      { type:"callout", title:"2026 Gerçeği", text:"Yapay zekâ destekli işletmeler, geleneksel operasyonlara göre yaklaşık 3,4 kat daha hızlı ölçek ekonomisi üretiyor. Ancak 'AI = sıfır emek' yanılgısı, en hızlı düşüşe yol açan inanç hâlinde." },
-      { type:"takeaways", items:[
-        "AI bir gelir modeli değil, mevcut modelleri çarpan etkisiyle büyüten bir katmandır.",
-        "Niş + insan editör + otomasyon zinciri, sürdürülebilir AI pasif gelirinin üç ayağıdır.",
-        "Telif ve etik riskleri başlangıçta yönetin; sonrasında telafisi pahalıdır."
-      ]}
-    ]
-  },
-  { id:"otomasyon", shortTitle:"Otomasyon ve Sistemler",
-    title:'Otomasyon ve <em>Sistem Kurulumu</em>',
-    lead:"Pasif geliri 'pasif' yapan unsur otomasyondur. Tekrarlayan görevleri yazılıma devrettiğinizde, gelir akışı sizden bağımsızlaşır.",
-    blocks:[
-      { type:"h", text:"Otomasyonun Stratejik Konumu" },
-      { type:"p", text:"Otomasyon katmanı; ürün ile müşteri arasındaki ödeme, faturalandırma, destek, içerik yayını ve lojistik gibi tüm tekrarlayan süreçleri yönetir. Geleneksel işletmelerde büyüme çalışan eklemekken, otomasyon bunu yazılım katmanına devreder." },
-      { type:"h", text:"Adım Adım Otomasyon Kurulumu" },
-      { type:"steps", items:[
-        { title:"Tekrarlayan görevleri belirleyin", body:"E-posta yanıtlama, sosyal medya, fatura kesme, sipariş takibi gibi süreçleri listeleyin." },
-        { title:"Doğru araçları seçin", body:"E-posta için Mailchimp/ActiveCampaign, sosyal medya için Buffer, AI ajanı için n8n/Make, ödeme için Stripe." },
-        { title:"Test edin ve optimize edin", body:"Küçük ölçekte devreye alın, A/B testleriyle iyileştirin; otomasyon statik değildir." }
-      ]},
-      { type:"h", text:"Temel Araçlar ve İşlevler" },
-      { type:"table",
-        headers:["İşlev","Önerilen Araçlar","Öne Çıkan Özellik"],
-        rows:[
-          ["E-posta Pazarlama","Mailchimp, ActiveCampaign, ConvertKit","Sekanslar, segmentasyon, A/B testi"],
-          ["Sosyal Medya","Buffer, Hootsuite, Later","Önceden zamanlama, çoklu platform"],
-          ["Müşteri Destek","ManyChat, Intercom, AI ajanları","7/24 yanıt, kural + AI destekli"],
-          ["Ödeme & Checkout","Stripe, PayPal, Iyzico","Anında tahsilat, dijital ürün teslimatı"],
-          ["Kurs Teslimi","Teachable, Kajabi, Gumroad","Otomatik kayıt, erişim ve hatırlatma"],
-          ["Akış Otomasyonu","n8n, Make, Zapier","Servisler arası akıllı zincirleme"]
-        ]
-      },
-      { type:"callout", title:"Sınır", text:"Otomasyon 'kur ve unut' değildir; 'kur ve asgari müdahaleyle yönet'tir. Düzenli izleme, içerik tazeleme ve hata bildirim sistemleri olmadan sistemler sessizce çürür." },
-      { type:"takeaways", items:[
-        "Otomasyon, tekrarlayan görevleri yazılıma devrederek gerçek pasifliği sağlar.",
-        "3 adımlık kurulum: tekrarı tespit et, doğru aracı seç, test edip optimize et.",
-        "İzleme ve bakım olmadan otomasyon zamanla bozulur; minimum müdahale stratejisi şart."
-      ]}
-    ]
-  },
-  { id:"olcek", shortTitle:"Ölçeklendirme",
-    title:'Pasif Gelir Akışlarını <em>Ölçeklendirme</em>',
-    lead:"Sistemi kurdunuz, otomatikleştirdiniz. Şimdi soru şu: 2x, 5x, 10x büyütmeyi nasıl başaracaksınız? Cevap, sermaye değil sistem mimarisidir.",
-    blocks:[
-      { type:"h", text:"Yeniden Yatırım: Bileşik Büyümenin Motoru" },
-      { type:"p", text:"Ölçeklendirmenin en temel mekaniği, kazancı harcamak yerine yeni gelir üreten varlıklara yönlendirmektir. Kira gelirleriyle yeni mülk almak, temettüyle yeni hisse, dijital ürün kârıyla yeni ürün üretmek — her döngüde varlık tabanınız ve geliriniz büyür." },
-      { type:"vaka",
-        title:"Paige Brunton'un SLO Stratejisi",
-        baglam:"Saatlik gelirin tavanına ulaşan bir web tasarım girişimcisi. Daha fazla saat çalışmadan büyümek için pasif akış eklemek zorunda.",
-        analiz:"35 dolarlık düşük fiyatlı bir dijital rehber oluşturdu (Self-Liquidating Offer). Bu ürün doğrudan 3.500 $ getirdi; ama asıl değeri, e-posta listesine nitelikli alıcılar eklemesiydi.",
-        sonuc:"Yüksek biletli kursların satışı tetiklendi; toplamda 15.000 $ ek gelir. Düşük biletli giriş ürünü, yüksek biletli teklifin yolunu açan ölçeklenme merdivenine dönüştü."
-      },
-      { type:"h", text:"Ölçeklendirme Stratejileri" },
-      { type:"table",
-        headers:["Strateji","Nasıl Çalışır","Örnek"],
-        rows:[
-          ["Yeniden Yatırım","Kazancı yeni varlıklara yönlendirip bileşik büyüme","Temettüyle yeni hisse, kirayla yeni mülk"],
-          ["Ürün Yelpazesi","Mevcut kitleye tamamlayıcı ürünler","E-kitap → kurs → mentorluk paketi"],
-          ["Kitle Büyütme","Zamansız SEO ve e-posta listesi","Evergreen blog yazıları + bülten"],
-          ["Platform Sinerjisi","Tek içeriği çok kanala dönüştürmek","Podcast → blog → kısa video"],
-          ["Otomasyon & AI","Tekrarlayan süreçleri yazılıma devretmek","AI içerik + Zapier yayın zinciri"],
-          ["Yinelenen Gelir","Abonelik/üyelik modelleri","Aylık üyelik kütüphanesi"],
-          ["Sistemleştirme","İşletmeyi sahibinden bağımsız hâle getirmek","Profesyonel mülk yönetimi, franchise"]
-        ]
-      },
-      { type:"h", text:"Ölçeklendirme Planınız: 5 Adım" },
-      { type:"steps", items:[
-        { title:"Mevcut akışları analiz edin", body:"Her akışın aylık geliri, büyüme oranı, zaman maliyeti ve ölçek potansiyelini ölçün." },
-        { title:"Yeniden yatırım hedefi belirleyin", body:"Hangi akıştan ne kadar yüzde büyümeye ayrılacak — net karar verin." },
-        { title:"Tamamlayıcı ürün ekleyin", body:"Düşük biletli giriş (SLO) ve abonelik modeli ile yelpazeyi katmanlandırın." },
-        { title:"Kitle ve trafik stratejisi", body:"SEO uyumlu evergreen içerik + e-posta listesi: algoritmadan bağımsız sahipli varlık." },
-        { title:"Sistemleştirme ve otomasyon", body:"Süreçleri belgeleyin, gerekirse ekip kurun veya profesyonel hizmet alın." }
-      ]},
       { type:"stats", items:[
-        { value:"3,4x", label:"AI destekli işletmelerin ölçek ekonomisi avantajı" },
-        { value:"%73", label:"Stratejik dış kaynak kullanımıyla gelir büyüme artışı" },
-        { value:"20+ kira", label:"Profesyonel mülk yönetimiyle ulaşılabilen portföy" }
+        { value:"36-44 $", label:"Harcanan 1 dolar başına ortalama ROI" },
+        { value:"%42,35", label:"2025 genel ortalama açılma oranı" },
+        { value:"%51,3", label:"En yüksek açılma: işlemsel e-postalar" }
       ]},
       { type:"takeaways", items:[
-        "Yeniden yatırım, ölçeklendirmenin bileşik motorudur.",
-        "Düşük biletli giriş ürünleri (SLO) yüksek biletli tekliflerin yolunu açar.",
-        "Evergreen içerik ve e-posta listesi, algoritmalardan bağımsız sahipli varlıklardır.",
-        "Çeşitlendirme + sistemleştirme, gerçek ölçeklenmeyi mümkün kılar."
+        "E-posta pazarlama, dijital pazarlamanın en yüksek ROI'lu kanalıdır.",
+        "7 temel tür: bülten, tanıtım, ilişkisel, işlemsel, lead besleme, onay, etkileşimli.",
+        "Segmentasyon ve kişiselleştirme, modern e-posta pazarlamanın iki ana sütunudur.",
+        "Konu satırı 60 karakter ve 9 kelimeyi geçmemelidir; en fazla 1 emoji kullanın.",
+        "CAN-SPAM, GDPR, CASL ve Türkiye İYS uyumu yasal zorunluluktur ve marka güvenini inşa eder."
       ]}
     ]
   },
-  { id:"risk", shortTitle:"Risk ve Sürdürülebilirlik",
-    title:'Risk Yönetimi ve <em>Sürdürülebilirlik</em>',
-    lead:"Çoğu girişimci getirinin peşinde koşarken sistemin kırılganlığını ihmal eder. Oysa uzun vadede kazanan, hızla değil 'hayatta kalarak' kazanır.",
+
+  /* 6 */
+  { id:"reklam", shortTitle:"Dijital Reklamcılık",
+    title:'Dijital <em>Reklamcılık</em>',
+    lead:"Bir sayfa yüklenirken, milisaniyeler içinde algoritmalar sizi analiz eder, reklamverenler açık artırma yapar ve en yüksek teklif kazanan reklam ekranınıza düşer. Dijital reklamcılığın esnekliği ve isabeti onu geleneksel reklamcılıktan kökten ayırır.",
     blocks:[
-      { type:"h", text:"İki Temel Kavram" },
-      { type:"p", text:"Risk yönetimi, gelir akışlarınızı tehdit eden finansal, operasyonel ve yasal riskleri tanımlama-ölçme-minimize etme sürecidir. Sürdürülebilirlik ise akışların on yıllar boyunca, değişen piyasa koşullarında ve regülasyon dalgalarında gelir üretmeye devam etme kapasitesidir." },
-      { type:"h", text:"Çeşitlendirme: Risk Yönetiminin Temel Taşı" },
-      { type:"p", text:"Tek bir akışa bağımlılık, en pahalı stratejidir. Her bir akışın payını %20-25 ile sınırlamak ve çekirdek-uydu (core-satellite) bir yapı kurmak portföy düşüşlerini %30-50 azaltır." },
-      { type:"callout", title:"Core-Satellite Yaklaşım", text:"Portföyün %60-70'i istikrarlı çekirdek (temettü ETF, REIT, blue-chip), %30-40'ı dinamik uydu (dijital ürün, bağlı kuruluş, yüksek getirili nakit) olarak yapılandırılır." },
-      { type:"h", text:"Nakit Tamponu: Emniyet Kemeri" },
-      { type:"p", text:"Beklenmedik olaylar (hastalık, kriz, platform değişikliği) için 6-12 aylık yaşam giderlerini karşılayacak likit bir fon zorunludur. Bu fon, varlıklarınızı zararına satmak zorunda kalmamanızı sağlar." },
-      { type:"h", text:"Stres Testi ve İzleme Takvimi" },
-      { type:"steps", items:[
-        { title:"Aylık kontroller", body:"Her akışın performansı, nakit tampon seviyesi, olağandışı sapmalar." },
-        { title:"Üç aylık yeniden dengeleme", body:"Hedef ağırlıklardan %5'ten fazla sapan kalemleri rebalance edin; stres senaryoları uygulayın." },
-        { title:"6-12 aylık değerlendirme", body:"Acil durum fonu yeterliliği, yeni akış ekleme veya mevcudu ölçeklendirme kararı." }
-      ]},
-      { type:"h", text:"Yasal Koruma ve Sigorta Kalkanı" },
-      { type:"p", text:"Net sözleşmeler, kira kaybı sigortası, mesleki sorumluluk sigortası, marka/patent tescilleri — krizde en güçlü kalkanınızdır. Dijital ürün ve yazılım gelirlerinde lisans şartlarını ve fikri mülkiyet hükümlerini ihmal etmeyin." },
-      { type:"takeaways", items:[
-        "Risk yönetimi kısa-orta vadeli tehditleri, sürdürülebilirlik uzun vadeli yapısal dayanıklılığı sağlar.",
-        "Çeşitlendirme ile her akış %20-25 ile sınırlanarak risk dağıtılır.",
-        "6-12 aylık nakit tamponu olmayan sistem, ilk kriz dalgasında zarara satmaya mahkûmdur.",
-        "Otomasyon, duygusal hatalara karşı kalkandır; ancak izleme olmadan çürür.",
-        "Yasal sözleşmeler ve sigorta, sessiz ama en güçlü yatırımlardır."
-      ]}
-    ]
-  },
-  { id:"uzunvade", shortTitle:"Uzun Vadeli Strateji",
-    title:'Uzun Vadeli <em>Pasif Gelir Stratejisi</em>',
-    lead:"Tüm akışları portföy olarak yönetmek, emeklilik planlamasıyla bütünleştirmek ve miras bırakılabilir sistemler kurmak — ömür boyu finansal özgürlüğün son halkası.",
-    blocks:[
-      { type:"h", text:"Portföy Yaklaşımı" },
-      { type:"p", text:"Tüm pasif gelir kaynaklarınızı tek bir portföy çatısı altında toplayın ve çeşitlendirme yoluyla riski dağıtın. Gayrimenkul, hisse senedi, tahvil, dijital ürünler ve telif hakları gibi farklı varlık sınıflarını bir arada tutmak, bir alandaki düşüşü diğerleriyle dengeler." },
-      { type:"h", text:"İki Temel Metrik" },
+      { type:"h", text:"Dijital Reklamcılık Nedir?" },
+      { type:"p", text:"Dijital reklamcılık; web siteleri, streaming içerikler ve benzer çevrim içi kanallar aracılığıyla yürütülen pazarlama çalışmalarını ifade eder. Metin, resim, ses ve video formatlarını kapsar. Geleneksel reklamcılığa kıyasla iki kritik üstünlük sunar: <em>esneklik</em> ve <em>isabet</em>. Reklam dakikalar içinde yayınlanabilir, kreatif/hedefleme/bütçe gerçek zamanlı optimize edilebilir." },
+      { type:"h", text:"Programatik Reklamcılık" },
+      { type:"p", text:"Programatik reklamcılık; milisaniyeler içinde gerçekleşen, yapay zekâ ve makine öğrenimi destekli otomatik reklam satın alma modelidir. RTB (Real-Time Bidding), bunun çalışma mantığıdır. Bir kullanıcı web sayfasını ziyaret ettiğinde, sayfa yüklenene kadar geçen sürede en yüksek teklifi veren reklamverenin reklamı gösterilir. Türkiye'de 2020'de dijital medya yatırımlarının %79'u programatik teknolojisiyle gerçekleşmiştir." },
+      { type:"callout", title:"Ekosistem", text:"Dijital reklam ekosistemi dört aktör etrafında döner: <strong>Reklamveren (DSP)</strong>, <strong>Yayıncı (SSP)</strong>, <strong>Reklam Borsası (Ad Exchange)</strong> ve <strong>Veri Platformu</strong>. Tüm bu süreç saniyenin altında gerçekleşir." },
+      { type:"h", text:"Reklam Türleri" },
       { type:"cards", items:[
-        { title:"Gelir İstikrarı", body:"Bir kaynağın zaman içinde ne kadar güvenilir ve düzenli ödeme sağladığı. Emeklilikte düzenli nakit akışı hayati önem taşır." },
-        { title:"Riske Göre Ayarlanmış Getiri", body:"Üstlendiğiniz risk seviyesine kıyasla elde ettiğiniz getirinin tatmin ediciliği. Yüksek getiri her zaman daha iyi değildir." }
+        { title:"Arama Reklamları", body:"Kullanıcı arama yaptığında üst sıralarda görünen metin reklamlar; yüksek niyet, yüksek dönüşüm." },
+        { title:"Görüntülü (Display)", body:"Banner ve görsel reklamlar; geniş erişim, marka bilinirliği için ideal." },
+        { title:"Video Reklamlar", body:"YouTube, sosyal video platformları; storytelling ve duygusal bağ için güçlü." },
+        { title:"Streaming TV (CTV)", body:"Connected TV reklamları; TV'nin kitlesi + dijitalin hedeflemesi." },
+        { title:"Sesli Reklamlar", body:"Podcast ve sesli asistanlar; düşük rekabet, yüksek dikkat oranı." },
+        { title:"Sosyal Medya Reklamı", body:"Instagram, TikTok, LinkedIn'de format-spesifik reklam yayını." }
       ]},
+      { type:"h", text:"Hedefleme Stratejileri" },
+      { type:"cards", items:[
+        { title:"Arama Terimine", body:"Belirli anahtar kelime arandığında reklam gösterilir; en niyetli kitle." },
+        { title:"Demografik", body:"Yaş, cinsiyet, gelir seviyesi gibi kriterler; geniş kitle ayrıştırması." },
+        { title:"Coğrafi Konum", body:"Ülke, şehir, mahalle, posta kodu hassasiyeti; lokal işletmeler için kritik." },
+        { title:"İçeriğe Dayalı", body:"İlgili web sitelerinde yayınlama; finans işi → finans sitesi." },
+        { title:"Yeniden Hedefleme", body:"Siteyi ziyaret etmiş kullanıcıyı çerez ile tekrar yakalama." },
+        { title:"Alışveriş Sinyali", body:"İlgili ürünleri satın almış/ilgilenmiş kullanıcılara hedef." }
+      ]},
+      { type:"h", text:"Fiyatlandırma Modelleri" },
       { type:"table",
-        headers:["Kaynak","Gelir İstikrarı","Riske Göre Getiri"],
+        headers:["Model","Nasıl Çalışır?","Ne Zaman Kullanılır?"],
         rows:[
-          ["Temettü Hisseleri","Orta","Orta-Yüksek"],
-          ["Tahviller","Yüksek","Düşük-Orta"],
-          ["Kısa Süreli Kiralama","Düşük","Yüksek"],
-          ["Dijital Ürün Telifleri","Orta","Yüksek"],
-          ["REIT","Yüksek","Orta"]
+          ["CPC (Tıklama Başına)","Her tıklama için ödeme","Trafik ve site ziyareti odaklı kampanyalar"],
+          ["CPM (Bin Gösterim)","1.000 gösterim için sabit ücret","Marka bilinirliği ve geniş erişim"],
+          ["CPA (Eylem Başına)","Sadece istenen eylem (satın alma, kayıt) gerçekleşince","Dönüşüm ve satış odaklı kampanyalar"]
         ]
       },
-      { type:"h", text:"Vergi Verimliliği ve Likidite" },
-      { type:"p", text:"Net getiri, vergi sonrası getiridir. Bireysel emeklilik (BES), Roth IRA, vergi avantajlı tasarruf hesapları gibi araçların stratejik kullanımı uzun vadede ciddi fark yaratır. Likidite ise kriz anında zararına satmamanızı sağlar; portföyün bir kısmı her zaman likit olmalıdır." },
-      { type:"h", text:"Emekliliğe Entegrasyon: Erken Başlamanın Gücü" },
-      { type:"callout", title:"Andy & Bob Örneği", text:"Andy 30 yıl boyunca aylık 250 $ yatırdı (toplam 90.000 $). Bob 20 yıl boyunca aylık 400 $ yatırdı (toplam 96.000 $). Her ikisi de aynı %4 yıllık getiriyi elde etti. Andy'nin son bakiyesi belirgin biçimde daha yüksek. Erken başlamak, çok yatırmaktan değerlidir." },
-      { type:"h", text:"Miras Bırakılabilir Sistemler" },
-      { type:"p", text:"Pasif gelir sisteminizin yalnızca sizin yaşamınızı değil, sonraki nesilleri de beslemesi için dijital cüzdanlar, erişim anahtarları, lisans sözleşmeleri ve telif hakları belgelenmeli; vasiyetname veya trust yapılarıyla yasal çerçeveye oturtulmalıdır." },
-      { type:"h", text:"6 Adımlı Yol Haritası" },
+      { type:"h", text:"Performans Metrikleri" },
+      { type:"cards", items:[
+        { title:"CTR", body:"Tıklama oranı: tıklama / gösterim. Reklam metni ve görselin etkinliği." },
+        { title:"Dönüşüm Oranı", body:"İstenen aksiyonu tamamlayan kullanıcı yüzdesi." },
+        { title:"ROAS", body:"Reklam Harcaması Getirisi: 1 TL reklam → kaç TL gelir?" },
+        { title:"ROI", body:"Yatırım Getirisi: net kâr / yatırım. Kampanyanın gerçek karlılığı." },
+        { title:"ACOS", body:"Satışın reklam maliyeti yüzdesi; e-ticarette kritik metrik." }
+      ]},
+      { type:"vaka",
+        title:"Blueair · Etkileşimli Sesli Reklam",
+        baglam:"Blueair, Amazon Ads'in üretken yapay zekâ çözümü Ses Üretici'yi kullanarak Alexa'da etkileşimli sesli reklamlar oluşturdu. 'Alexa, sepete ekle' eylem çağrısıyla erkek/kadın ses sürümleri test edildi.",
+        analiz:"Kampanya, üretken AI destekli sesli reklamcılığın yeni müşteri kazanımındaki etkinliğini ortaya koydu. A/B testi ile en etkili ses versiyonu belirlendi ve kreatif optimize edildi.",
+        sonuc:"%45,3 markaya yeni müşteri detay sayfa görüntülemesi, 2024 ortalamasından %94 daha yüksek sepete ekleme oranı ve kıyasların 3 katı sesli etkileşim oranı."
+      },
+      { type:"h", text:"En İyi Uygulamalar" },
       { type:"steps", items:[
-        { title:"Mevcut finansal durumu gözden geçirin", body:"Emeklilikteki yaşam tarzının maliyetini, enflasyon beklentisini ve mevcut birikimleri değerlendirin." },
-        { title:"Akışları çeşitlendirin", body:"En az 2-3 farklı türde akış kurun: temettü, kira, dijital ürün, AI destekli akış." },
-        { title:"Vergi etkilerini değerlendirin", body:"Vergi avantajlı hesapları stratejik kullanın; net getiri planlamanın temelidir." },
-        { title:"Likit nakit tamponu bulundurun", body:"Düşük likiditeli varlıkların yanında hızlı erişilebilir nakit benzeri araçlar tutun." },
-        { title:"Miras planlamasını yapın", body:"Tüm varlıklar belgelensin; erişim anahtarları, dijital cüzdanlar, vasiyetname/trust yapıları kurulsun." },
-        { title:"Stratejiyi düzenli olarak gözden geçirin", body:"Piyasa koşulları, regülasyonlar ve kişisel öncelikler değiştikçe dağılımı güncelleyin." }
+        { title:"Doğru Kitleye Erişin", body:"İsabetli hedefleme; yüksek alaka düzeyine sahip kullanıcılara reklam gösterimi." },
+        { title:"Performansı Gerçek Zamanlı Takip Edin", body:"Nelerin işe yarayıp yaramadığını veriden öğrenin." },
+        { title:"Test Edin ve Optimize Edin", body:"Reklam metni, görsel, kitle ve bütçe — her şey A/B testine açık." },
+        { title:"Samimi Olun", body:"Çevrim içi kitleler seçicidir; düşük çaba ve alakasız içerik başarısızlığa götürür." }
       ]},
       { type:"takeaways", items:[
-        "Akışlarınızı tek bir portföy olarak yönetmek riski dağıtır ve istikrarı artırır.",
-        "Gelir istikrarı ve riske göre getiri, akışları değerlendirmek için iki temel metriktir.",
-        "Vergi verimliliği ve likidite, net getiriyi ve esnekliği aynı anda korur.",
-        "Erken başlamak, sonradan büyük tutarlar yatırmaktan değerlidir.",
-        "Miras planlaması, pasif gelir sisteminin nesiller boyu sürdürülebilirliğinin teminatıdır."
+        "Dijital reklamlar dakikalar içinde yayınlanabilir ve gerçek zamanlı optimize edilir.",
+        "Programatik reklamcılık; milisaniyelik açık artırmalarla otomatik satın alma modeli sunar.",
+        "Altı ana reklam türü: arama, görüntülü, video, CTV, sesli, sosyal medya.",
+        "Hedefleme yöntemleri: arama, demografik, coğrafi, içeriğe dayalı, yeniden hedefleme, alışveriş sinyali.",
+        "Üç temel fiyatlandırma: CPC, CPM, CPA — kampanya hedefine göre seçilir."
+      ]}
+    ]
+  },
+
+  /* 7 */
+  { id:"cro", shortTitle:"CRO ve Web Optimizasyonu",
+    title:'Web Optimizasyonu ve <em>Dönüşüm Oranı</em>',
+    lead:"Bir saniyede yüklenen siteler, beş saniyede yüklenenlere göre 2,5 kat daha yüksek dönüşüm sağlar. Tüketicilerin %70'i yavaş sitelerden alışveriş niyetini kaybeder. SEO trafiği getirir, CRO o trafiği gelire çevirir.",
+    blocks:[
+      { type:"h", text:"CRO Nedir, Neden Trafik Artırmaktan Akıllıca?" },
+      { type:"p", text:"Dönüşüm Oranı Optimizasyonu (CRO); web sitesi veya uygulama ziyaretçilerinin istenen eylemi (satın alma, form, kayıt) tamamlama yüzdesini sistematik olarak artırma sürecidir. Yeni ziyaretçi çekmek yerine, mevcut trafiğin daha fazla kısmını müşteriye dönüştürür. Sonuç: müşteri edinme maliyeti düşer, ziyaretçi başına gelir artar." },
+      { type:"callout", title:"Dönüşüm Formülü", text:"Dönüşüm Oranı = (Toplam Dönüşüm / Toplam Ziyaretçi) × 100. E-ticarette ortalama %2,5-3 arası kabul edilir. <strong>İyi bir dönüşüm oranı, kendi önceki oranınızı geçendir</strong> — sektör ortalaması mutlak referans değildir." },
+      { type:"h", text:"CRO Süreci · 5 Temel Adım" },
+      { type:"steps", items:[
+        { title:"Araştırma ve Veri Toplama", body:"Analitik, kullanıcı geri bildirimi, ısı haritası, oturum kaydı." },
+        { title:"Hipotez Oluşturma", body:"\"X değişikliği Y metriğini Z oranında iyileştirecek\" formatında." },
+        { title:"Önceliklendirme (P.I.E.)", body:"Potential (etki), Importance (önem), Ease (kolaylık) skorlaması." },
+        { title:"Test Türü Kararı", body:"A/B, çok değişkenli (multivariate) veya bölünmüş URL testi." },
+        { title:"Sonuçlardan Öğrenme", body:"Kazanan kalıcı uygulanır, kaybeden de içgörü olarak kayda alınır." }
+      ]},
+      { type:"h", text:"A/B Testi: Veriyle Karar Almak" },
+      { type:"p", text:"A/B testi; aynı sayfanın iki versiyonunu (kontrol ve varyasyon) farklı kullanıcı gruplarına göstererek hangisinin daha yüksek dönüşüm sağladığını belirler. Sonuçların güvenilir olması için <strong>istatistiksel anlamlılığa</strong> (genellikle %95) ulaşmak gerekir. <em>Peeking error</em> (erken bakma); test tamamlanmadan sonuç değerlendirip Tip 1 hata (yanlış pozitif) riskini doğurur. Bazı modern araçlar Bayesian motor kullanarak bu kısıtı yumuşatır." },
+      { type:"h", text:"Yüksek Dönüşümlü Açılış Sayfası Anatomisi" },
+      { type:"cards", items:[
+        { title:"Net Değer Önerisi", body:"İlk ekranda 'ne sunuyorum, neden değerli' sorusuna 5 saniyede yanıt vermeli." },
+        { title:"CTA İlk Ekranda", body:"Eylem çağrısı kaydırma gerektirmeden görünür olmalı." },
+        { title:"Mesaj Uyumu", body:"Reklam metni ile açılış sayfası başlığı birebir örtüşmeli." },
+        { title:"Sosyal Kanıt", body:"Müşteri yorumları, logolar, rakamlar; %3-37 dönüşüm artışı sağlar." },
+        { title:"Hız", body:"1 sn'de yüklenen sayfa, 5 sn'ye göre 2,5 kat daha fazla dönüşür." },
+        { title:"Az Engel", body:"Form alanı, link sayısı, dikkat dağıtıcı her şey azaltılmalı." }
+      ]},
+      { type:"h", text:"Isı Haritası ve Oturum Kaydı" },
+      { type:"p", text:"Google Analytics size <em>ne</em> olduğunu söyler; ısı haritaları ve oturum kayıtları <em>neden</em> sorusuna cevap verir. Isı haritaları; tıklama, kaydırma, duraklamayı sıcak/soğuk tonlarla görselleştirir. Oturum kayıtları; bireysel ziyaretçinin yolculuğunu video formatında izlemenizi sağlar. Bu araçlar kantitatif veriyi (sayı) kalitatif veriyle (davranış) birleştirir." },
+      { type:"h", text:"SEO vs CRO" },
+      { type:"table",
+        headers:["Özellik","SEO","CRO"],
+        rows:[
+          ["Temel Odak","Arama motoru görünürlüğü","Ziyaretçiyi müşteriye dönüştürme"],
+          ["Ana Metrik","Organik trafik, sıralama","Dönüşüm oranı, gelir/ziyaretçi"],
+          ["Zaman","Uzun vadeli (aylar)","Kısa-orta vadeli (haftalar)"],
+          ["Araçlar","Anahtar kelime, backlink analizi","A/B testi, ısı haritası, oturum kaydı"],
+          ["Ortak Nokta","Site hızı ve UX ikisinde de kritik","Site hızı ve UX ikisinde de kritik"]
+        ]
+      },
+      { type:"vaka",
+        title:"Bombas · CTA Metniyle %36 Daha Fazla Giriş",
+        baglam:"Bombas e-ticaret sitesi, login CTA'sını ikon tabanlı tasarımdan metin tabanlı tasarıma geçirmeyi test etti. İkonlar görsel olarak çekiciydi ama işlevi hemen anlaşılmıyordu.",
+        analiz:"Test sonucu çarpıcıydı: log-inler %36, siparişler %4,1 arttı. HubSpot'un başka bir testinde metin tabanlı CTA'lar banner CTA'lara göre %93'e varan daha fazla lead üretti.",
+        sonuc:"CRO'nun temel prensibi netleşti: <em>spesifik ve fayda odaklı metinler</em> her zaman kazanır. \"Submit\" yerine \"Get Your Free Quote Now\" tereddütü azaltır."
+      },
+      { type:"h", text:"Sosyal Kanıt ve Güven Unsurları" },
+      { type:"p", text:"İnsanlar kalabalığı takip eder. Müşteri yorumları, ürün incelemeleri, influencer onayları, medya görünürlüğü ve gerçek zamanlı satın alma bildirimleri dönüşümü %3-37 arası artırabilir. <em>Otantik olmak kritik</em>: tam isim + fotoğraflı yorumlar, anonim övgülerden çok daha etkilidir. SSL, iade politikası, güvenli ödeme rozetleri özellikle ilk kez alışveriş yapan ziyaretçinin tereddüdünü kırar. China Expat Health'te başlık 'Health Insurance in China' yerine 'Save Up to 32% on Your Health Insurance in China' yapıldığında lead dönüşümü %79 arttı." },
+      { type:"stats", items:[
+        { value:"2,5×", label:"1 sn'lik sayfaların 5 sn'liklere göre dönüşüm avantajı" },
+        { value:"%23", label:"Açılış sayfalarının ortalama dönüşüm oranı" },
+        { value:"%95", label:"A/B testinde kabul edilen istatistiksel anlamlılık eşiği" }
+      ]},
+      { type:"takeaways", items:[
+        "CRO; yeni trafik çekmeden mevcut trafiğin değerini katlar.",
+        "Süreç 5 adımlı: araştırma, hipotez, önceliklendirme, test, öğrenme.",
+        "A/B testinde %95 anlamlılığa ulaşılmalı; peeking error testin geçerliliğini bozar.",
+        "Açılış sayfalarının ortalama dönüşüm oranı %23 ile tüm formlar arasında en yüksektir.",
+        "Isı haritası + oturum kaydı, kantitatif veriyi kalitatif davranışla birleştirir.",
+        "Sosyal kanıt ve güven rozetleri dönüşümü %3-37 oranında artırır."
+      ]}
+    ]
+  },
+
+  /* 8 */
+  { id:"analitik", shortTitle:"Analitik ve Veri",
+    title:'Analitik ve <em>Veri Yönetimi</em>',
+    lead:"Pazarlama bütçenizin yarısının boşa gittiğini biliyorsunuz — hangi yarısı olduğunu da bilmiyorsanız, sorun sezgilerde değil, verilerdedir. Kararlar artık 'bence' ile değil, 'veri gösteriyor ki' ile alınır.",
+    blocks:[
+      { type:"h", text:"Dijital Pazarlama Analitiği Nedir?" },
+      { type:"p", text:"Dijital pazarlama analitiği; kampanyalardan veri toplama, ölçme ve analiz etme uygulamasıdır. Amaç sadece 'ne oldu' sorusuna cevap vermek değil; kampanyayı anlamak ve gelecek çabaları optimize etmektir. Analitik, hangi kanalın, içeriğin ve stratejinin en iyi sonucu verdiğini objektif olarak değerlendirmenizi sağlar." },
+      { type:"callout", title:"Optimizasyon Döngüsü", text:"Veri Toplama → Analiz → İçgörü Çıkarma → Aksiyon Alma → Sonuç Ölçme → Tekrar Analiz. Bu döngü kampanyaların sürekli iyileşmesini sağlar ve 'kör uçuş' riskini ortadan kaldırır." },
+      { type:"h", text:"Veri Yönetimi: Silolardan Birleşik Görüşe" },
+      { type:"p", text:"Veri yönetimi; verilerin toplanması (ingestion), depolanması, organize edilmesi ve sürdürülmesi sürecidir. Pazarlama bağlamında müşteri ve kampanya verisi merkezi bir sistemde toplanmazsa <strong>veri siloları</strong> oluşur. Bir e-posta kampanyasının CTR'si düşük görünse bile CRM verisiyle birleştirildiğinde yüksek LTV'li müşterilerden geldiği ortaya çıkabilir." },
+      { type:"h", text:"Customer Data Platform (CDP)" },
+      { type:"cards", items:[
+        { title:"Veri Toplama", body:"Web, mobil, sosyal medya, e-posta, CRM, reklam platformlarından gelen veri akışı." },
+        { title:"Birleştirme", body:"Farklı kaynaklardaki kullanıcı kayıtları tek bir 360° müşteri profilinde birleştirilir." },
+        { title:"Segmentasyon", body:"Davranış, demografi ve değer skorlarına göre dinamik kitleler oluşturulur." },
+        { title:"Aktivasyon", body:"Birleştirilmiş veri, pazarlama platformlarına gerçek zamanlı aktarılır; kişiselleştirilmiş kampanyalar tetiklenir." }
+      ]},
+      { type:"h", text:"Google Analytics 4 Kurulum Adımları" },
+      { type:"steps", items:[
+        { title:"Hesap ve Mülk Oluşturma", body:"GA4 hesabı kurulur; web sitesi için bir mülk (property) eklenir. GA4 olay (event) tabanlı veri modeli kullanır." },
+        { title:"Veri Akışı Yapılandırma", body:"Web sitesi/uygulama için veri akışı (data stream) tanımlanır." },
+        { title:"Takip Kodu Yerleştirme", body:"Takip kodu sitenin <head> bölümüne eklenir; tüm sayfalarda çalıştığı doğrulanır." },
+        { title:"Dönüşüm Olaylarını Tanımlama", body:"Satın alma, form doldurma, bülten kaydı dönüşüm olayı olarak işaretlenir." },
+        { title:"Hedef Kitle ve Entegrasyon", body:"Hedef kitleler oluşturulur; Google Ads, Search Console gibi platformlarla entegre edilir." }
+      ]},
+      { type:"h", text:"Attribution Model Türleri" },
+      { type:"table",
+        headers:["Model","Kredi Dağılımı","En İyi Kullanım"],
+        rows:[
+          ["Last Click","Dönüşümden hemen önceki temas %100","Doğrudan yanıt kampanyaları"],
+          ["First Click","İlk temas noktasına %100","Marka bilinirliği kampanyaları"],
+          ["Linear","Tüm temaslara eşit dağılım","Uzun satış döngülü ürünler"],
+          ["Time Decay","Dönüşüme yakın temaslara daha fazla","Sınırlı süreli promosyonlar"],
+          ["Position Based","İlk/son %40, ortalar %20","Çok kanallı stratejiler"],
+          ["Data-Driven","Makine öğrenmesi ile gerçek katkı","Yeterli veri hacmi olan markalar"]
+        ]
+      },
+      { type:"p", text:"Pratik örnek: Müşteri önce organik arama ile siteyi buldu, sonra sosyal medya reklamını gördü, e-posta bültenine tıkladı ve son olarak Google Ads üzerinden satın aldı. Last Click tüm krediyi Google Ads'e verirken Linear dört kanala eşit dağıtır. <strong>Doğru model, iş modeline ve satış döngüsüne göre seçilir.</strong>" },
+      { type:"h", text:"ROI Hesaplama" },
+      { type:"callout", title:"ROI Formülü", text:"ROI = (Kazanç − Yatırım Maliyeti) / Yatırım Maliyeti. Pozitif ROI kampanyanın kârlı olduğunu gösterir. ROAS gelire bakar, ROI ise <strong>net kâra</strong> odaklanır." },
+      { type:"h", text:"Marketing Analytics Dashboard" },
+      { type:"steps", items:[
+        { title:"İş Hedefleri ve KPI'lar", body:"Ne ölçeceğinizi tanımlayın: bilinirlik, lead, satış, retansiyon?" },
+        { title:"Veri Kaynakları", body:"GA, sosyal medya, e-posta, CRM, reklam platformları entegre edilir." },
+        { title:"Görselleştirme Tipleri", body:"Çizelge, grafik, tablo, gösterge; metriğe en uygun format seçilir." },
+        { title:"Dashboard Düzeni", body:"En önemli metrikler üstte; detaylar altta. Her gösterge bir aksiyona işaret etmeli." }
+      ]},
+      { type:"callout", title:"Müze Değil, Kontrol Paneli", text:"Dashboard'unuz bir müze değil, bir <strong>kontrol panelidir</strong>. 'Trafik arttı' bilgisi yetmez — 'Trafik arttı ama dönüşüm düştü, açılış sayfasını optimize etmeliyiz' içgörüsü aksiyon doğurur." },
+      { type:"vaka",
+        title:"Veri Kalitesi Krizi · E-Ticaret Senaryosu",
+        baglam:"Bir e-ticaret sitesi, GA4 kurulumu sonrası dönüşüm oranlarında anormallik tespit etti. Bazı günler dönüşüm sayısı sıfır görünüyordu ama satışlar devam ediyordu.",
+        analiz:"İncelemede takip kodunun sadece ana sayfada çalıştığı; ürün ve ödeme sayfalarında eksik olduğu ortaya çıktı. Bot trafiği ve iç (şirket çalışanı) trafik filtrelenmemişti. Dönüşüm olayları tam tanımlanmamıştı.",
+        sonuc:"Takip kodu tüm sayfalara eklendi, bot ve iç trafik filtreleri uygulandı, dönüşüm olayları yeniden tanımlandı. Veri doğruluğu %98'e ulaştı; pazarlama kararları artık güvenilir verilere dayanıyor."
+      },
+      { type:"h", text:"Veri Gizliliği ve Uyum" },
+      { type:"p", text:"GDPR ve benzeri düzenlemeler; açık rıza (explicit consent), veri minimizasyonu ve şeffaflık ilkelerini zorunlu kılar. Pratikte bu; cookie banner'ı yapılandırması, rıza kayıtlarının saklanması, veri silme taleplerinin zamanında yerine getirilmesi anlamına gelir. Uyumsuzluk ciddi para cezaları ve marka itibar kaybı doğurur. <em>Gizlilik uyumu</em> aynı zamanda müşteri güveni inşa etmenin en güçlü yoludur." },
+      { type:"h", text:"Analitik Olgunluk Modeli" },
+      { type:"cards", items:[
+        { title:"Tanımlayıcı (Descriptive)", body:"Ne oldu? Geçmiş veriyi raporlayan en temel seviye." },
+        { title:"Tanılayıcı (Diagnostic)", body:"Neden oldu? Neden-sonuç ilişkilerini keşfeden analiz." },
+        { title:"Tahminleyici (Predictive)", body:"Ne olacak? Modellerle gelecek davranışı tahmin etme." },
+        { title:"Öngörücü (Prescriptive)", body:"Ne yapmalıyım? AI destekli karar önerileri ve aksiyon planları." }
+      ]},
+      { type:"takeaways", items:[
+        "Analitik; kampanyaları optimize eden, sürekli iyileşmeyi sağlayan veri döngüsüdür.",
+        "Veri yönetimi silolardan birleşik müşteri görüşüne (CDP) geçişi sağlar.",
+        "Attribution modelleri, her temas noktasının dönüşüme katkısını ölçer; bütçe optimizasyonunun anahtarıdır.",
+        "ROI = (Kazanç − Yatırım) / Yatırım; gerçek kârlılığın tek doğru ölçüsüdür.",
+        "Dashboard bir müze değil, bir kontrol panelidir; her gösterge bir aksiyona işaret etmelidir.",
+        "GDPR uyumu yasal zorunluluğun ötesinde, marka güveninin temelidir.",
+        "Veri olmadan strateji kör, strateji olmadan veri anlamsızdır."
       ]}
     ]
   }
@@ -993,10 +1141,10 @@ function renderHero(s) {
   return `
     <section class="ega-hero">
       <div class="ega-hero-mark">Ek Gelir Akademi · Premium Edisyon</div>
-      <h1 class="ega-hero-title">Pasif Gelir <em>Yaratma Sanatı</em></h1>
-      <p class="ega-hero-sub">Uyurken para kazanma vaadi bir mit değil; ancak bir gecede oluşan bir mucize de değil. Doğru zihniyet, sağlam sistemler ve ölçeklenebilir varlıklarla inşa edilen, ömür boyu sürdürülebilir bir finansal özgürlük yolculuğudur. Bu sunum, sizi 12 bölümde tam donanımlı bir pasif gelir mimarına dönüştürmek için tasarlandı.</p>
+      <h1 class="ega-hero-title">Dijital Pazarlama <em>Stratejisi</em></h1>
+      <p class="ega-hero-sub">Geleneksel reklamcılığın yerini hassas hedefleme, ölçülebilir kampanyalar ve veriyle büyüyen markalar aldı. Bu 8 bölümlük sunum; dijital pazarlamanın temellerinden SEO'ya, sosyal medyadan analitiğe kadar markanızın çevrimiçi varlığını profesyonel düzeye taşımak için tasarlandı.</p>
       <div class="ega-hero-meta">
-        <span><strong>12</strong> Bölüm</span>
+        <span><strong>8</strong> Bölüm</span>
         <span><strong>Premium</strong> Sunum Edisyonu</span>
         <span><strong>2026</strong> Türkiye Sürümü</span>
       </div>
