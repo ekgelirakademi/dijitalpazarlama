@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ek Gelir Akademi · Dijital Pazarlama Sistemi: Reklamla Müşteri Getir</title>
+<meta name="description" content="Ek Gelir Akademi — Dijital Pazarlama Sistemi: Reklamla Müşteri Getir. 10 bölümlük premium interaktif reklam ve büyüme eğitimi." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --ega-bg: #07070a;
+  --ega-bg-2: #0b0b10;
+  --ega-ink: #efe7d4;
+  --ega-ink-soft: #b8b3a4;
+  --ega-ink-muted: #7a7464;
+  --ega-line: rgba(212, 175, 55, 0.16);
+  --ega-line-strong: rgba(212, 175, 55, 0.32);
+  --ega-gold: #d4af37;
+  --ega-gold-soft: #e9c66b;
+  --ega-gold-deep: #a87f1c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: var(--ega-bg); }
+body {
+  font-family: "Manrope", system-ui, sans-serif;
+  color: var(--ega-ink);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+::selection { background: rgba(212,175,55,0.35); color: #fff; }
+button { font-family: inherit; cursor: pointer; }
+
+.ega-shell { position: relative; height: 100vh; width: 100vw; overflow: hidden; isolation: isolate; }
+.ega-bg-grain {
+  position: absolute; inset: 0; pointer-events: none; z-index: -2; opacity: .6;
+  background-image:
+    radial-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 4px 4px, 9px 9px;
+  background-position: 0 0, 2px 2px;
+}
+.ega-bg-glow {
+  position: absolute; inset: 0; pointer-events: none; z-index: -1;
+  background:
+    radial-gradient(60% 50% at 12% 18%, rgba(212,175,55,0.10), transparent 60%),
+    radial-gradient(50% 40% at 88% 82%, rgba(168,127,28,0.08), transparent 60%),
+    linear-gradient(180deg, #07070a 0%, #050507 100%);
+}
+.ega-layout { display: grid; grid-template-columns: 320px 1fr; height: 100vh; }
+@media (max-width: 1024px) { .ega-layout { grid-template-columns: 1fr; } }
+
+.ega-topbar {
+  display: none; align-items: center; gap: 12px;
+  padding: 14px 18px; border-bottom: 1px solid var(--ega-line);
+  background: rgba(7,7,10,0.85); backdrop-filter: blur(14px);
+  position: sticky; top: 0; z-index: 30;
+}
+@media (max-width: 1024px) { .ega-topbar { display: flex; } }
+.ega-icon-btn {
+  width: 38px; height: 38px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 10px; border: 1px solid var(--ega-line);
+  background: rgba(255,255,255,0.02); color: var(--ega-ink);
+  transition: all .2s ease;
+}
+.ega-icon-btn:hover { border-color: var(--ega-line-strong); color: var(--ega-gold-soft); }
+.ega-brand-mini { display: flex; align-items: center; gap: 10px; }
+.ega-brand-mark {
+  font-family: "Fraunces", serif; font-weight: 600; letter-spacing: 0.18em; font-size: 14px;
+  background: linear-gradient(180deg, var(--ega-gold-soft), var(--ega-gold-deep));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ega-brand-name { font-size: 13px; color: var(--ega-ink-soft); letter-spacing: .04em; }
+.ega-progress-mini { flex:1; height:2px; background: rgba(212,175,55,0.10); border-radius:2px; overflow:hidden; }
+.ega-progress-mini-fill { height:100%; background: linear-gradient(90deg, var(--ega-gold-deep), var(--ega-gold-soft)); transition: width .5s ease; }
+
+.ega-sidebar {
+  height: 100vh; border-right: 1px solid var(--ega-line);
+  background: linear-gradient(180deg, rgba(212,175,55,0.04), transparent 30%), rgba(7,7,10,0.6);
+  backdrop-filter: blur(20px);
+  display: flex; flex-direction: column; position: relative; z-index: 20;
+}
+.ega-brand { padding: 28px 26px 22px; border-bottom: 1px solid var(--ega-line); position: relative; }
+.ega-brand::after {
+  content: ""; position: absolute; left: 26px; right: 26px; bottom: -1px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ega-gold), transparent); opacity: .5;
+}
+.ega-brand-eyebrow {
+  font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.32em;
+  color: var(--ega-gold-deep); text-transform: uppercase;
+}
+.ega-brand-title {
+  font-family: "Fraunces", serif; font-weight: 500; font-size: 28px; line-height: 1.05;
+  margin-top: 10px; letter-spacing: -0.01em; color: var(--ega-ink);
+}
+.ega-brand-title em {
+  font-style: italic;
+  background: linear-gradient(180deg, var(--ega-gold-soft), var(--ega-gold-deep));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ega-brand-sub { margin-top: 12px; font-size: 12.5px; color: var(--ega-ink-muted); line-height: 1.5; }
+.ega-nav { flex: 1; overflow-y: auto; padding: 16px 14px 24px; scrollbar-width: thin; scrollbar-color: rgba(212,175,55,0.25) transparent; }
+.ega-nav::-webkit-scrollbar { width: 6px; }
+.ega-nav::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.2); border-radius: 3px; }
+.ega-nav-label {
+  font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.28em;
+  color: var(--ega-ink-muted); padding: 6px 12px 14px; text-transform: uppercase;
+}
+.ega-nav-item {
+  width: 100%; display: grid; grid-template-columns: 32px 1fr; align-items: center; gap: 12px;
+  padding: 11px 12px; border-radius: 10px; background: transparent; border: 1px solid transparent;
+  color: var(--ega-ink-soft); text-align: left;
+  transition: background .25s, color .25s, border-color .25s; margin-bottom: 2px;
+}
+.ega-nav-item:hover { background: rgba(212,175,55,0.05); color: var(--ega-ink); }
+.ega-nav-item .num { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--ega-ink-muted); }
+.ega-nav-item .label { font-size: 14px; line-height: 1.3; }
+.ega-nav-item.active {
+  background: linear-gradient(180deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02));
+  border-color: var(--ega-line-strong); color: var(--ega-ink);
+}
+.ega-nav-item.active .num { color: var(--ega-gold-soft); }
+.ega-nav-item.active .label { color: #fff; }
+.ega-sidebar-foot {
+  padding: 18px 26px 22px; border-top: 1px solid var(--ega-line);
+  font-size: 11px; color: var(--ega-ink-muted); letter-spacing: 0.04em;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.ega-sidebar-foot .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--ega-gold); box-shadow: 0 0 12px var(--ega-gold); }
+@media (max-width: 1024px) {
+  .ega-sidebar {
+    position: fixed; inset: 0 30% 0 0; height: 100vh; z-index: 40;
+    transform: translateX(-100%); transition: transform .3s ease;
+  }
+  .ega-sidebar.open { transform: translateX(0); }
+}
+
+.ega-main { position: relative; height: 100vh; display: flex; flex-direction: column; }
+.ega-progress-bar { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: rgba(212,175,55,0.08); z-index: 10; }
+.ega-progress-fill {
+  height: 100%; background: linear-gradient(90deg, var(--ega-gold-deep), var(--ega-gold-soft), var(--ega-gold));
+  box-shadow: 0 0 14px var(--ega-gold); transition: width .5s cubic-bezier(.4,0,.2,1);
+}
+.ega-scroll { flex: 1; overflow-y: auto; scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: rgba(212,175,55,0.2) transparent; }
+.ega-scroll::-webkit-scrollbar { width: 8px; }
+.ega-scroll::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.18); border-radius: 4px; }
+
+.ega-section { max-width: 1080px; margin: 0 auto; padding: 72px 56px 40px; animation: section-in .55s cubic-bezier(.2,.7,.2,1) both; }
+@media (max-width: 768px) { .ega-section { padding: 40px 22px 20px; } }
+@keyframes section-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.ega-section-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ega-gold); margin-bottom: 18px;
+}
+.ega-section-eyebrow::before { content: ""; width: 36px; height: 1px; background: linear-gradient(90deg, transparent, var(--ega-gold)); }
+.ega-section-title {
+  font-family: "Fraunces", serif; font-weight: 400;
+  font-size: clamp(34px, 4vw, 54px); line-height: 1.04; letter-spacing: -0.02em; color: #fff; margin-bottom: 18px;
+}
+.ega-section-title em {
+  font-style: italic; font-weight: 500;
+  background: linear-gradient(180deg, #f3dca0 0%, var(--ega-gold) 60%, var(--ega-gold-deep) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ega-section-lead { font-size: 17px; line-height: 1.65; color: var(--ega-ink-soft); max-width: 780px; margin-bottom: 38px; }
+.ega-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--ega-line-strong), transparent); margin: 44px 0; }
+
+.ega-h3 {
+  font-family: "Fraunces", serif; font-weight: 500; font-size: 24px; line-height: 1.25;
+  letter-spacing: -0.01em; color: #fff; margin: 28px 0 14px;
+  display: flex; align-items: center; gap: 12px;
+}
+.ega-h3-bar { width: 4px; height: 22px; background: var(--ega-gold); border-radius: 2px; box-shadow: 0 0 12px rgba(212,175,55,0.6); }
+.ega-p { color: var(--ega-ink-soft); font-size: 15.5px; line-height: 1.7; margin: 0 0 14px; }
+.ega-p strong { color: var(--ega-ink); font-weight: 600; }
+.ega-p em { color: var(--ega-gold-soft); font-style: normal; }
+
+.ega-callout {
+  margin: 22px 0; padding: 22px 24px; border-radius: 14px;
+  background: linear-gradient(180deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));
+  border: 1px solid var(--ega-line-strong); position: relative; overflow: hidden;
+}
+.ega-callout::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: linear-gradient(180deg, var(--ega-gold-soft), var(--ega-gold-deep));
+}
+.ega-callout-title {
+  font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--ega-gold); margin-bottom: 10px;
+}
+.ega-callout-body { color: var(--ega-ink); font-size: 15px; line-height: 1.65; }
+
+.ega-stats { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin: 24px 0; }
+.ega-stat {
+  padding: 22px; border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+  border: 1px solid var(--ega-line);
+  transition: transform .3s, border-color .3s, background .3s;
+}
+.ega-stat:hover {
+  transform: translateY(-3px); border-color: var(--ega-line-strong);
+  background: linear-gradient(180deg, rgba(212,175,55,0.06), rgba(212,175,55,0.01));
+}
+.ega-stat-value {
+  font-family: "Fraunces", serif; font-weight: 500; font-size: 36px; line-height: 1;
+  background: linear-gradient(180deg, #f3dca0 0%, var(--ega-gold) 80%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ega-stat-label { margin-top: 10px; color: var(--ega-ink-soft); font-size: 13.5px; line-height: 1.4; }
+
+.ega-cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin: 22px 0; }
+.ega-card {
+  padding: 24px 22px; border-radius: 14px; border: 1px solid var(--ega-line);
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+  transition: all .3s; position: relative; overflow: hidden;
+}
+.ega-card::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(120% 80% at 0% 0%, rgba(212,175,55,0.10), transparent 50%);
+  opacity: 0; transition: opacity .35s; pointer-events: none;
+}
+.ega-card:hover { border-color: var(--ega-line-strong); transform: translateY(-3px); }
+.ega-card:hover::before { opacity: 1; }
+.ega-card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.ega-card-num {
+  width: 32px; height: 32px; border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--ega-line-strong); color: var(--ega-gold);
+  font-family: "JetBrains Mono", monospace; font-size: 12px;
+}
+.ega-card-title { font-family: "Fraunces", serif; font-weight: 500; font-size: 18px; color: #fff; }
+.ega-card-body { color: var(--ega-ink-soft); font-size: 14px; line-height: 1.6; }
+
+.ega-steps { margin: 24px 0; }
+.ega-step {
+  display: grid; grid-template-columns: 56px 1fr; gap: 18px;
+  padding: 20px 0; border-bottom: 1px solid var(--ega-line);
+}
+.ega-step:last-child { border-bottom: 0; }
+.ega-step-num {
+  font-family: "Fraunces", serif; font-size: 36px; line-height: 1; font-weight: 500;
+  background: linear-gradient(180deg, var(--ega-gold-soft), var(--ega-gold-deep));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ega-step-title { font-family: "Fraunces", serif; font-weight: 500; color: #fff; font-size: 18.5px; margin-bottom: 6px; }
+.ega-step-body { color: var(--ega-ink-soft); font-size: 14.5px; line-height: 1.65; }
+
+.ega-table { margin: 22px 0; border: 1px solid var(--ega-line); border-radius: 14px; overflow: hidden; }
+.ega-table-row { display: grid; align-items: stretch; }
+.ega-table-row > div {
+  padding: 14px 18px; border-right: 1px solid var(--ega-line);
+  font-size: 14px; color: var(--ega-ink-soft); line-height: 1.55;
+}
+.ega-table-row > div:last-child { border-right: 0; }
+.ega-table-row + .ega-table-row { border-top: 1px solid var(--ega-line); }
+.ega-table-head > div {
+  background: linear-gradient(180deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+  color: var(--ega-gold-soft);
+  font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+}
+
+.ega-prosncons { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; margin: 22px 0; }
+@media (max-width: 768px) { .ega-prosncons { grid-template-columns: 1fr; } }
+.ega-pc { border: 1px solid var(--ega-line); border-radius: 14px; padding: 20px 22px; background: rgba(255,255,255,0.015); }
+.ega-pc-title {
+  font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ega-gold); margin-bottom: 12px;
+}
+.ega-pc.con .ega-pc-title { color: #c9826a; }
+.ega-pc ul { list-style: none; }
+.ega-pc li {
+  padding: 8px 0 8px 22px; position: relative;
+  color: var(--ega-ink-soft); font-size: 14px; line-height: 1.55;
+  border-bottom: 1px dashed rgba(212,175,55,0.08);
+}
+.ega-pc li:last-child { border-bottom: 0; }
+.ega-pc li::before {
+  content: ""; position: absolute; left: 4px; top: 16px;
+  width: 8px; height: 8px; border-radius: 2px;
+  background: var(--ega-gold); transform: rotate(45deg);
+  box-shadow: 0 0 8px rgba(212,175,55,0.5);
+}
+.ega-pc.con li::before { background: #c9826a; box-shadow: 0 0 8px rgba(201,130,106,0.4); }
+
+.ega-vaka {
+  margin: 26px 0; padding: 26px 28px; border-radius: 16px;
+  background: linear-gradient(180deg, rgba(212,175,55,0.04), transparent 80%), rgba(255,255,255,0.02);
+  border: 1px solid var(--ega-line);
+}
+.ega-vaka-label {
+  font-family: "JetBrains Mono", monospace; font-size: 10.5px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--ega-gold); margin-bottom: 14px;
+}
+.ega-vaka-title { font-family: "Fraunces", serif; font-weight: 500; font-size: 22px; color: #fff; margin-bottom: 14px; }
+.ega-vaka-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 768px) { .ega-vaka-grid { grid-template-columns: 1fr; } }
+.ega-vaka-col h5 {
+  font-family: "JetBrains Mono", monospace; font-size: 10.5px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ega-gold-deep); margin-bottom: 8px;
+}
+.ega-vaka-col p { color: var(--ega-ink-soft); font-size: 14px; line-height: 1.6; }
+
+.ega-takeaways {
+  border: 1px solid var(--ega-line-strong); border-radius: 16px; padding: 26px 28px;
+  background: linear-gradient(180deg, rgba(212,175,55,0.06), rgba(212,175,55,0.01));
+  margin: 26px 0;
+}
+.ega-takeaways h4 {
+  font-family: "Fraunces", serif; font-weight: 500; font-size: 22px; color: #fff; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 12px;
+}
+.ega-takeaways h4 .ega-h3-bar { width: 6px; height: 24px; }
+.ega-takeaways ol { list-style: none; counter-reset: tk; }
+.ega-takeaways li {
+  counter-increment: tk; padding: 12px 0 12px 44px; position: relative;
+  color: var(--ega-ink); font-size: 14.5px; line-height: 1.65;
+  border-bottom: 1px dashed rgba(212,175,55,0.10);
+}
+.ega-takeaways li:last-child { border-bottom: 0; }
+.ega-takeaways li::before {
+  content: counter(tk, decimal-leading-zero);
+  position: absolute; left: 0; top: 11px;
+  font-family: "JetBrains Mono", monospace; font-size: 12px;
+  color: var(--ega-gold); letter-spacing: 0.04em;
+}
+
+.ega-hero { padding: 64px 56px 60px; max-width: 1080px; margin: 0 auto; }
+@media (max-width: 768px) { .ega-hero { padding: 40px 22px 30px; } }
+.ega-hero-mark {
+  font-family: "JetBrains Mono", monospace; letter-spacing: 0.36em; color: var(--ega-gold);
+  font-size: 11px; text-transform: uppercase; margin-bottom: 22px;
+}
+.ega-hero-title {
+  font-family: "Fraunces", serif; font-weight: 300;
+  font-size: clamp(48px, 7vw, 88px); line-height: 0.98; letter-spacing: -0.035em; color: #fff;
+}
+.ega-hero-title em {
+  font-style: italic; font-weight: 400;
+  background: linear-gradient(180deg, #f3dca0 0%, var(--ega-gold) 50%, var(--ega-gold-deep) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ega-hero-sub { font-size: 18px; line-height: 1.6; color: var(--ega-ink-soft); max-width: 720px; margin-top: 28px; }
+.ega-hero-meta {
+  margin-top: 36px; display: flex; flex-wrap: wrap; gap: 28px;
+  font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ega-ink-muted);
+}
+.ega-hero-meta span strong { color: var(--ega-gold-soft); font-weight: 500; }
+.ega-hero-rule { height: 1px; background: linear-gradient(90deg, transparent, var(--ega-line-strong), transparent); margin: 44px 0; }
+.ega-toc { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 12px; }
+.ega-toc-item {
+  display: grid; grid-template-columns: 32px 1fr; gap: 12px; align-items: center;
+  padding: 14px 16px; border-radius: 12px; border: 1px solid var(--ega-line);
+  background: rgba(255,255,255,0.02); transition: all .25s;
+}
+.ega-toc-item:hover {
+  border-color: var(--ega-line-strong);
+  background: linear-gradient(180deg, rgba(212,175,55,0.06), rgba(212,175,55,0));
+  transform: translateY(-2px);
+}
+.ega-toc-num { color: var(--ega-gold); font-family: "JetBrains Mono", monospace; font-size: 12px; }
+.ega-toc-label { color: var(--ega-ink); font-size: 14.5px; font-weight: 500; }
+
+.ega-pager {
+  max-width: 1080px; margin: 30px auto 0; padding: 0 56px;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 14px;
+}
+@media (max-width: 768px) { .ega-pager { padding: 0 22px; } }
+.ega-pager-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 18px; border-radius: 12px; border: 1px solid var(--ega-line);
+  background: rgba(255,255,255,0.02); color: var(--ega-ink-soft);
+  font-size: 13.5px; transition: all .25s;
+}
+.ega-pager-btn:hover:not(:disabled) {
+  border-color: var(--ega-line-strong);
+  background: linear-gradient(180deg, rgba(212,175,55,0.06), rgba(212,175,55,0));
+  color: #fff;
+}
+.ega-pager-btn:disabled { opacity: .35; cursor: not-allowed; }
+.ega-pager-next { justify-self: end; }
+.ega-pager-count { font-family: "JetBrains Mono", monospace; color: var(--ega-gold-soft); font-size: 12px; letter-spacing: 0.16em; }
+
+.ega-footer {
+  max-width: 1080px; margin: 60px auto 40px; padding: 0 56px;
+  text-align: center; color: var(--ega-ink-muted); font-size: 12px; letter-spacing: 0.08em;
+}
+.ega-foot-rule { height: 1px; background: linear-gradient(90deg, transparent, var(--ega-line-strong), transparent); margin-bottom: 22px; }
+.ega-foot-mark {
+  background: linear-gradient(180deg, var(--ega-gold-soft), var(--ega-gold-deep));
+  -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 600;
+}
+.ega-foot-sep { margin: 0 10px; opacity: .6; }
+.ega-foot-sub { margin-top: 8px; opacity: 0.7; }
+</style>
+</head>
+<body>
+<div class="ega-shell">
+  <div class="ega-bg-grain"></div>
+  <div class="ega-bg-glow"></div>
+
+  <header class="ega-topbar">
+    <button class="ega-icon-btn" id="menuToggle" aria-label="Menü">☰</button>
+    <div class="ega-brand-mini">
+      <span class="ega-brand-mark">EGA</span>
+      <span class="ega-brand-name">Ek Gelir Akademi</span>
+    </div>
+    <div class="ega-progress-mini"><div class="ega-progress-mini-fill" id="progressMini"></div></div>
+  </header>
+
+  <div class="ega-layout">
+    <aside class="ega-sidebar" id="sidebar">
+      <div class="ega-brand">
+        <div class="ega-brand-eyebrow">Premium Sunum</div>
+        <h1 class="ega-brand-title">Ek Gelir <em>Akademi</em></h1>
+        <p class="ega-brand-sub">Dijital Pazarlama Sistemi: Reklamla Müşteri Getir. 10 bölümlük interaktif reklam ve büyüme çalışması.</p>
+      </div>
+      <nav class="ega-nav" id="nav" aria-label="Bölümler">
+        <div class="ega-nav-label">Bölümler</div>
+      </nav>
+      <div class="ega-sidebar-foot"><span>Edisyon · 2026</span><span class="dot"></span></div>
+    </aside>
+
+    <main class="ega-main">
+      <div class="ega-progress-bar"><div class="ega-progress-fill" id="progressFill"></div></div>
+      <div class="ega-scroll" id="scroll">
+        <div id="sectionContainer"></div>
+        <nav class="ega-pager">
+          <button class="ega-pager-btn" id="prevBtn">‹ <span id="prevLabel">Başlangıç</span></button>
+          <div class="ega-pager-count" id="pagerCount">01 / 11</div>
+          <button class="ega-pager-btn ega-pager-next" id="nextBtn"><span id="nextLabel">Sonraki</span> ›</button>
+        </nav>
+        <footer class="ega-footer">
+          <div class="ega-foot-rule"></div>
+          <p>
+            <span class="ega-foot-mark">Ek Gelir Akademi</span>
+            <span class="ega-foot-sep">·</span>
+            Dijital Pazarlama Sistemi: Reklamla Müşteri Getir · Premium Sunum Serisi
+          </p>
+          <p class="ega-foot-sub">Bu sunum eğitim ve bilgilendirme amaçlıdır.</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+/* ============ İçerik ============ */
+const SECTIONS = [
+  {
+    id: "intro", shortTitle: "Açılış", hero: true,
+    toc: [
+      "Reklam Zihniyeti · Maliyet Değil, Yatırım",
+      "Alıcı Yolculuğu · Farkındalıktan Sadakate",
+      "Kitle ve Persona · Bütçenin İlk Filtresi",
+      "Reklam Kanalları · Meta, Google, TikTok",
+      "Reklam Yaratıcısı · Görsel ve Video Reçetesi",
+      "Metin ve Hook · Reklamda Satan Kelime",
+      "Bütçe ve Kampanya Yapısı · CBO, Testler",
+      "Landing Page ve Dönüşüm · Reklamdan Sonrası",
+      "Piksel, Ölçüm ve Atıf · Ölçemediğin Yanar",
+      "Ölçekleme · Vertical, Horizontal, Retargeting"
+    ]
+  },
+
+  /* 1 */
+  { id:"zihniyet", shortTitle:"Reklam Zihniyeti",
+    title:"Reklam <em>Zihniyeti</em> · Maliyet Değil, Yatırım",
+    lead:"Reklamla müşteri getirmek bir sanat değil, bir sistemdir. Yanlış zihniyetle 100 bin TL 3 haftada yanabilir; doğru sistemle aynı bütçe 30 bin TL kâra dönüşür. Bu bölüm, tüm reklam düşüncesinin temeli olan denklemi kurar.",
+    blocks:[
+      { type:"h", text:"Reklam = Yatırım, Kumar Değil" },
+      { type:"p", text:"Reklama harcanan her lira <strong>ölçülebilir bir iş biriminin</strong> parçasıdır. Hisse senedi gibi düşünün: 1 TL yatırırsınız, 3 TL geri alırsınız → yatırım. 1 TL yatırırsınız, 0,50 TL geri alırsınız → kayıp. Şansa bırakılamaz. Ölçüm + optimizasyon olmadan yapılan reklam, para değil şans dağıtır." },
+      { type:"callout", title:"Temel Denklem", text:"<strong>ROAS = Reklamdan Gelen Gelir ÷ Reklama Harcanan.</strong> Bir kampanyanın sağlığı ROAS ile ölçülür. Sürdürülebilir eşik dijital ürün için 3×, hizmet için 4×, e-ticaret için 2,5-3× civarındadır. ROAS < 2 uzun süre giden kampanya bütçe yakımıdır." },
+      { type:"h", text:"3 Reklam Yatırımcısı Profili" },
+      { type:"cards", items:[
+        { title:"Şansçı", body:"Sezgiye göre reklam açar, ölçmez, sürekli değiştirir. Bütçenin çoğu yanar." },
+        { title:"Bilimci", body:"Hipotez kurar, test eder, ölçer, kazananı ölçekler. Sürdürülebilir büyüme." },
+        { title:"Otomat", body:"AI ve sistemler kurar, insan müdahalesi minimum, ölçek büyük. En gelişmiş faz." }
+      ]},
+      { type:"h", text:"Reklamın Sürdürülebilirlik Denklemi" },
+      { type:"steps", items:[
+        { title:"LTV Hesapla", body:"Bir müşterinin ömür boyu değeri kaç TL?" },
+        { title:"Karlılık Payı Belirle", body:"LTV'nin ne kadarı reklam yatırılabilir? (genelde %25-40)" },
+        { title:"Hedef CAC Bul", body:"Yeni müşteri kazanma maliyeti bu üst sınırın altında kalmalı." },
+        { title:"Ölçüm Kur", body:"Piksel, dönüşüm etkinlikleri, atıf modeli olmadan optimize edilemez." },
+        { title:"Sürekli Test", body:"Reklam bir kez kurulup unutulmaz; haftalık test döngüsüyle yaşar." }
+      ]},
+      { type:"h", text:"Reklamın 3 Fonksiyonu · Ne Bekleyeceksin?" },
+      { type:"table",
+        headers:["Fonksiyon","Amaç","Beklenti"],
+        rows:[
+          ["Farkındalık (TOFU)","Yeni kitleye ulaşmak","Ucuz CPM, düşük dönüşüm"],
+          ["Değerlendirme (MOFU)","Sıcak aday oluşturmak","Lead toplama, e-mail büyütme"],
+          ["Dönüşüm (BOFU)","Satın alma tetiklemek","Doğrudan gelir, yüksek ROAS"]
+        ]
+      },
+      { type:"p", text:"En yaygın hata: sadece BOFU (dönüşüm) reklamı çalıştırmak. Kısa vadede satar, uzun vadede kitle kurumaya başlar çünkü <em>huninin üst kısmı beslenmez</em>. Sağlıklı reklam mix'i 3 katmana da yatırım yapar." },
+      { type:"h", text:"Bütçe Kararı · Aylık Ne Kadar?" },
+      { type:"stats", items:[
+        { value:"3-5×", label:"CAC → LTV oranı; sürdürülebilir reklam için minimum" },
+        { value:"%15-25", label:"Cironun reklam bütçesi olarak ayrılan tipik oranı" },
+        { value:"14-21 gün", label:"Bir kampanyanın karar verilebilir sinyal biriktirme süresi" },
+        { value:"%3-5", label:"Yeni kampanyaların ilk hafta ölçek büyüme oranı" }
+      ]},
+      { type:"callout", title:"3 Öğrenme Fazı", text:"Meta Ads'te bir kampanya <strong>öğrenme fazına</strong> girer (ortalama 7-14 gün) — algoritma en iyi kitleyi bulmaya çalışır. Bu fazda yapılan aşırı müdahale (bütçe değişimi, kreatif değişimi) öğrenmeyi sıfırlar. <em>Sabır, algoritmanın en iyi dostudur</em>." },
+      { type:"h", text:"Reklamda Yapılan 6 Pahalı Hata" },
+      { type:"prosncons",
+        pros:["Ölçüm ve piksel önce, reklam sonra kurulur","Kampanyaya en az 7-14 gün öğrenme süresi verilir","LTV/CAC analizi yapılır, sonra bütçe artırılır","Hedef kitle net; avatar yazılı doküman haline getirilir","Her kampanya en az 3 farklı kreatif testiyle başlar","Retargeting hunisi her zaman açık"],
+        cons:["Ölçüm kurmadan reklam açmak","Her gün müdahale ederek öğrenmeyi sıfırlamak","Tek kreatifle kampanya çalıştırmak","Bütçeyi bir günde 3 katına çıkarmak","Hedef kitleyi 'herkes'e ayarlamak","Retargeting olmadan yalnız soğuk trafik reklamı"]
+      },
+      { type:"vaka",
+        title:"E-Ticaret Butiği · Şansçıdan Bilimciye Geçiş",
+        baglam:"Küçük giyim markası aylık 25.000 TL reklam bütçesi, ROAS 1,4. Kurucu her gün kampanyaya bakıyor, bütçe artırıyor/azaltıyor, kreatif değiştiriyor. Bütçe artıyor, satış artmıyor.",
+        analiz:"Yaklaşım değişti: piksel doğrulandı, LTV/CAC analizi yapıldı (LTV 640 TL, hedef CAC 210 TL). Öğrenme fazı boyunca müdahale durduruldu. 4 kreatif A/B testi kuruldu. TOFU/MOFU/BOFU üç katmanlı yapı oluşturuldu.",
+        sonuc:"8 hafta sonra: ROAS 1,4 → 3,1, aylık gelir 35 bin → 78 bin TL. Aynı bütçe, aynı ürün — sadece <em>sistematik yaklaşım</em>. Kurucunun reklama harcadığı vakit haftada 8 saatten 2 saate düştü."
+      },
+      { type:"takeaways", items:[
+        "Reklam bir maliyet değil, ölçülebilir bir yatırım biçimidir.",
+        "ROAS temel denklemdir; sektöre göre 2,5× - 4× sürdürülebilir eşiktir.",
+        "3 katman (TOFU / MOFU / BOFU) birlikte beslendiğinde kalıcı büyüme oluşur.",
+        "Öğrenme fazına müdahale, kampanyayı sıfırlamak demektir.",
+        "LTV/CAC analizi olmadan bütçe artışı ölçek değil, kayıp katlar."
+      ]}
+    ]
+  },
+
+  /* 2 */
+  { id:"yolculuk", shortTitle:"Alıcı Yolculuğu",
+    title:"Alıcı <em>Yolculuğu</em> · Farkındalıktan Sadakate",
+    lead:"Bir yabancı ilk gördüğü an satın almaz. Ortalama bir alıcı satın alma kararı vermeden önce 7-11 marka temasından geçer. Reklamların görevi bu temasları planlı ve ölçülü şekilde üretmektir.",
+    blocks:[
+      { type:"h", text:"Alıcı Yolculuğu · 5 Aşama" },
+      { type:"cards", items:[
+        { title:"Farkındalık", body:"Yabancı seni ilk kez görür. 'Böyle bir marka varmış' anı." },
+        { title:"İlgi", body:"İçeriğini takip eder, karşılaşmalar tekrarlanır." },
+        { title:"Değerlendirme", body:"Fiyat, alternatifler, yorumları karşılaştırır." },
+        { title:"Karar", body:"Satın alma butonu, ödeme, ilk sipariş." },
+        { title:"Sadakat", body:"Tekrar satın alma, referans verme, LTV artışı." }
+      ]},
+      { type:"callout", title:"Reklam Bu Yolculuğun Motorudur", text:"Yolculuk kendi kendine ilerlemez. Doğru zamanda doğru reklam gösterilmeyen aday, <strong>yolun ortasında kaybolur</strong>. Her aşamanın kendi reklam türü ve mesajı vardır — evrensel bir reklam yoktur." },
+      { type:"h", text:"Aşama Bazlı Reklam Türleri" },
+      { type:"table",
+        headers:["Aşama","Reklam Türü","Mesaj","Metrik"],
+        rows:[
+          ["Farkındalık","Video görüntüleme, erişim","Marka hikayesi, sorun tespiti","CPM, ThruPlay"],
+          ["İlgi","Etkileşim, sayfa trafiği","Değer içeriği, blog, quiz","CTR, sayfa süresi"],
+          ["Değerlendirme","Lead, mesaj","Ücretsiz rehber, denetim, demo","CPL"],
+          ["Karar","Dönüşüm, satın alma","Aciliyet, kampanya, garanti","CPA, ROAS"],
+          ["Sadakat","Retargeting müşteriye","Yeni ürün, upsell, referans","LTV, tekrar satış"]
+        ]
+      },
+      { type:"h", text:"Mikro-Anlar (Micro-Moments)" },
+      { type:"p", text:"Google'ın 'micro-moments' modeline göre alıcı 4 farklı mikro-anda karar verir: <strong>Bilmek istiyorum, gitmek istiyorum, yapmak istiyorum, satın almak istiyorum</strong>. Reklam bu mikro-anları yakalayan formatlarla eşleşmeli. Örneğin: 'Bilmek istiyorum' için blog reklamı; 'satın almak istiyorum' için katalog reklamı." },
+      { type:"h", text:"7-11 Temas Kuralı · Neden Retargeting?" },
+      { type:"p", text:"Aday ilk temasta genellikle almaz. Google araştırması: bir tüketici satın alma kararı vermeden ortalama <strong>7 ile 11 marka teması</strong> yaşar. Bu yüzden retargeting (yeniden hedefleme) reklamın en kârlı halidir — kitle zaten seni tanıyor, itiraz azalıyor, dönüşüm 3-5 katına çıkıyor." },
+      { type:"cards", items:[
+        { title:"Site Ziyaretçileri", body:"Landing gelmiş, satın almamış. En sıcak retargeting kitlesi." },
+        { title:"Video İzleyenler", body:"%75+ videoyu izleyen kitle → yüksek niyet sinyali." },
+        { title:"Sosyal Etkileşimliler", body:"Post beğenen, kaydeden, paylaşanlar." },
+        { title:"Sepet Terk Edenler", body:"Ödemenin dibine gelmiş, tamamlamamış. Altın kitle." },
+        { title:"Eski Müşteriler", body:"90+ gündür sipariş vermeyen. Yeni ürünle geri çağrı." }
+      ]},
+      { type:"h", text:"AIDA + AARRR · İki Farklı Model" },
+      { type:"table",
+        headers:["Model","Aşamalar","Kimin için"],
+        rows:[
+          ["AIDA","Attention → Interest → Desire → Action","Klasik satış hunisi, e-ticaret"],
+          ["AARRR","Acquisition → Activation → Retention → Referral → Revenue","SaaS, uygulama, dijital ürün"]
+        ]
+      },
+      { type:"callout", title:"Doğru Hunide Doğru Reklam", text:"Küçük işletmelerin çoğu tek bir dönüşüm reklamı çalıştırır ve şaşırır ki 'reklam işlemiyor'. Gerçek: <strong>farkındalık ve değerlendirme aşamalarını beslemeyen huni</strong>, karar aşamasına kimseyi göndermez. Reklam bir katman değil, bir sistemdir." },
+      { type:"h", text:"Alıcı Yolculuğu Haritası · Doldurulacak Şablon" },
+      { type:"steps", items:[
+        { title:"Aşama 1 · Farkındalık", body:"Nerede? (Sosyal, arama, YouTube) Hangi reklam? (Video, image) Bütçe payı?" },
+        { title:"Aşama 2 · İlgi", body:"Değer içeriği (blog, video). Beslenen kitle: ana kanaldan gelen ziyaretçiler." },
+        { title:"Aşama 3 · Değerlendirme", body:"Lead magnet + karşılaştırma sayfası. E-mail listesine düşürme." },
+        { title:"Aşama 4 · Karar", body:"Retargeting + aciliyet + garanti. En yüksek ROAS burada." },
+        { title:"Aşama 5 · Sadakat", body:"Yeni ürün, upsell, referans kampanyası. LTV bileşenleri." }
+      ]},
+      { type:"vaka",
+        title:"Kişisel Bakım Markası · Huni Tabakalı Reklamla 2,7× Büyüme",
+        baglam:"Marka aylık 40 bin TL bütçeyi %90 dönüşüm reklamlarına harcıyordu. İlk ay iyi çalıştı, sonraki aylarda satış plato yaptı, CAC yükseldi.",
+        analiz:"3 katmanlı yapıya geçildi: %35 TOFU video (marka hikayesi), %25 MOFU lead (cilt tanı testi), %40 BOFU retargeting + dönüşüm. E-mail listesi bütün huniden beslendi.",
+        sonuc:"12 hafta sonra: CAC 210 TL → 145 TL, aylık satış 2,7× büyüdü. Uzun vadeli marka bilinirliği ilk defa organik olarak artmaya başladı. Reklam çıksa da e-mail listesinden gelen satışlar toplam gelirin %30'una çıktı."
+      },
+      { type:"takeaways", items:[
+        "Alıcı ilk temasta satın almaz; 7-11 marka teması ortalamadır.",
+        "Yolculuk 5 aşamada işler: farkındalık, ilgi, değerlendirme, karar, sadakat.",
+        "Her aşamanın kendine ait reklam türü, mesajı ve metriği vardır.",
+        "Yalnız dönüşüm reklamı kısa vadeli, üst huni beslenmeden büyüme sürmez.",
+        "Retargeting reklamda en yüksek ROAS'lı katmandır — asla kapatma."
+      ]}
+    ]
+  },
+
+  /* 3 */
+  { id:"kitle", shortTitle:"Kitle ve Persona",
+    title:"Kitle ve <em>Persona</em> · Bütçenin İlk Filtresi",
+    lead:"Reklamlarda yakılan bütçenin çoğu 'yanlış kişiye gösterildiği' için yanar. Doğru kişiye zayıf mesaj bile satar; yanlış kişiye harika mesaj bile satmaz. Bu bölüm reklam bütçesinin ilk filtresi olan kitle stratejisini kurar.",
+    blocks:[
+      { type:"h", text:"Kitle Neden Her Şeydir?" },
+      { type:"p", text:"Reklam platformlarının algoritması <strong>hedef kitlenize benzeyen</strong> kişilere sizinkine benzer içerikler gösterir. Hedef 'kadın, 20-55, Türkiye' ise algoritma neye göre eşleştirsin? Böyle bir tanım yok gibidir. Doğru kitle darlaştıkça algoritma keskinleşir, CPA düşer, ROAS yükselir." },
+      { type:"callout", title:"Kural · Kitle Persona Olarak Yazılır", text:"'Kadın 25-45' bir kitle değildir; 'İki çocuklu 32 yaş anne, ofisten uzaktan çalışıyor, cilt problemi doğum sonrası başladı, Instagram'da minimal hayat hesaplarını takip ediyor' — <strong>bu bir personadır</strong>. Persona olmadan reklam para dağıtır." },
+      { type:"h", text:"Persona Şablonu · 8 Boyut" },
+      { type:"cards", items:[
+        { title:"Demografi", body:"Yaş, cinsiyet, coğrafya, meslek, gelir." },
+        { title:"Psikografi", body:"Değerler, korkular, umutlar, günlük ritim." },
+        { title:"Sorun (Pain)", body:"Uykusunu kaçıran, günlük dert olan spesifik problem." },
+        { title:"Arzu (Desire)", body:"Bu sorun çözülürse hayatının nasıl değişeceği." },
+        { title:"İtirazlar", body:"'Bende işlemez', 'pahalı', 'zamanım yok' cümleleri." },
+        { title:"Alışveriş Davranışı", body:"Ne kadar sıklıkla, ne kadar bütçeyle, hangi kanaldan alır?" },
+        { title:"Dijital Alışkanlıklar", body:"Hangi platform, hangi zaman, hangi format?" },
+        { title:"Etkilendiği Otoriteler", body:"Hangi markalar, hangi kişiler, hangi hesaplar?" }
+      ]},
+      { type:"h", text:"3 Kitle Türü · Meta / Google Uyumu" },
+      { type:"table",
+        headers:["Kitle Türü","Kaynak","Kullanım Yeri"],
+        rows:[
+          ["Soğuk (Cold)","İlgi alanı, davranış, demografi","Farkındalık, ilk temas"],
+          ["Sıcak (Warm)","Site ziyaretçisi, etkileşim","Değerlendirme, retargeting"],
+          ["Müşteri (Customer)","Satın almış müşteri listesi","Sadakat, tekrar satın alma"],
+          ["Benzer (Lookalike)","Müşteriye benzeyen kitle","Yeni müşteri, ölçekleme"],
+          ["Advantage+ / Broad","Algoritma optimize, geniş","Ölçek fazı, güçlü kreatifle"]
+        ]
+      },
+      { type:"h", text:"Lookalike (Benzer) Kitle · Ölçeğin Anahtarı" },
+      { type:"p", text:"Meta ve Google, mevcut müşterilerinize benzeyen kişileri bulur. <strong>%1 lookalike</strong>, en iyi müşterilerinize en benzeyen dar segmenttir — yüksek dönüşüm, düşük ölçek. %5-10 daha geniş ama daha az doğru. Sürüş kuralı: en iyi 100-500 alıcının listesini yükle, %1-3 lookalike kur, ölçek artınca %5-10 aç." },
+      { type:"callout", title:"Kişisel Veri · Doğru Kaynak", text:"Lookalike için 'sadece e-mail kaydeden' değil, <strong>en yüksek LTV'li müşteriler</strong> tercih edilmelidir. 1.000 sıradan müşteri yerine <em>200 en iyi müşterinin</em> lookalike'ı çoğu zaman daha iyi kitle üretir. Kalite > adet." },
+      { type:"h", text:"İlgi Alanı (Interest) Kitleleri" },
+      { type:"p", text:"Meta'nın 'ilgi alanı' hedeflemesi (yoga takipçileri, girişimcilik ilgililileri vb.) artık algoritmik önerilere göre çok daha zayıf sinyal veriyor. 2024 sonrasında Meta 'Advantage+' ve <em>geniş kitle + güçlü kreatif</em> stratejisini teşvik ediyor. Bu, algoritmanın gizli kitle segmentlerini bulmasına izin vermek demek." },
+      { type:"cards", items:[
+        { title:"Advantage+ Audience", body:"Meta önerdiği kitle + kısıtlar. Kreatif iyi ise ölçek büyük." },
+        { title:"İlgi Alanı Stackleme", body:"3-5 ilgili ilgi alanını üst üste; hâlâ küçük hesaplar için işe yarar." },
+        { title:"Coğrafi Daraltma", body:"Belirli şehir, mesafe, posta kodu — yerel hizmet için altın." },
+        { title:"Davranış Bazlı", body:"'Sık seyahat edenler', 'yeni ev alanlar' — durum bazlı hedefleme." },
+        { title:"Custom Audience", body:"Müşteri listesi, site ziyaretçisi, video izleyeni." },
+        { title:"Google · Alım Niyeti", body:"'Şu ürünü satın al' araması — en yüksek niyetli kitle." }
+      ]},
+      { type:"h", text:"Persona Yazma Egzersizi · 10 Sorulu Anket" },
+      { type:"steps", items:[
+        { title:"Kaç yaşında, nerede yaşıyor?", body:"Somut sınırlar koy, 'herkes' cevabı yasak." },
+        { title:"Günlük hangi 3 sorunu yaşıyor?", body:"Sıradan bir gününde ne canını sıkıyor?" },
+        { title:"En büyük hayali ne?", body:"5 yıl sonra kendini nerede görüyor?" },
+        { title:"Bu ürüne 'hayır' derse sebebi ne olur?", body:"En kuvvetli 3 itiraz." },
+        { title:"Hangi 3 hesap/markayı takip ediyor?", body:"Rekabet ve etki analizi." },
+        { title:"Alışverişte en çok neyi umursar?", body:"Fiyat, kalite, hız, güven — sırala." },
+        { title:"Ne kadar bütçeyi rahat harcar?", body:"Fiyat aralığı psikolojisi." },
+        { title:"Alışverişten önce nereye bakar?", body:"Yorum, blog, YouTube, DM — kanal ipucu." },
+        { title:"Onu 'bizim müşterimiz' yapan tek an ne?", body:"Doğuş anı; ürünü seçtiği kritik moment." },
+        { title:"Bize 'evet' diyecek 3 cümlesi ne olabilir?", body:"Reklamda kullanılacak alıntı cümleleri." }
+      ]},
+      { type:"vaka",
+        title:"B2B Yazılım Şirketi · 'Herkes'ten '250 Kişilik Kitle'ye",
+        baglam:"Şirket muhasebeci hedefleyen yazılım satıyor. Reklam kitlesi 'meslek: muhasebeci' + 30-55 + Türkiye. Bütçe 60 bin TL/ay, ROAS 1,2, CPA 4.800 TL.",
+        analiz:"Persona daraltıldı: 'Serbest muhasebeci, İstanbul + Ankara + İzmir, 3+ yıl deneyim, 20+ müşteri portföyü'. Custom Audience LinkedIn + müşteri e-mail listesi ile beslendi. %1 lookalike + üst kısıt olarak Advantage+.",
+        sonuc:"6 hafta: kitle 250 bin kişiye daraldı, CPA 4.800 → 1.950 TL, ROAS 1,2 → 3,4. Aynı bütçe, aynı ürün — <em>doğru kişilere ulaştığında</em> reklam bambaşka çalıştı."
+      },
+      { type:"takeaways", items:[
+        "Reklamda yakılan bütçenin çoğu 'yanlış kitle' yüzünden yanar.",
+        "Persona demografi değildir; sorun-arzu-itiraz üçlüsüyle tanımlanır.",
+        "Lookalike için en iyi kaynak yüksek LTV'li müşteri listesidir.",
+        "Advantage+ ile broad kitle, güçlü kreatif varsa dar hedefi geçebilir.",
+        "İyi bir persona reklam metninin, kreatifin ve landing sayfasının pusulasıdır."
+      ]}
+    ]
+  },
+
+  /* 4 */
+  { id:"kanallar", shortTitle:"Reklam Kanalları",
+    title:"Reklam <em>Kanalları</em> · Meta, Google, TikTok",
+    lead:"Her kanalın kendi ekonomisi, kendi kitlesi, kendi format kuralları vardır. 'Herkes bir yerde' yaklaşımı bütçeyi böler ve tümünde vasat sonuç üretir. Doğru başlangıç: 1-2 kanala odaklan, hâkim ol, sonra çeşitlendir.",
+    blocks:[
+      { type:"h", text:"5 Ana Reklam Kanalı · Türkiye 2026" },
+      { type:"cards", items:[
+        { title:"Meta Ads (Instagram + Facebook)", body:"Türkiye'de en yaygın; görsel + video + katalog; her sektör için başlangıç kanalı." },
+        { title:"Google Ads", body:"Arama ağı + display + shopping + YouTube. Alım niyeti yüksek." },
+        { title:"TikTok Ads", body:"Genç kitle + viral potansiyel + düşük CPM. UGC odaklı." },
+        { title:"YouTube Ads", body:"Video ile derin bağ; uzun-satın alma-döngüsü olan ürünler için altın." },
+        { title:"LinkedIn Ads", body:"B2B, yüksek CPC ama karar verici kitle. Pahalı ama kaliteli." }
+      ]},
+      { type:"callout", title:"Kanal Odağı Kuralı", text:"Her kanal 3 farklı sanat: reklam mimarisi, kreatif tipi, kitle davranışı. <strong>Bir kanalda ustalaşmadan diğerine geçmek</strong>, her ikisinde vasat kalmak demektir. İdeal başlangıç: bir platformda 30-90 gün, minimum 25-50 bin TL harcama; sonra ikincisine geçiş." },
+      { type:"h", text:"Meta Ads · Kampanya Yapısı" },
+      { type:"steps", items:[
+        { title:"Kampanya Seviyesi", body:"Amaç seçimi: farkındalık, trafik, etkileşim, lead, satış, mesaj." },
+        { title:"Ad Set Seviyesi", body:"Kitle, bütçe, yerleşim (Feed, Story, Reels, Marketplace), zaman." },
+        { title:"Ad Seviyesi", body:"Yaratıcı (görsel/video), metin, başlık, açıklama, CTA butonu." }
+      ]},
+      { type:"h", text:"Meta Ads Kampanya Amaçları · Ne Zaman Hangisi?" },
+      { type:"table",
+        headers:["Amaç","Ne Optimize Eder","Ne Zaman Kullan"],
+        rows:[
+          ["Farkındalık","CPM (bin gösterim)","Yeni marka, kitle büyütme"],
+          ["Trafik","Link tıklama","Erken faz, blog trafiği"],
+          ["Etkileşim","Beğeni, yorum","Sosyal kanıt biriktirme"],
+          ["Video Görüntüleme","İzleme süresi","Video reklam testi"],
+          ["Lead","Anlık form kayıt","B2B, danışmanlık"],
+          ["Mesaj","DM konuşma","Kişisel marka, hizmet"],
+          ["Satış (Conversions)","Piksel dönüşümü","Ana ölçek reklamı"],
+          ["Katalog Satış","Ürün retargeting","E-ticaret zorunlu"]
+        ]
+      },
+      { type:"h", text:"Google Ads · Alım Niyeti Kanalı" },
+      { type:"p", text:"Google Ads, Meta'nın 'yakala + ikna et' modelinden farklıdır: kullanıcı zaten <strong>bir şey arıyor</strong>, siz görünüyorsunuz. Bu 'niyet trafiği' en yüksek dönüşen trafik türüdür. 'Beyaz spor ayakkabı 42 numara' araması yapan biri satın almaya %85 hazırdır." },
+      { type:"cards", items:[
+        { title:"Search Network", body:"Arama sonucunda çıkar; en yüksek niyet, en yüksek CPC." },
+        { title:"Display Network", body:"Milyonlarca sitede banner; farkındalık ve retargeting için." },
+        { title:"Shopping", body:"Google alışveriş sonuçlarında ürün + fiyat + görsel." },
+        { title:"YouTube Ads", body:"Video reklam, uzun form ürünler için." },
+        { title:"Performance Max", body:"Tüm kanalları tek kampanyada AI ile optimize; Google'ın önerisi." },
+        { title:"Demand Gen", body:"YouTube + Gmail + Discover; TOFU keşif kampanyaları." }
+      ]},
+      { type:"h", text:"TikTok Ads · Viral Motor" },
+      { type:"p", text:"TikTok algoritması organik ve reklam arasındaki farkı azaltır. <strong>UGC hissi veren</strong> reklamlar en yüksek dönüşümü verir; 'reklama benzeyen' reklamlar hızla kaydırılır. TikTok'a 'ürün fotoğrafı + metin' değil, 'gerçek kişi + günlük çekim + hook' yükleyin." },
+      { type:"table",
+        headers:["Format","Süre","Amaç"],
+        rows:[
+          ["In-Feed Video","9-15 sn","Ana reklam formatı"],
+          ["TopView","5-60 sn","Uygulama açılışında premium spot"],
+          ["Spark Ads","Değişken","Mevcut organik postu boost et"],
+          ["Collection Ad","-","Ürün kataloğu + hızlı satın alma"],
+          ["Branded Effect","-","Filter/lens ile marka etkileşimi"]
+        ]
+      },
+      { type:"h", text:"Kanal Seçim Matrisi · Ürüne Göre" },
+      { type:"table",
+        headers:["Ürün / İş Türü","1. Kanal","2. Kanal","Neden"],
+        rows:[
+          ["E-Ticaret Görsel Ürün","Meta Ads","TikTok","Görsel + duygu satışı"],
+          ["B2B Yazılım","LinkedIn","Google Search","Karar verici + niyet"],
+          ["Yerel Hizmet","Google Search","Meta Ads","Yerel arama + coğrafya"],
+          ["Dijital Ürün / Kurs","Meta Ads","YouTube","Video ile eğit + sat"],
+          ["Mobil Uygulama","TikTok","Meta App","Genç + viral"],
+          ["Lüks / Premium","Google Search","YouTube","Yüksek niyet + premium format"]
+        ]
+      },
+      { type:"callout", title:"Diversifikasyon Kuralı", text:"Ölçekli bir sistem <strong>hiçbir kanala %70'ten fazla</strong> bağlı olmamalı. 2024'te Apple ATT (iOS gizlilik) sonrası Meta ölçümü zayıfladı; sadece Meta çalışan işletmelerin çoğu sarsıldı. Ana kanal + destek kanal + retargeting kanal — 3'lü strateji güvenlidir." },
+      { type:"vaka",
+        title:"El Yapımı Takı Markası · Meta + TikTok İkilisi",
+        baglam:"Marka aylık 80 bin TL bütçeyi %100 Meta'ya harcıyordu. Ölçek platoya girdi, CPA yükseldi, yeni kitle bulmak zorlaştı.",
+        analiz:"%70 Meta, %30 TikTok dağılımı denendi. TikTok için özel UGC video reklamlar çekildi (atölye içi + kullanıcı yorumu). Meta zaten güçlü olduğu retargeting katmanında tutuldu.",
+        sonuc:"6 hafta: TikTok tarafında CPA Meta'dan %28 daha ucuz çıktı. Aynı bütçe %31 daha çok satış getirdi. Marka artık iki kanaldan besleniyor; bir kanalda dalgalanma toplam performansı tehdit etmiyor."
+      },
+      { type:"takeaways", items:[
+        "Her kanalın ekonomisi ve dili farklıdır; 'herkes bir yerde' vasat üretir.",
+        "Başlangıçta tek kanalda 30-90 gün ustalaş, sonra çeşitlendir.",
+        "Meta 'ikna et', Google 'yakala', TikTok 'eğlendirerek sat' kanallarıdır.",
+        "Advantage+ / Performance Max, güçlü kreatif varsa algoritmanın gizli kitle bulma silahıdır.",
+        "Hiçbir kanala %70'ten fazla bağlı olma; diversifikasyon sigortadır."
+      ]}
+    ]
+  },
+
+  /* 5 */
+  { id:"kreatif", shortTitle:"Reklam Yaratıcısı",
+    title:"Reklam <em>Yaratıcısı</em> · Görsel ve Video Reçetesi",
+    lead:"Kreatif (reklam yaratıcısı) reklam sonucunun %70'ini belirler. Aynı kitle, aynı bütçe, aynı ürün — kreatif değişince ROAS 3 katına da çıkabilir sıfıra da düşebilir. Bu bölüm satan kreatifin bilimsel reçetesini kurar.",
+    blocks:[
+      { type:"h", text:"Kreatif Neden %70?" },
+      { type:"p", text:"Meta'nın 2024 raporu: reklam performansının <strong>~%70'i kreatiften, ~%20'si hedeflemeden, ~%10'u tekliften</strong> gelir. Algoritma öyle iyi ki, doğru kişileri zaten buluyor; sizin işiniz onların 3 saniyede durmasını sağlamak. Bu, 'kreatif her şeydir' kuralının nedeni." },
+      { type:"callout", title:"3 Saniye Kuralı", text:"Feed veya Reels'te <strong>ilk 3 saniyede</strong> hook vermeyen reklam kaydırılır. Görsel merak, ses, hareket, kontrast, insan yüzü — biri olmadan reklam 'sessiz' geçer. Kaç bin TL bütçe ayırırsanız ayırın, hook'suz reklam bunun %50-70'ini yakar." },
+      { type:"h", text:"Kreatif Anatomisi · 4 Katman" },
+      { type:"cards", items:[
+        { title:"Hook (0-3 sn)", body:"Dikkati durdur. Metin overlay, sarsıcı görsel, insan yüzü." },
+        { title:"Gövde (3-15 sn)", body:"Sorun + çözüm bağı; ürün nasıl fark yaratıyor?" },
+        { title:"Kanıt (15-25 sn)", body:"Sosyal kanıt, öncesi-sonrası, müşteri konuşması, rakam." },
+        { title:"CTA (Son 3-5 sn)", body:"Net eylem: 'Şimdi al', 'DM at', 'Linke bas'." }
+      ]},
+      { type:"h", text:"9 Kanıtlanmış Video Reklam Formatı" },
+      { type:"steps", items:[
+        { title:"UGC Testimonial", body:"Gerçek müşteri, telefon kamerası, kendi sesiyle deneyim." },
+        { title:"Öncesi/Sonrası", body:"Somut dönüşüm görselleştirme; cilt, kilo, tasarım." },
+        { title:"Ürün Demo", body:"Ürün nasıl kullanılır; hızlı, net, faydalı." },
+        { title:"Talking Head", body:"Kurucu / uzman kameraya konuşur; otorite kurma." },
+        { title:"Problem-Çözüm Sketch", body:"Kısa dramatize edilmiş bir sorun sahnesi + çözüm." },
+        { title:"Perde Arkası", body:"Atölye, üretim, ekip. Güven inşası." },
+        { title:"Comparison / Karşılaştırma", body:"'Herkes X, biz Y' — konumlandırma reklamı." },
+        { title:"Text-on-Screen (Sessiz)", body:"Kısa metin overlay + arka plan görüntüsü. Ses açık olmadan bile anlaşılır." },
+        { title:"Listicle / 3 Sebep", body:"'Bu ürünü seçmenizin 3 sebebi' + hızlı görüntüler." }
+      ]},
+      { type:"h", text:"Statik Görsel Reklamları" },
+      { type:"p", text:"Video her zaman daha iyi değildir. Bazı sektörlerde <strong>iyi bir statik görsel</strong> videodan yüksek dönüşüm verir — özellikle e-ticaret ürün odaklı kampanyalarda. Statik reklamın avantajı: hızlı üretim, hızlı test, düşük maliyet." },
+      { type:"cards", items:[
+        { title:"Ürün + Arka Plan", body:"Temiz zemin, iyi ışık, ürün merkezde." },
+        { title:"Ürün + İnsan Kullanımı", body:"Ürünün 'yaşayan' hâli; ilişki hissi." },
+        { title:"Metin Ağırlıklı", body:"Sarsıcı istatistik veya alıntı + minimal görsel." },
+        { title:"Öncesi/Sonrası (Yan Yana)", body:"Split görsel; en yüksek 'stopping power'." },
+        { title:"Grid / Kolaj", body:"6 küçük görüntü; ürünün çok yönlülüğü." },
+        { title:"Meme / Yerel Kültür", body:"Doğru marka için: yerel kültürel referans." }
+      ]},
+      { type:"h", text:"Yaratıcı Test Sistemi · Bilim Gibi Kur" },
+      { type:"steps", items:[
+        { title:"Test Batch'i Hazırla", body:"Aynı anda 5-7 farklı kreatif üret. Format çeşitli tut." },
+        { title:"Kontrollü Değişken", body:"Test edilen tek şey kreatif olsun — kitle, bütçe, teklif sabit." },
+        { title:"Bütçe Ayır", body:"Her kreatife eşit bütçe, minimum 3-5 gün öğrenme süresi." },
+        { title:"Kazananları Bul", body:"CPA, CTR, hook oranı (3-sn video izleme)." },
+        { title:"Ölçekle", body:"Kazananı çoğaltarak, versiyonlarını üreterek." },
+        { title:"Kaybedenleri Kapat", body:"Duygusal bağlanma yok; veriye göre karar." }
+      ]},
+      { type:"h", text:"Kreatif Metrikleri · Neyi Ölç?" },
+      { type:"table",
+        headers:["Metrik","Ne Ölçer","Sağlıklı"],
+        rows:[
+          ["Hook Rate","İlk 3 sn izleme","%25+"],
+          ["Hold Rate","Video tamamlama","%15-25"],
+          ["CTR (Link)","Tıklama oranı","%1,5-4"],
+          ["Thumbstop Ratio","Feed'de durma","%20+"],
+          ["CPC","Tıklama başı maliyet","Kanala göre"],
+          ["CPA","Dönüşüm başı maliyet","Hedef CAC altı"]
+        ]
+      },
+      { type:"callout", title:"UGC Ekonomisi", text:"UGC (kullanıcı üretimi içerik) reklam formatı, profesyonel prodüksiyona kıyasla <strong>%25-40 daha iyi ROAS</strong> üretiyor 2025 ortalamalarında. Sebep basit: kullanıcı 'reklam gibi görünmeyen' içeriği daha uzun izliyor. UGC toplama sistemi (müşteriye ödüllendirme, brief gönderme) düzenli olarak kurulmalı." },
+      { type:"h", text:"AI ve Kreatif Üretimi · 2026 Standardı" },
+      { type:"p", text:"2026'da AI araçları (Midjourney, Runway, ElevenLabs, GPT görsel) reklam kreatifinin ilk versiyonunu 15 dakikada üretebiliyor. Ancak <strong>AI çıktısı iyileştirilmeden reklam yapılmaz</strong> — insan editi, marka tutarlılığı, kültürel adaptasyon şart. AI = üretim hızlandırıcı, insan = kalite kontrolü. Sadece AI reklam çoğu zaman 'yapay' hissi verir ve tıklama düşer." },
+      { type:"vaka",
+        title:"Doğal Cilt Bakım Markası · 7 Kreatif Testi ile 3× ROAS",
+        baglam:"Marka tek bir 'profesyonel' ürün fotoğrafı reklamıyla çalışıyordu. ROAS 1,8, aylık satış plato yapmış.",
+        analiz:"7 farklı kreatif üretildi: 3 UGC video, 2 öncesi/sonrası statik, 1 kurucu talking head, 1 ürün demo. Aynı kitle + eşit bütçe ile test kuruldu. 6. gün sonunda 2 UGC + 1 öncesi/sonrası kazandı; kalanlar kapatıldı.",
+        sonuc:"Kazanan 3 kreatif ölçeklendi. ROAS 1,8 → 3,4, aylık satış 2,1 katına çıktı. Yaratıcı test sistemi kurumsallaştı; her ay 5 yeni test yapılıyor. Marka artık 'ne satar?' değil, 'hangi kreatif satar?' sorusunu ölçüyor."
+      },
+      { type:"takeaways", items:[
+        "Reklam performansının %70'i kreatiften gelir; hedefleme ikincil.",
+        "İlk 3 saniyede hook olmayan reklam bütçenin yarısını yakar.",
+        "9 farklı format var; UGC ve öncesi/sonrası genelde şampiyondur.",
+        "Sistemli test: aynı anda 5-7 kreatif, tek değişken, veriye göre karar.",
+        "AI kreatif üretimi hızlandırır ama insan editi olmadan yayına girmez."
+      ]}
+    ]
+  },
+
+  /* 6 */
+  { id:"metin", shortTitle:"Metin ve Hook",
+    title:"Metin ve <em>Hook</em> · Reklamda Satan Kelime",
+    lead:"Kreatif dikkati toplar; metin aksiyonu tetikler. Aynı görsel, farklı metinlerle test edildiğinde tıklama 2-3 katına çıkabiliyor. Reklam metni (copy) hafife alındığı için para tabelalarında en yaygın yakılan alandır.",
+    blocks:[
+      { type:"h", text:"Copy Neden Kritik?" },
+      { type:"p", text:"Görsel kullanıcıyı durdurur; <strong>metin ikna eder</strong>. Instagram feed'inde kullanıcının 'devamını gör' butonuna basması bile CTR'ı %30 artırır. Metin okunmuyorsa reklam yarım güçtür. İyi bir reklam metni; hook, hikaye, kanıt ve CTA'yı 4-6 kısa paragrafta yaşatır." },
+      { type:"callout", title:"AIDA Copy Formülü", text:"<strong>Attention</strong> (dikkat) → <strong>Interest</strong> (ilgi) → <strong>Desire</strong> (arzu) → <strong>Action</strong> (aksiyon). Bu 4 katmanı bir metinde geçmeyen reklam yarıda kalır. Hemen 'satın al' diyen metin de yarım — hikayesi olmadığı için." },
+      { type:"h", text:"9 Kanıtlanmış Hook Şablonu" },
+      { type:"steps", items:[
+        { title:"Rakam-Sonuç", body:"'3 haftada aylık gelirimizi 4 katına çıkardık.'" },
+        { title:"Karşı Görüş", body:"'Sürekli reklam açmak sana para kaybettiriyor. İşte neden…'" },
+        { title:"Yasak Bilgi", body:"'Reklam ajanslarının sana söylemediği tek gerçek…'" },
+        { title:"Sorun Adres", body:"'Bütçeni ayda 20 bin TL'ye çıkarıp aynı satışı görüyorsan bu senin için.'" },
+        { title:"Kim İçin Değil", body:"'Bu içerik kurumsal markalara değil, tam senin gibi başlayanlara.'" },
+        { title:"Meraklı Soru", body:"'Reklam bütçenin %40'ı nerede kayboluyor? İşte cevap…'" },
+        { title:"Hatanın İtirafı", body:"'İlk 6 ay yaptığım hatayı sana anlatayım…'" },
+        { title:"Kısa Hikaye", body:"'Bir müşteri 5 aydır aynı sorunla uğraşıyordu, sonra…'" },
+        { title:"Sarsıcı İstatistik", body:"'Küçük işletmelerin %63'ü reklam bütçesinin yarısını verimsiz yakıyor.'" }
+      ]},
+      { type:"h", text:"Reklam Metni Yazım Şablonu · 6-Cümle Kural" },
+      { type:"steps", items:[
+        { title:"1. Cümle (Hook)", body:"3 saniyede kimin için olduğunu söyle." },
+        { title:"2. Cümle (Sorun)", body:"Kitlenin yaşadığı ağrıyı isimlendir." },
+        { title:"3. Cümle (Sarsıcı Gerçek)", body:"Beklenmeyen bir bakış açısı ver." },
+        { title:"4. Cümle (Kanıt)", body:"Hızlı bir vaka veya rakam." },
+        { title:"5. Cümle (Sonuç)", body:"Ürünün / sistemin sağladığı somut fayda." },
+        { title:"6. Cümle (CTA)", body:"Net, tek eylem. 'DM at', 'Linke bas', 'Formu doldur'." }
+      ]},
+      { type:"h", text:"Uzun Copy vs Kısa Copy · Ne Zaman?" },
+      { type:"table",
+        headers:["Copy Uzunluğu","Ne Zaman İdeal","Örnek Kullanım"],
+        rows:[
+          ["Çok Kısa (1-2 satır)","Ünlü marka + basit ürün","'Yeni koleksiyon. Şimdi al.'"],
+          ["Kısa (3-5 satır)","E-ticaret + görsel ağırlıklı","Ürün özelliği + net CTA"],
+          ["Orta (6-10 satır)","Hizmet + ikna + biraz eğit","Danışmanlık, kurs, servis"],
+          ["Uzun (10+ satır)","Yüksek fiyat + fikir satışı","Premium kurs, koçluk, B2B"]
+        ]
+      },
+      { type:"h", text:"Duygu Tetikleri · Satın Alma Motorları" },
+      { type:"cards", items:[
+        { title:"Merak", body:"'Kimsenin söylemediği tek şey…' — devamını okumaya iter." },
+        { title:"Korku (FOMO)", body:"'Bu fırsat cuma bitiyor.' — kaybetme korkusu." },
+        { title:"Onay Arayışı", body:"'Sen de bu kulübün parçası ol.' — aidiyet." },
+        { title:"Kendini Görme", body:"'32 yaş anne, uzaktan çalışan…' — 'bu ben' hissi." },
+        { title:"Dönüşüm Umudu", body:"'6 hafta sonra kendini şöyle göreceksin.' — arzu." },
+        { title:"Sosyal Kanıt", body:"'840+ mutlu müşteri, ortalama 4,8/5 yorum.' — güven." }
+      ]},
+      { type:"h", text:"Başlık (Headline) Yazma · A/B Test Yasal" },
+      { type:"p", text:"Reklam metninin en çok okunan kısmı başlık ve ilk satırdır. <strong>Aynı reklamın başlığını değiştirmek CTR'ı %30-70 arasında oynatır</strong>. Her ciddi kampanyada minimum 4-6 farklı başlık test edilmelidir. Meta'da 'Dinamik Yaratıcı' özelliği bunu otomatik yapabilir." },
+      { type:"cards", items:[
+        { title:"Rakam Başlık", body:"'3 hafta · 4 kat büyüme'" },
+        { title:"Karşı Görüş", body:"'Reklam bütçeni yakan aptal alışkanlık'" },
+        { title:"Kişisel", body:"'Sana özel: reklam denetim raporu'" },
+        { title:"Sarsıcı", body:"'Reklam ajansların söylemediği 3 gerçek'" },
+        { title:"Faydayı Söyle", body:"'CAC'ı yarı yarıya düşür'" },
+        { title:"Merak", body:"'ROAS 3× nasıl mümkün?'" }
+      ]},
+      { type:"h", text:"CTA · Aksiyon Cümleleri Kütüphanesi" },
+      { type:"table",
+        headers:["Niyet","CTA Örnekleri","Ne Zaman"],
+        rows:[
+          ["Yumuşak İlgi","'Detayları gör'","TOFU, farkındalık"],
+          ["Kayıt","'Ücretsiz rehberi indir'","MOFU, lead"],
+          ["Etkileşim","'Yorumlarda paylaş'","Sosyal kanıt"],
+          ["Sıcak DM","'DM'den DENETİM yaz'","Hizmet satışı"],
+          ["Satın Alma","'Şimdi al · 14 gün iade'","BOFU"],
+          ["Aciliyet","'Cuma bitiyor · linke bas'","Kampanya"]
+        ]
+      },
+      { type:"callout", title:"'Ben' Değil, 'Sen'", text:"Zayıf reklam metni sürekli marka hakkında konuşur ('biz, ürünümüz, hizmetimiz'). Güçlü metin okuyanın hakkında konuşur ('sen, senin, sana'). Yeniden yaz: her cümlenin 'sen'e nasıl fayda sağladığını göster. <strong>'Ben' cümleleri ile 'sen' cümleleri oranı 1'e 4</strong> olmalı." },
+      { type:"vaka",
+        title:"Freelance Danışman · 3 Farklı Copy Testi",
+        baglam:"Danışman tek bir 'Aynı danışmanlık paketini sana da sunuyorum, DM'den yaz' reklam metniyle çalışıyordu. CTR %0,6, CPA 950 TL.",
+        analiz:"3 farklı metin varyantı test edildi: (A) Rakam-sonuç hook, (B) Karşı görüş hook, (C) Kişisel hikaye hook. Her biri aynı görselle, eşit bütçeyle 7 gün çalıştırıldı.",
+        sonuc:"7 gün sonunda: (B) karşı görüş metni CTR %1,9, CPA 380 TL. Diğerlerine 2,5× fark. Bu tek copy değişikliği; aynı görsel, aynı kitle, aynı ürün ile <em>CPA %60 düştü</em>. Metin gerçekten reklamın aksiyon anahtarı."
+      },
+      { type:"takeaways", items:[
+        "Kreatif dikkati toplar, metin aksiyonu tetikler — ikisi ayrılmaz.",
+        "6-cümle kural: Hook → Sorun → Sarsıcı Gerçek → Kanıt → Sonuç → CTA.",
+        "Uzunluk ürüne göre değişir; premium ürün uzun copy ister.",
+        "Duygu tetikleri (merak, FOMO, aidiyet, dönüşüm) rasyonel argümanı geçer.",
+        "'Ben' değil 'sen' odaklı metin; her cümle okuyucuya nasıl fayda sağladığını göstermeli."
+      ]}
+    ]
+  },
+
+  /* 7 */
+  { id:"butce", shortTitle:"Bütçe ve Kampanya Yapısı",
+    title:"Bütçe ve <em>Kampanya Yapısı</em> · CBO, Testler",
+    lead:"Yanlış kampanya yapısı, harika kreatif ve harika kitleyi bile öldürür. Bütçenin nereye, nasıl, ne kadar süreyle yatırılacağı — reklamın motor mühendisliğidir. Bu bölüm, kampanyaların doğru mimarisini kurar.",
+    blocks:[
+      { type:"h", text:"Meta Ads Kampanya Hiyerarşisi" },
+      { type:"table",
+        headers:["Seviye","Ne Belirler","Örnek"],
+        rows:[
+          ["Campaign","Amaç + bütçe stratejisi","Satış · CBO 500 TL/gün"],
+          ["Ad Set","Kitle + yerleşim + optimizasyon","Kadın 25-40 · Kadın giyim ilgililere"],
+          ["Ad","Kreatif + metin + link","Video reklam #3"]
+        ]
+      },
+      { type:"h", text:"CBO vs ABO · Bütçe Stratejisi" },
+      { type:"cards", items:[
+        { title:"CBO (Campaign Budget Optimization)", body:"Bütçe kampanya seviyesinde; algoritma en iyi Ad Set'e dağıtır. Ölçek + otomatik optimizasyon için ideal." },
+        { title:"ABO (Ad Set Budget Optimization)", body:"Bütçe Ad Set seviyesinde; her Ad Set eşit test edilir. Test aşaması için ideal." }
+      ]},
+      { type:"callout", title:"Kural · Önce ABO ile Test, Sonra CBO ile Ölçek", text:"Test fazında ABO kullan (her Ad Set'e eşit şans). Kazananlar belli olunca CBO ile birlikte yeniden yapılandır → algoritma bütçeyi kazananlara akıtır. Bu 2 adım en yaygın <strong>öğrenme faz problemini</strong> çözer." },
+      { type:"h", text:"3 Ana Kampanya Türü · Bir Sistemde" },
+      { type:"steps", items:[
+        { title:"Test Kampanyası", body:"Küçük bütçe (günlük 200-500 TL), 4-6 Ad Set, farklı kreatif + kitle kombinasyonları." },
+        { title:"Ölçek Kampanyası", body:"Kazanan Ad Set + kreatif kombinasyonlarını CBO ile büyütme." },
+        { title:"Retargeting Kampanyası", body:"Sıcak kitleye (site ziyaretçi, sepet terk, video izleyeni) sürekli açık." }
+      ]},
+      { type:"h", text:"Bütçe Dağılımı · İdeal Model" },
+      { type:"table",
+        headers:["Katman","Bütçe Payı","Kampanya Türü"],
+        rows:[
+          ["TOFU (Farkındalık)","%20-30","Video görüntüleme, geniş kitle"],
+          ["MOFU (Değerlendirme)","%15-25","Lead / mesaj, ilgi alanı"],
+          ["BOFU (Dönüşüm)","%30-40","Satış, custom + lookalike"],
+          ["Retargeting","%15-25","Sıcak kitle, sepet, ziyaretçi"]
+        ]
+      },
+      { type:"h", text:"Öğrenme Fazı · Sabır Kuralı" },
+      { type:"p", text:"Meta bir Ad Set'i optimize etmek için <strong>haftalık 50 dönüşüm</strong> ister. Bu eşiğe ulaşamayan Ad Set'ler öğrenme fazında kalır ve sürekli değişken sonuç verir. Bu yüzden çok küçük bütçeli kampanyalar performans göstermez. Minimum eşik: günlük 200-300 TL Ad Set bütçesi + hedef 5-10 TL CPA olan bir ürün için." },
+      { type:"cards", items:[
+        { title:"Sabır", body:"Yeni Ad Set'e minimum 3-4 gün, ideal 7 gün ver." },
+        { title:"Aşırı Müdahale = Reset", body:"Bütçe %20+ değişimi öğrenmeyi sıfırlar." },
+        { title:"Küçük İyileştirme", body:"Her seferinde tek bir değişken; %10-15 artış kabul edilebilir." },
+        { title:"Kreatif Refresh", body:"14-21 günde bir yeni kreatif; ad fatigue'i önle." }
+      ]},
+      { type:"h", text:"Bütçe Ölçekleme · 2 Strateji" },
+      { type:"table",
+        headers:["Yöntem","Nasıl","Avantaj","Risk"],
+        rows:[
+          ["Horizontal (Yatay)","Kazananın kopyasını yeni kitleye","Öğrenmeyi bozmaz","Kanıbal etki (aynı kitle)"],
+          ["Vertical (Dikey)","Aynı Ad Set bütçesini artır","Hızlı büyüme","Öğrenme reset riski"]
+        ]
+      },
+      { type:"callout", title:"Vertical Ölçek Kuralı", text:"Kazanan Ad Set'in bütçesini <strong>haftada bir maksimum %20-30</strong> artır. Bir günde bütçeyi 500'den 2.000 TL'ye çıkarmak, öğrenmeyi sıfırlar ve genellikle CPA'yı 3 katına çıkarır. Tırmanış, sıçrayış değil." },
+      { type:"h", text:"Kampanya Denetim Şablonu · 5-Dakika Rutini" },
+      { type:"steps", items:[
+        { title:"1. ROAS ve CPA", body:"Hedef eşikleri karşılıyor mu?" },
+        { title:"2. Frekans", body:"Aynı kişi kaç kez gördü? >3-4 fatigue işareti." },
+        { title:"3. CTR", body:"Kreatif hâlâ ilgi çekiyor mu? Düşüş = fatigue sinyali." },
+        { title:"4. CPM", body:"Bin gösterim maliyeti stabil mi? Ani artış = kitle sorunu." },
+        { title:"5. Öğrenme Durumu", body:"'Learning', 'Learning Limited' veya 'Active'?" }
+      ]},
+      { type:"h", text:"Kampanya Yapılanma · Örnek İskelet" },
+      { type:"prosncons",
+        pros:["ABO ile test, CBO ile ölçek yaklaşımı","Aynı anda 3 kampanya (test + ölçek + retargeting) çalıştırma","Sabit retargeting bütçesi ayırma","Kreatif refresh takvimi (14-21 gün)","Öğrenme fazı boyunca müdahalesiz sabır"],
+        cons:["Her gün Ad Set kapatıp açmak","Ad Set'e günde birden çok kez müdahale","10+ Ad Set'i tek kampanyada bulundurmak","Öğrenme faz bitmeden karar vermek","Retargeting olmadan yalnız soğuk kitleye harcamak"]
+      },
+      { type:"h", text:"Google Ads Kampanya Yapısı · Kısa Rehber" },
+      { type:"p", text:"Google Ads'te yapı biraz farklıdır: Kampanya → Ad Group → Ad + Keywords. <strong>Anahtar kelime niyet düzeyine göre</strong> ayrı Ad Group'lara ayrılmalı. Örneğin 'kadın kot pantolon' (yüksek niyet) ile 'moda 2026' (düşük niyet) aynı Ad Group'ta olmamalı — birinin CPC'si diğerini yakar." },
+      { type:"vaka",
+        title:"E-Ticaret Markası · Kampanya Yeniden Yapılanma",
+        baglam:"Marka tek bir kampanyada 12 Ad Set, her Ad Set için 50 TL/gün. Her gün 3-4 saatlik müdahale ile bütçe değiştiriliyor, kreatif değiştiriliyor. ROAS 1,3, CAC yüksek.",
+        analiz:"3 kampanya kuruldu: (1) TEST · ABO, 4 Ad Set, kreatif ve kitle testi. (2) ÖLÇEK · CBO, kazananlar. (3) RETARGETING · Advantage+ retargeting. Her Ad Set en az 7 gün öğrenmeye bırakıldı, günlük müdahale kaldırıldı.",
+        sonuc:"3 hafta: ROAS 1,3 → 3,6, CAC %58 düştü. Kurucu haftada 3 saatlik kampanya bakımı yapıyor (öncesi 20+ saat). Sistem 'çalışır durumda' — reklam artık bir 'nöbetçi işi' değil, bir yatırım süreci."
+      },
+      { type:"takeaways", items:[
+        "Kampanya yapısı reklam mühendisliğidir; kreatif iyi olsa bile yapı bozarsa çalışmaz.",
+        "ABO ile test et, CBO ile ölçekle — iki fazın kuralı.",
+        "Öğrenme fazı 7 gün / 50 dönüşüm; bu eşiği geçmeden karar verme.",
+        "Bütçe artışı haftada %20-30; sıçrayış öğrenmeyi sıfırlar.",
+        "3 kampanya paralel: test + ölçek + retargeting — tam sistem budur."
+      ]}
+    ]
+  },
+
+  /* 8 */
+  { id:"landing", shortTitle:"Landing Page ve Dönüşüm",
+    title:"Landing Page ve <em>Dönüşüm</em> · Reklamdan Sonrası",
+    lead:"Reklam trafiği getirir; landing page satışa çevirir. Aynı reklam iyi bir landing'e %8 dönüşür, kötü bir landing'e %1 — 8 katı fark. Reklam bütçesinin en pahalı optimizasyonu tıklama sonrası deneyimdedir.",
+    blocks:[
+      { type:"h", text:"Neden Landing Page? · Reklam-Sonrası Zayıf Halka" },
+      { type:"p", text:"Reklamlar günlerce optimize edilirken landing page unutulur. Ana sayfa (homepage) 'her şey için' tasarlanmıştır — kimse için değil. Reklama gelen kullanıcının <strong>tek bir amacı</strong> vardır (ilan edilmiş vaad); landing bu tek amacı en sürtünmesiz teslimatla verir. Aksi hâlde reklamın %70'i tıklamayı boşa harcar." },
+      { type:"callout", title:"Kural · Mesaj Eşleşmesi (Message Match)", text:"Reklamda gördüğü mesaj ile landing'in ilk manşeti <strong>bire bir eşleşmeli</strong>. 'Doğal cilt bakım seti' reklamı, 'Ana Sayfaya Hoşgeldiniz' landing'ine gitmemeli. Eşleşmesi bozuk sayfada dönüşüm %50-70 kaybolur." },
+      { type:"h", text:"Yüksek Dönüşen Landing Page Anatomisi" },
+      { type:"steps", items:[
+        { title:"Manşet (H1)", body:"Reklamda söz verilen faydanın net tekrarı. Örn: 'Cildinde 14 günde parlamayı bitir.'" },
+        { title:"Alt Manşet", body:"Kim için + neden bu ürün. 1-2 satır." },
+        { title:"Ana Görsel / Video", body:"Ürünü / faydayı gösterir; UGC video en yüksek dönüşüm veriyor." },
+        { title:"Sorun Beyanı", body:"'Şu an bu ağrıyı yaşıyorsan…' → kitle kendini görür." },
+        { title:"Çözüm Sunumu", body:"Ürünün ne yaptığı, hangi bileşenlerden oluştuğu." },
+        { title:"Sosyal Kanıt", body:"En az 3 yorum + varsa video testimonial + rakam." },
+        { title:"İçerik / Paket Detayı", body:"'Ne alacağın' netleşir; belirsizlik satışı öldürür." },
+        { title:"Risk Kaldırma", body:"14 gün iade, sonuç garantisi, ücretsiz kargo." },
+        { title:"Fiyat + Karşılaştırma", body:"3 paket (düşük/orta/premium) veya net tek fiyat." },
+        { title:"Sık Sorulan Sorular", body:"En yaygın 6-10 itirazın açık cevabı." },
+        { title:"Son CTA + Aciliyet", body:"'Şimdi başla', 'Bu haftaya son 24 saat'." }
+      ]},
+      { type:"h", text:"Dönüşüm Öldüren 8 Hata" },
+      { type:"prosncons",
+        pros:["Tek net amaç ve tek CTA","Reklam ile aynı manşet + görsel dili","Sosyal kanıt her ekranda","Mobil-öncelikli tasarım","Sürtünmesiz ödeme (tek sayfa)"],
+        cons:["Menü + üst navigasyon (kaçış rampası)","Reklamda söz verilen şey landing'de yok","Uzun form (10+ alan)","Yavaş yükleme (>3 sn)","Ödeme adımlarının 3+ olması","Fiyat gizli, 'fiyat için mesaj'"]
+      },
+      { type:"h", text:"Mobil Öncelik · %70+ Trafik" },
+      { type:"p", text:"Reklam tıklamalarının Türkiye'de <strong>%75+'ı mobil</strong>. Landing masaüstünde harika görünüp mobilde kırıksa dönüşüm yarıya düşer. Mobil test: parmak boyutu butonlar, tek elle scroll, 3G'de yüklenme süresi, tek sayfa akış. <em>Google Lighthouse skoru 85+ hedeflenmeli</em>." },
+      { type:"h", text:"Sayfa Hızı · Sessiz Katil" },
+      { type:"stats", items:[
+        { value:"1-3 sn", label:"Yüklenme süresi eşiği; ötesi %32 dönüşüm kaybı" },
+        { value:"%38", label:"5+ saniyede yüklenen sayfayı terk oranı" },
+        { value:"85+", label:"Google Lighthouse minimum mobil skor" },
+        { value:"2×", label:"Hız optimize edilmiş sayfaların dönüşüm oranı" }
+      ]},
+      { type:"h", text:"Landing Page Araçları · 2026 Yığını" },
+      { type:"table",
+        headers:["Araç","Güçlü Yön","Kimin İçin"],
+        rows:[
+          ["Framer","Hız + tasarım","Kişisel marka, agency"],
+          ["Webflow","Esnek + SEO","Marka, e-ticaret"],
+          ["Unbounce","A/B test odaklı","Performance marketer"],
+          ["Shopify","E-ticaret entegre","Ürün markası"],
+          ["Landen / Carrd","Hızlı MVP","Test aşaması"],
+          ["Wordpress + Elementor","Ekonomik + esnek","Küçük işletme"]
+        ]
+      },
+      { type:"h", text:"Isı Haritası ve Kullanıcı Kaydı" },
+      { type:"p", text:"Hotjar veya Microsoft Clarity ile <strong>gerçek kullanıcının nerede tıkladığını, nerede scroll ettiğini, nerede vazgeçtiğini</strong> görebilirsiniz. Anket ve A/B testinden önce kullanıcı kayıtları — landing zayıflıklarının en hızlı tespit yöntemi. 20 kayıt izlemek çoğu zaman 1 haftalık A/B testinden daha bilgilendiricidir." },
+      { type:"callout", title:"Ödeme Sayfası · Ayrı Dünya", text:"Landing dönüşüyor ama ödemede insanlar kaçıyorsa problem farklıdır. <strong>Sepet terk oranı sağlıklıda %55-70</strong> arasıdır — düşürmek için: tek sayfa ödeme, misafir alışveriş, çoklu ödeme yöntemi (kart + havale + taksit), güven rozetleri, ödeme sonrası anlık teşekkür + upsell." },
+      { type:"h", text:"A/B Testi · Landing İyileştirme" },
+      { type:"steps", items:[
+        { title:"Zayıf Halkayı Bul", body:"Isı haritası + dönüşüm oranı ile en düşük performanslı bölüm hangisi?" },
+        { title:"Tek Hipotez", body:"'Manşet çok soyut; kısaltırsak dönüşüm artar.'" },
+        { title:"İki Varyant", body:"A (mevcut) vs B (yeni). Aynı trafik dağılımı." },
+        { title:"Min 7 Gün / 1.000 Ziyaretçi", body:"İstatistiksel anlamlılık için." },
+        { title:"Karar", body:"%95 anlamlılık üstünde kazananı sabitle, bir sonraki halkaya geç." }
+      ]},
+      { type:"vaka",
+        title:"Kurs Satıcısı · Landing İyileştirmesiyle %72 Daha Fazla Satış",
+        baglam:"Kurs satıcısı Meta'dan iyi trafik alıyor ama landing dönüşümü sadece %1,4. Reklam bütçesi artırıldıkça CPA da artıyor.",
+        analiz:"Landing analiz edildi: ana sayfa gibi kurgulanmış (menü + 5 farklı CTA + uzun 'hakkımızda'), reklamdaki mesaj yok. Yeniden yazıldı: reklamla eşleşen manşet, tek CTA, 3 sosyal kanıt, sık sorulanlar, mobil öncelik, 2,1 sn yüklenme.",
+        sonuc:"4 hafta: dönüşüm %1,4 → %2,4 (%72 artış), CAC %41 düştü. Aynı reklam, aynı bütçe, aynı ürün — <em>landing değişti</em>, sistem katlandı. Reklam bütçesindeki en yüksek ROI iyileştirmesi genelde landing'dedir."
+      },
+      { type:"takeaways", items:[
+        "Reklam trafiği getirir; landing satışa çevirir — ikisi bir sistemdir.",
+        "Reklam mesajı ile landing manşeti bire bir eşleşmeli (message match).",
+        "İyi landing anatomisi: manşet, sorun, çözüm, kanıt, garanti, tek CTA.",
+        "Mobil öncelik + hız (Lighthouse 85+) dönüşümde temel eşiktir.",
+        "En yüksek ROI'li reklam iyileştirmesi çoğu zaman landing tarafındadır."
+      ]}
+    ]
+  },
+
+  /* 9 */
+  { id:"olcum", shortTitle:"Piksel, Ölçüm ve Atıf",
+    title:"Piksel, Ölçüm ve <em>Atıf</em> · Ölçemediğin Yanar",
+    lead:"Ölçmediğiniz reklam iyileştirilemez. iOS 14+ ve gizlilik regülasyonlarıyla ölçüm zorlaştı ama zorunluluğu arttı. Bu bölüm, reklam sisteminizin görünmez ama en kritik altyapısını kurar.",
+    blocks:[
+      { type:"h", text:"Ölçüm · Reklamın Görünmez Motoru" },
+      { type:"p", text:"Peter Drucker: <strong>'Ölçmediğini yönetemezsin.'</strong> Reklamda bu daha da keskindir. Hangi kreatif satıyor? Hangi kitle dönüşüyor? Hangi Ad Set kâr ediyor? Piksel + dönüşüm etkinlikleri + atıf modeli — bu üçünü kurmamış bir reklam sistemi 'şansa harcanan bütçe'dir." },
+      { type:"h", text:"Meta Piksel + CAPI · 2026 Standardı" },
+      { type:"cards", items:[
+        { title:"Meta Piksel", body:"Tarayıcıda çalışır. Site ziyaretini, ürün görüntülemeyi, satın almayı Meta'ya bildirir." },
+        { title:"Conversion API (CAPI)", body:"Sunucudan sunucuya veri gönderimi. iOS 14+ sonrası kritik." },
+        { title:"Piksel + CAPI Birlikte", body:"Çift kanal ölçüm; %30-50 daha doğru sinyal." }
+      ]},
+      { type:"callout", title:"iOS 14 Sonrası Ölçüm", text:"Apple ATT (App Tracking Transparency) sonrası iOS kullanıcılarının <strong>%70+'ı</strong> takip izni vermiyor. Meta Piksel yalnız başına bu kullanıcıları göremiyor. CAPI (server-side ölçüm) + Google Analytics 4 + kendi UTM sisteminiz — üç kaynak birden gerekli." },
+      { type:"h", text:"Standart Dönüşüm Olayları · Kurulmalı" },
+      { type:"table",
+        headers:["Olay","Ne Ölçer","Öncelik"],
+        rows:[
+          ["Page View","Sayfa ziyareti","Otomatik"],
+          ["View Content","Ürün detay sayfası","Yüksek"],
+          ["Add to Cart","Sepete ekleme","Yüksek"],
+          ["Initiate Checkout","Ödeme başlatma","Yüksek"],
+          ["Add Payment Info","Ödeme bilgisi","Orta"],
+          ["Purchase","Satın alma tamamlandı","En Yüksek"],
+          ["Lead","Form kaydı","Yüksek"],
+          ["Complete Registration","Hesap oluşturma","Orta"]
+        ]
+      },
+      { type:"h", text:"Atıf Modelleri (Attribution) · Krediye Kim?" },
+      { type:"cards", items:[
+        { title:"Last-Click (Son Tıklama)", body:"Satıştan hemen önceki tıklamaya %100 kredi. Klasik, ama üst huniyi görmezden gelir." },
+        { title:"First-Click (İlk Tıklama)", body:"İlk temasa kredi. Üst huniyi öne çıkarır." },
+        { title:"Linear (Doğrusal)", body:"Tüm temaslara eşit kredi. Dengeli ama net değil." },
+        { title:"Time Decay", body:"Son teması daha çok, ilki az. Meta varsayılanı." },
+        { title:"Data-Driven (Veri Odaklı)", body:"Google Analytics 4 AI ile hangi teması ne kadar katkı yaptığını hesaplar." }
+      ]},
+      { type:"callout", title:"Meta Ads Attribution Window", text:"2026'da Meta varsayılan: <strong>7 gün click + 1 gün view</strong>. Yani reklamı tıklamışsa 7 gün, sadece görmüşse 1 gün içindeki satış bu reklama atfedilir. Uzun karar veren ürünler (yüksek fiyat, B2B) için 28 gün window seçmek gerekir — aksi hâlde atıf eksik kalır." },
+      { type:"h", text:"UTM Etiketleri · Kendi Ölçümün" },
+      { type:"p", text:"Meta / Google atıfına bağımlı kalmayın. Her reklam linkinize <strong>UTM etiketi</strong> ekleyin: <em>?utm_source=meta&utm_medium=ads&utm_campaign=nov2026&utm_content=video3</em>. Google Analytics 4'te 'trafiğin kaynak / kampanya / içerik' bazında satışa etkisi net görünür — platformların iç raporlarından bağımsız gerçek." },
+      { type:"cards", items:[
+        { title:"utm_source", body:"meta, google, tiktok, linkedin — platform" },
+        { title:"utm_medium", body:"ads, cpc, email, organic — trafiğin türü" },
+        { title:"utm_campaign", body:"Kampanya adı: 'kislaklife-ekim-2026'" },
+        { title:"utm_content", body:"Kreatif: 'video-ugc-01' — hangi reklam" },
+        { title:"utm_term", body:"Anahtar kelime (Google Ads için)" }
+      ]},
+      { type:"h", text:"3 Ölçüm Panosu · Sistem Sağlığı" },
+      { type:"steps", items:[
+        { title:"Platform Panosu", body:"Meta Ads Manager / Google Ads. Kampanya, Ad Set, Ad seviyesinde metrikler." },
+        { title:"Kendi Analytics", body:"GA4 + UTM. Kaynak bağımsız gerçek dönüşüm." },
+        { title:"İş Panosu (Dashboard)", body:"Databox, Klipfolio veya Google Data Studio. LTV, CAC, ROAS, MRR birlikte." }
+      ]},
+      { type:"h", text:"Kritik Metrikler · Reklam Sisteminde" },
+      { type:"table",
+        headers:["Metrik","Anlamı","Sağlıklı"],
+        rows:[
+          ["CPM","Bin gösterim maliyeti","Ürüne göre değişir"],
+          ["CTR","Tıklama oranı","%1-3+ (kanal fark eder)"],
+          ["CPC","Tıklama başı maliyet","Sektör bazlı"],
+          ["CPA / CAC","Satın alma / müşteri edinme maliyeti","LTV'nin ≤ %30-40'ı"],
+          ["ROAS","Reklam gelir oranı","≥ 2,5-4× (sektör)"],
+          ["LTV / CAC","Yaşam boyu değer / edinme","≥ 3×"],
+          ["Frequency","Aynı kişiye gösterim sayısı","2-4 arası ideal"],
+          ["Click-to-Purchase %","Tıklamadan satın almaya","%1-5 (kanala göre)"]
+        ]
+      },
+      { type:"h", text:"Sunucu-Tarafı Ölçüm (Server-Side)" },
+      { type:"p", text:"Modern e-ticaret ve dijital markalar artık Piksel + CAPI + Google Analytics <strong>server-side</strong> setup kuruyor. Google Tag Manager Server ile veri doğrudan Meta ve GA'ya sunucudan gönderiliyor — reklam engelleyicileri ve tarayıcı kısıtları etkilemiyor. Kurulumu teknik ama 2026'da ölçüm doğruluğu için standart." },
+      { type:"callout", title:"Uyarı · Ölçüm Kurmadan Reklam Yok", text:"Piksel + dönüşüm etkinlikleri + UTM + GA4 setup yapılmadan reklam açmak, <strong>arabayı gösterge paneli olmadan sürmek</strong>tir. İlk 3 gün 'iyi görünen' rakamlar, gerçekte hangi kreatifin sattığını göstermez. Reklam başlamadan önce ölçüm sistemi test edilmiş olmalı." },
+      { type:"h", text:"KVKK ve GDPR · Türkiye 2026" },
+      { type:"p", text:"Kullanıcı verisi toplarken (piksel, çerez, e-mail) <strong>çerez izin bildirimi</strong> (cookie banner) ve <strong>KVKK aydınlatma metni</strong> zorunlu. 2024 sonrası Türkiye'deki denetimler artıyor. Cookiebot, iubenda gibi araçlarla yönetilir. Uyumsuzluk cezalarını göze almadan reklam kurulmasın." },
+      { type:"vaka",
+        title:"Butik Marka · Ölçüm Sisteminden Sonra Optimize Etme",
+        baglam:"Marka aylık 50 bin TL reklam bütçesi harcıyordu ama Meta Piksel sadece 'Purchase' değeri döndürmüyordu — yanlış kurulmuş. Kararlar hislere göre veriliyordu.",
+        analiz:"Piksel + CAPI + GA4 + UTM + Cookiebot kurulumu 2 haftada tamamlandı. Tüm dönüşüm etkinlikleri (view, cart, checkout, purchase) tetiklenir hale geldi. 3 ölçüm panosu Databox'ta birleştirildi.",
+        sonuc:"1 ay sonra: hangi kreatifin sattığı, hangi kitlenin ROAS'ı düşük olduğu netleşti. Kaybeden kreatifler kapatıldı, kazananlar ölçeklendi. Aynı bütçe → %48 daha fazla satış. Ölçüm 'ekstra iş' değil, <em>reklamın motoruydu</em>."
+      },
+      { type:"takeaways", items:[
+        "Ölçüm kurmadan reklam açmak arabayı göstergesiz sürmektir.",
+        "Piksel + CAPI + UTM + GA4 → 2026 standart 4'lüsü.",
+        "Attribution window ürüne göre 7 gün click / 1 gün view veya 28 gün.",
+        "3 ölçüm panosu: platform + kendi analytics + iş panosu.",
+        "KVKK / cookie banner uyumluluğu ihmal edilmemeli."
+      ]}
+    ]
+  },
+
+  /* 10 */
+  { id:"olcek", shortTitle:"Ölçekleme",
+    title:"Ölçekleme · <em>Vertical, Horizontal</em>, Retargeting",
+    lead:"Sistem çalışıyor: ölçüm var, kreatif satıyor, ROAS 3× üstünde. Şimdi ölçek zamanı — ama yanlış ölçekleme sistemi bir haftada çökertebilir. Bu bölüm, hızlı büyümeyi kontrollü büyümeye çeviren mimariyi kurar.",
+    blocks:[
+      { type:"h", text:"Ölçekleme = Aynı Verimle Daha Fazla Bütçe" },
+      { type:"p", text:"Ölçekleme aylık 30 bin TL harcayan bir kampanyayı 300 bin TL'ye çıkarma sanatıdır — <strong>ROAS düşmeden</strong>. Yanlış yapıldığında bütçe artar, satış aynı kalır, CAC 3-4 katına çıkar. Doğru yapıldığında ise sistem lineer değil, üstel büyür." },
+      { type:"h", text:"3 Ölçekleme Yönü" },
+      { type:"cards", items:[
+        { title:"Vertical (Dikey) · Bütçe Artışı", body:"Kazanan Ad Set'in bütçesini kademeli artırmak. Haftada max %20-30." },
+        { title:"Horizontal (Yatay) · Kitle Çeşitlendirme", body:"Aynı kreatif + kitle kopyaları yeni Ad Set'lerde. Kanibalizmi önler." },
+        { title:"Yeni Kreatif / Kanal", body:"Yeni format, yeni platform (TikTok, YouTube), yeni açı. Ölçek yolları çeşitlenir." }
+      ]},
+      { type:"callout", title:"Kural · Öğrenme Fazını Koru", text:"Ölçekte en büyük tuzak: kazananın bütçesini <strong>bir gecede 3-5 katına</strong> çıkarmak. Bu, öğrenme fazını sıfırlar, algoritma yeniden 'kitle bulma' moduna girer, CPA 2-3 katına çıkar. Sabırlı tırmanış > hızlı sıçrayış." },
+      { type:"h", text:"Vertical Ölçek · Bütçe Merdiveni" },
+      { type:"steps", items:[
+        { title:"Hafta 1", body:"Günlük 500 TL bütçe. ROAS 3×." },
+        { title:"Hafta 2", body:"Günlük 650 TL (%30 artış). ROAS gözle, düşerse dur." },
+        { title:"Hafta 3", body:"Günlük 850 TL. Öğrenme stabil kaldıysa devam." },
+        { title:"Hafta 4", body:"Günlük 1.100 TL." },
+        { title:"Hafta 6+", body:"Bütçe 2.000+ TL. Kreatif yorgunluğu için refresh şart." }
+      ]},
+      { type:"h", text:"Horizontal Ölçek · Yeni Ad Set Kopyalama" },
+      { type:"p", text:"Aynı kreatif + aynı kitleyi <strong>farklı Ad Set adı altında kopyalamak</strong> — algoritmaya 'aynı reklam ama yeni öğrenme fazı' sinyali verir. Kanibalizmi (aynı kişiye 2 kez gösterim) önlemek için kitle biraz farklılaştırılır: yaş aralığı, coğrafya, ilgi alanı. Aynı reklam 3-5 farklı Ad Set'te + günlük 300-500 TL bütçe = güvenli ölçek." },
+      { type:"h", text:"Retargeting · Ölçekte Gizli Silah" },
+      { type:"cards", items:[
+        { title:"Site Ziyaretçileri (7 gün)", body:"En sıcak. Sepete koymamış ama sayfayı görmüş." },
+        { title:"Site Ziyaretçileri (30 gün)", body:"Genişletilmiş sıcak kitle." },
+        { title:"Video İzleyenleri", body:"%75+ videoyu izlemiş; yüksek niyet." },
+        { title:"Sepet Terk (7 gün)", body:"Ödemenin dibine gelmiş. Aciliyet + kupon ideal." },
+        { title:"Etkileşim (60 gün)", body:"Post beğenmiş, yorum yapmış, kaydetmiş." },
+        { title:"Müşteri (Cross-sell)", body:"Alışveriş yapmış; yeni ürün, upgrade önerisi." }
+      ]},
+      { type:"callout", title:"Retargeting ROAS'ı 3-5×", text:"Retargeting reklamlar genellikle soğuk trafikten <strong>3-5 kat daha yüksek ROAS</strong> üretir. Sistemde retargeting bütçesi kapalı olamaz — sabit %15-25 pay ayrılmalı. Ölçek büyüdükçe retargeting havuzu da büyür, dolayısıyla iyi bir 'ilerleme itici' motoru olur." },
+      { type:"h", text:"Kreatif Yorgunluğu (Ad Fatigue) · Ölçeğin Düşmanı" },
+      { type:"p", text:"Ölçek yükseldikçe aynı kişiye daha sık reklam düşer. Frekans 3-4'ün üstüne çıktığında <strong>CTR düşer, CPM artar, ROAS erozyona uğrar</strong>. Bu 'ad fatigue' — reklamlar yorulmuş demektir. Çözüm: 14-21 günde bir yeni kreatif enjekte etmek, versiyon üretmek, hook değiştirmek. 'Yaratıcı hattı' (creative pipeline) sürekli çalışır." },
+      { type:"steps", items:[
+        { title:"Haftalık 3-5 Kreatif Üretim", body:"UGC, statik, video — çeşitli format." },
+        { title:"14 Gün Test", body:"Yeni kreatifler mevcut kazananlarla A/B." },
+        { title:"Kazananları Ölçekle", body:"CBO ile bütçe akıtma." },
+        { title:"Kaybedenleri Öldür", body:"Duygusal bağ yok; veri konuşur." },
+        { title:"Kreatif Bank", body:"Kazanan kreatiflerin arşivi; sezonluk yeniden kullanım." }
+      ]},
+      { type:"h", text:"Ölçekleme Sırasında Ortak Hatalar" },
+      { type:"prosncons",
+        pros:["Vertical + Horizontal ikisi birlikte","Retargeting bütçesi sabit tutulur","Yeni kreatif her 14-21 günde bir","CBO kullanımı ile algoritma güveni","Öğrenme fazı boyunca müdahalesiz sabır","Yeni kanal (TikTok, YouTube) ile diversifikasyon"],
+        cons:["Bütçeyi bir gecede 3-5 katına çıkarmak","Retargeting'i kapatıp yalnız soğuk trafiğe harcamak","Aynı kreatifle 30+ gün ölçek çalıştırmak","Kanibalizmi görmezden gelmek","Kitleyi 'herkes' yaparak ölçmek","Attribution window ayarını unutmak"]
+      },
+      { type:"h", text:"LTV / CAC Yeniden · Ölçekte Sürdürülebilirlik" },
+      { type:"p", text:"Ölçek büyüdükçe genellikle CAC artar (en iyi kitle önce doyar). Bu doğaldır — sürdürülebilirlik için LTV'nin de büyümesi lazım. <strong>Upsell, abonelik, cross-sell, sadakat programı</strong> — LTV motoru büyüyen CAC'ı emer. LTV/CAC oranını 3× üstünde tutan sistem sınırsız ölçeklenebilir." },
+      { type:"table",
+        headers:["Faz","Aylık Bütçe","Hedef ROAS","Ana Odak"],
+        rows:[
+          ["Test","5-25 bin TL","Break-even (1-2×)","Kreatif + kitle testi"],
+          ["Erken Ölçek","25-100 bin TL","2,5-3,5×","Kazananları büyütme"],
+          ["Ölçek","100-500 bin TL","2-3×","Diversifikasyon + retargeting"],
+          ["Büyük Ölçek","500 bin+ TL","1,8-2,5×","AI + optimizasyon + ekip"]
+        ]
+      },
+      { type:"callout", title:"Ölçek Değil, Sistem", text:"Reklam sisteminin gerçek testi: <strong>siz 2 hafta izne çıksanız kampanyalar çalışmaya devam eder mi?</strong> Ölçüm otomatize, kreatif hattı sürekli, retargeting açık, iş panosu bakan biri var ise — evet. Aksi hâlde 'ölçek değil, hızlı akan bir maratona' dönüşür ve kurucu tükenir." },
+      { type:"vaka",
+        title:"Kozmetik Markası · 30 Bin TL/Ay'dan 400 Bin TL/Ay'a",
+        baglam:"Marka 3 aydır 30 bin TL/ay reklam ile aylık ~90 bin TL satış (ROAS 3×). Kurucu ölçek istedi ama önceki denemelerde ROAS 3'ten 1,4'e düşmüştü.",
+        analiz:"Sistematik ölçek planı: (1) Vertical: haftada +%25 bütçe artışı. (2) Horizontal: 4 Ad Set kopyası farklı kitle segmentlerinde. (3) TikTok kanalı eklendi. (4) Retargeting bütçesi %20 pay olarak sabitlendi. (5) Haftalık 4 yeni UGC video. LTV/CAC 3,8× → 3,1× (kabul edilebilir düşüş).",
+        sonuc:"5 ay sonra: aylık reklam bütçesi 30 bin → 400 bin TL, aylık satış 90 bin → ~1,15 milyon TL. ROAS ortalama 2,9×. Sistem 13 katına büyüdü ama kâr marjı ancak %10 küçüldü — <em>ölçekli sürdürülebilir büyüme</em>."
+      },
+      { type:"callout", title:"Eğitim Özeti · Sistemin Sonu", text:"10 bölüm boyunca sadece 'reklam açmayı' değil — <strong>Reklamla Müşteri Getiren Dijital Pazarlama Sistemi</strong>'ni kurdunuz. Zihniyet → Yolculuk → Kitle → Kanallar → Kreatif → Metin → Bütçe → Landing → Ölçüm → Ölçek. Her katman kendinden önceki ve sonrakiyle konuşur. Sistem çalıştığında reklam artık şansa değil, bilime dayalı bir yatırım kanalına dönüşür." },
+      { type:"takeaways", items:[
+        "Ölçekleme = aynı ROAS ile daha büyük bütçe, hızla değil ritmle.",
+        "3 yön: Vertical (bütçe), Horizontal (kitle), yeni kreatif/kanal.",
+        "Vertical ölçek haftalık %20-30; sıçrayış öğrenmeyi sıfırlar.",
+        "Retargeting bütçesi ölçekte 3-5× ROAS ile gizli silahtır.",
+        "Kreatif hattı sürekli işlemeli; 14-21 gün refresh kuralı.",
+        "Sürdürülebilir ölçek için LTV/CAC oranı ≥ 3× korunmalı."
+      ]}
+    ]
+  }
+];
+
+/* ============ Render ============ */
+const esc = (s) => String(s).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+function renderBlock(b) {
+  if (b.type === "h") return `<h3 class="ega-h3"><span class="ega-h3-bar"></span>${esc(b.text)}</h3>`;
+  if (b.type === "p") return `<p class="ega-p">${b.text}</p>`;
+  if (b.type === "callout") return `
+    <div class="ega-callout">
+      ${b.title ? `<div class="ega-callout-title">${esc(b.title)}</div>` : ""}
+      <div class="ega-callout-body">${b.text}</div>
+    </div>`;
+  if (b.type === "stats") return `
+    <div class="ega-stats">
+      ${b.items.map(it => `
+        <div class="ega-stat">
+          <div class="ega-stat-value">${esc(it.value)}</div>
+          <div class="ega-stat-label">${esc(it.label)}</div>
+        </div>`).join("")}
+    </div>`;
+  if (b.type === "cards") return `
+    <div class="ega-cards">
+      ${b.items.map((c, i) => `
+        <div class="ega-card">
+          <div class="ega-card-head">
+            <span class="ega-card-num">${String(i+1).padStart(2,"0")}</span>
+            <span class="ega-card-title">${esc(c.title)}</span>
+          </div>
+          <div class="ega-card-body">${esc(c.body)}</div>
+        </div>`).join("")}
+    </div>`;
+  if (b.type === "steps") return `
+    <div class="ega-steps">
+      ${b.items.map((s, i) => `
+        <div class="ega-step">
+          <div class="ega-step-num">${String(i+1).padStart(2,"0")}</div>
+          <div>
+            <div class="ega-step-title">${esc(s.title)}</div>
+            <div class="ega-step-body">${esc(s.body)}</div>
+          </div>
+        </div>`).join("")}
+    </div>`;
+  if (b.type === "table") {
+    const cols = b.headers.length;
+    const style = `grid-template-columns: repeat(${cols}, minmax(0,1fr));`;
+    return `
+    <div class="ega-table">
+      <div class="ega-table-row ega-table-head" style="${style}">
+        ${b.headers.map(h => `<div>${esc(h)}</div>`).join("")}
+      </div>
+      ${b.rows.map(row => `
+        <div class="ega-table-row" style="${style}">
+          ${row.map(c => `<div>${esc(c)}</div>`).join("")}
+        </div>`).join("")}
+    </div>`;
+  }
+  if (b.type === "prosncons" || b.type === "proscons") return `
+    <div class="ega-prosncons">
+      <div class="ega-pc">
+        <div class="ega-pc-title">Doğru Yaklaşımlar</div>
+        <ul>${b.pros.map(p => `<li>${esc(p)}</li>`).join("")}</ul>
+      </div>
+      <div class="ega-pc con">
+        <div class="ega-pc-title">Yaygın Hatalar</div>
+        <ul>${b.cons.map(p => `<li>${esc(p)}</li>`).join("")}</ul>
+      </div>
+    </div>`;
+  if (b.type === "vaka") return `
+    <div class="ega-vaka">
+      <div class="ega-vaka-label">Örnek Vaka</div>
+      <div class="ega-vaka-title">${esc(b.title)}</div>
+      <div class="ega-vaka-grid">
+        <div class="ega-vaka-col"><h5>Bağlam</h5><p>${esc(b.baglam)}</p></div>
+        <div class="ega-vaka-col"><h5>Analiz</h5><p>${esc(b.analiz)}</p></div>
+        <div class="ega-vaka-col"><h5>Sonuç</h5><p>${esc(b.sonuc)}</p></div>
+      </div>
+    </div>`;
+  if (b.type === "takeaways") return `
+    <div class="ega-takeaways">
+      <h4><span class="ega-h3-bar"></span>Temel Çıkarımlar</h4>
+      <ol>${b.items.map(t => `<li>${esc(t)}</li>`).join("")}</ol>
+    </div>`;
+  return "";
+}
+
+function renderHero(s) {
+  return `
+    <section class="ega-hero">
+      <div class="ega-hero-mark">Ek Gelir Akademi · Premium Edisyon</div>
+      <h1 class="ega-hero-title">Dijital Pazarlama Sistemi: <em>Reklamla Müşteri Getir</em></h1>
+      <p class="ega-hero-sub">Reklamla müşteri getirmek bir sanat değil, bir sistemdir. Bu 10 bölümlük eğitim; reklam zihniyetinden alıcı yolculuğuna, kitle ve personadan reklam kanallarına, kreatif reçetesinden metin yazımına, bütçe stratejisinden landing page dönüşümüne, piksel ve atıftan ölçekleme mimarisine — bütçenizi yakan değil, sizi büyüten gerçek bir dijital pazarlama sisteminin tam yol haritası.</p>
+      <div class="ega-hero-meta">
+        <span><strong>10</strong> Bölüm</span>
+        <span><strong>Premium</strong> Dijital Pazarlama Eğitimi</span>
+        <span><strong>2026</strong> Türkiye Sürümü</span>
+      </div>
+      <div class="ega-hero-rule"></div>
+      <h3 class="ega-h3"><span class="ega-h3-bar"></span>İçindekiler</h3>
+      <div class="ega-toc">
+        ${s.toc.map((t, i) => `
+          <button class="ega-toc-item" data-jump="${i+1}">
+            <span class="ega-toc-num">${String(i+1).padStart(2,"0")}</span>
+            <span class="ega-toc-label">${esc(t)}</span>
+          </button>`).join("")}
+      </div>
+    </section>`;
+}
+
+function renderSection(s, idx) {
+  if (s.hero) return renderHero(s);
+  return `
+    <section class="ega-section">
+      <div class="ega-section-eyebrow">Bölüm ${String(idx).padStart(2,"0")} · Ek Gelir Akademi</div>
+      <h2 class="ega-section-title">${s.title}</h2>
+      ${s.lead ? `<p class="ega-section-lead">${esc(s.lead)}</p>` : ""}
+      ${(s.blocks || []).map(renderBlock).join("")}
+    </section>`;
+}
+
+/* ============ State + Events ============ */
+const state = { activeIndex: 0 };
+const $nav = document.getElementById("nav");
+const $container = document.getElementById("sectionContainer");
+const $scroll = document.getElementById("scroll");
+const $progress = document.getElementById("progressFill");
+const $progressMini = document.getElementById("progressMini");
+const $prev = document.getElementById("prevBtn");
+const $next = document.getElementById("nextBtn");
+const $prevLabel = document.getElementById("prevLabel");
+const $nextLabel = document.getElementById("nextLabel");
+const $count = document.getElementById("pagerCount");
+const $sidebar = document.getElementById("sidebar");
+const $menuToggle = document.getElementById("menuToggle");
+
+SECTIONS.forEach((s, i) => {
+  const btn = document.createElement("button");
+  btn.className = "ega-nav-item";
+  btn.dataset.idx = i;
+  btn.innerHTML = `<span class="num">${String(i+1).padStart(2,"0")}</span><span class="label">${esc(s.shortTitle)}</span>`;
+  btn.addEventListener("click", () => { setActive(i); $sidebar.classList.remove("open"); });
+  $nav.appendChild(btn);
+});
+
+function setActive(i) {
+  if (i < 0 || i >= SECTIONS.length) return;
+  state.activeIndex = i;
+  $container.innerHTML = renderSection(SECTIONS[i], i);
+  $container.querySelectorAll(".ega-toc-item").forEach(el => {
+    el.addEventListener("click", () => setActive(parseInt(el.dataset.jump, 10)));
+  });
+  document.querySelectorAll(".ega-nav-item").forEach((el, idx) => {
+    el.classList.toggle("active", idx === i);
+  });
+  const pct = ((i + 1) / SECTIONS.length) * 100;
+  $progress.style.width = pct + "%";
+  if ($progressMini) $progressMini.style.width = pct + "%";
+  $prev.disabled = (i === 0);
+  $next.disabled = (i === SECTIONS.length - 1);
+  $prevLabel.textContent = i > 0 ? SECTIONS[i - 1].shortTitle : "Başlangıç";
+  $nextLabel.textContent = i < SECTIONS.length - 1 ? SECTIONS[i + 1].shortTitle : "Son bölüm";
+  $count.textContent = `${String(i+1).padStart(2,"0")} / ${String(SECTIONS.length).padStart(2,"0")}`;
+  $scroll.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+$prev.addEventListener("click", () => setActive(state.activeIndex - 1));
+$next.addEventListener("click", () => setActive(state.activeIndex + 1));
+if ($menuToggle) $menuToggle.addEventListener("click", () => $sidebar.classList.toggle("open"));
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") setActive(state.activeIndex + 1);
+  if (e.key === "ArrowLeft") setActive(state.activeIndex - 1);
+});
+
+setActive(0);
+</script>
+</body>
+</html>
